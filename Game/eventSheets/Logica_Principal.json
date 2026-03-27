@@ -1888,6 +1888,29 @@
 												}
 											],
 											"sid": 299603874282987
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 958589483765645,
+													"parameters": {
+														"instance-variable": "Inimigo_TIpo",
+														"comparison": 0,
+														"value": "\"Sniper\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Sniper_Arma_Inimigo",
+													"sid": 491303478388293
+												}
+											],
+											"sid": 570449067479302
 										}
 									]
 								}
