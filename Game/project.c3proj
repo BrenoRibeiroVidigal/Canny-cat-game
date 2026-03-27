@@ -207,7 +207,9 @@
 			"Texto_Cutscene",
 			"Cutscene_Simbolo_Vs",
 			"Sniper_Inimigo",
-			"Sniper_Arma_Inimigo"
+			"Sniper_Arma_Inimigo",
+			"Laser_Vermelho",
+			"Tiro_Sniper"
 		],
 		"subfolders": [
 			{

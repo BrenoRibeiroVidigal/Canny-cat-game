@@ -1236,12 +1236,61 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 932,
-						"y": -141,
-						"width": 92,
-						"height": 56,
-						"originX": 0.11956521739130435,
-						"originY": 0.6607142857142857,
+						"x": 920,
+						"y": -105,
+						"width": 106,
+						"height": 76,
+						"originX": 0.046875,
+						"originY": 0.515625,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Tiro_Sniper",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 65,
+					"sid": 526925636493118,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Projétil": {
+							"properties": {
+								"speed": 2000,
+								"acceleration": 2000,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 526925636493118,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1087,
+						"y": -131,
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

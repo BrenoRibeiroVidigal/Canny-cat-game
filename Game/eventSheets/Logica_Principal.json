@@ -2359,9 +2359,83 @@
 											"behaviorType": "ExploradorDeRotas"
 										},
 										{
+											"id": "spawn-another-object",
+											"objectClass": "Sniper_Arma_Inimigo",
+											"sid": 657049661144900,
+											"parameters": {
+												"object": "Laser_Vermelho",
+												"layer": "\"Camada 1\"",
+												"image-point": "1",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Laser_Vermelho",
+											"sid": 935358496019826,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"value": "Inimigos.UID"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 769433615988092,
+											"parameters": {
+												"seconds": "3",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Sniper_Arma_Inimigo",
+											"sid": 618152613682325,
+											"parameters": {
+												"object": "Tiro_Sniper",
+												"layer": "\"Camada 1\"",
+												"image-point": "1",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Laser_Vermelho",
+											"sid": 275123577519966
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Inimigos",
+											"sid": 973609551700344,
+											"behaviorType": "Interpolação",
+											"parameters": {
+												"tags": "\"KnockBack\"",
+												"property": "position",
+												"end-x": "Inimigos.X - cos(Sniper_Arma_Inimigo.Angle) * 40",
+												"end-y": "Inimigos.Y - sin(Sniper_Arma_Inimigo.Angle) * 40",
+												"time": "0.1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 781052954095775,
+											"parameters": {
+												"seconds": "2",
+												"use-timescale": true
+											}
+										},
+										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Inimigos",
-											"sid": 322195373075494,
+											"sid": 982748983963183,
 											"parameters": {
 												"instance-variable": "Atacando",
 												"value": "false"
@@ -2393,6 +2467,16 @@
 											"parameters": {
 												"unique-id": "Sniper_Arma_Inimigo.UID_Dono"
 											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Laser_Vermelho",
+											"sid": 654774991173921,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"comparison": 0,
+												"value": "Sniper_Arma_Inimigo.UID_Dono"
+											}
 										}
 									],
 									"actions": [
@@ -2403,6 +2487,31 @@
 											"parameters": {
 												"x": "Inimigos.X + cos(Sniper_Arma_Inimigo.Angle) * 30",
 												"y": "Inimigos.Y + sin(Sniper_Arma_Inimigo.Angle) * 30"
+											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "Laser_Vermelho",
+											"sid": 603368494986430,
+											"parameters": {
+												"object": "Sniper_Arma_Inimigo",
+												"image-point-optional": "1"
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "Laser_Vermelho",
+											"sid": 515133776215524,
+											"parameters": {
+												"angle": "Sniper_Arma_Inimigo.Angle"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "Laser_Vermelho",
+											"sid": 237214570136697,
+											"parameters": {
+												"width": "distance(Sniper_Arma_Inimigo.X, Sniper_Arma_Inimigo.Y, Player.X, Player.Y) - 20"
 											}
 										}
 									],
@@ -2420,22 +2529,13 @@
 														"object": "Player",
 														"image-point": "0"
 													}
-												},
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Inimigos",
-													"sid": 949723784612847,
-													"parameters": {
-														"instance-variable": "Atacando"
-													},
-													"isInverted": true
 												}
 											],
 											"actions": [
 												{
 													"id": "set-angle-toward-position",
 													"objectClass": "Sniper_Arma_Inimigo",
-													"sid": 164355901310097,
+													"sid": 422669535571630,
 													"parameters": {
 														"x": "Player.X",
 														"y": "Player.Y"
