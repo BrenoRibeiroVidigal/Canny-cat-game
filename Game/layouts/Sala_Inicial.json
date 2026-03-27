@@ -1210,7 +1210,7 @@
 							1
 						],
 						"z": 0,
-						"angle": 0
+						"angle": 0.0013066194654814262
 					}
 				},
 				{
@@ -1223,21 +1223,21 @@
 						"live-preview": false
 					},
 					"uid": 64,
-					"sid": 713571002049896,
+					"sid": 308742470102897,
 					"tags": "",
 					"instanceVariables": {
 						"UID_Dono": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 713571002049896,
+						"sid": 308742470102897,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1118,
-						"y": 92,
+						"x": 932,
+						"y": -141,
 						"width": 92,
 						"height": 56,
 						"originX": 0.11956521739130435,
