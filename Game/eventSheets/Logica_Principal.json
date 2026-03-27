@@ -1974,9 +1974,9 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Espada_Inimigo",
-											"sid": 493520265498096,
+											"sid": 498732061728197,
 											"parameters": {
-												"instance-variable": "Dono_UID",
+												"instance-variable": "UID_Dono",
 												"comparison": 0,
 												"value": "Inimigos.UID"
 											}
@@ -2112,9 +2112,9 @@
 										{
 											"id": "pick-by-unique-id",
 											"objectClass": "Inimigos",
-											"sid": 352909269650463,
+											"sid": 162165637703308,
 											"parameters": {
-												"unique-id": "Espada_Inimigo.Dono_UID"
+												"unique-id": "Espada_Inimigo.UID_Dono"
 											}
 										}
 									],
@@ -2212,9 +2212,9 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Espada_Inimigo",
-											"sid": 486060801150788,
+											"sid": 820752136404629,
 											"parameters": {
-												"instance-variable": "Dono_UID",
+												"instance-variable": "UID_Dono",
 												"value": "Inimigos.UID"
 											}
 										}
@@ -2259,6 +2259,223 @@
 							"isActiveOnStart": true,
 							"children": [],
 							"sid": 118263183515384
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 158786386116582,
+									"parameters": {
+										"object": "Inimigos"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Inimigos",
+									"sid": 130416544688412,
+									"parameters": {
+										"instance-variable": "Atacando"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Inimigos",
+									"sid": 906626551740619,
+									"parameters": {
+										"instance-variable": "Inimigo_TIpo",
+										"comparison": 0,
+										"value": "\"Melee\""
+									}
+								},
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Inimigos",
+									"sid": 495738836896790,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 619483936594797,
+									"parameters": {
+										"first-value": "distance(Inimigos.X, Inimigos.Y, Player.X, Player.Y)",
+										"comparison": 3,
+										"second-value": "1000"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Sniper_Arma_Inimigo",
+									"sid": 691388232969034,
+									"parameters": {
+										"instance-variable": "UID_Dono",
+										"comparison": 0,
+										"value": "Inimigos.UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Inimigos",
+									"sid": 344675552549604,
+									"parameters": {
+										"instance-variable": "Atacando",
+										"value": "true"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Inimigos",
+									"sid": 913147633305051,
+									"behaviorType": "ExploradorDeRotas"
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Inimigos",
+									"sid": 455753539164694,
+									"parameters": {
+										"instance-variable": "Atacando",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 721518293201579
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 189260080445398
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 330093568442326,
+									"parameters": {
+										"object": "Sniper_Arma_Inimigo"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Inimigos",
+									"sid": 456478948322223,
+									"parameters": {
+										"unique-id": "Sniper_Arma_Inimigo.UID_Dono"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Sniper_Arma_Inimigo",
+									"sid": 530802517111940,
+									"parameters": {
+										"x": "Inimigos.X + cos(Sniper_Arma_Inimigo.Angle) * 30",
+										"y": "Inimigos.Y + sin(Sniper_Arma_Inimigo.Angle) * 30"
+									}
+								}
+							],
+							"sid": 754024273589686,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-los-to-object",
+											"objectClass": "Inimigos",
+											"sid": 948101242708197,
+											"behaviorType": "CampoDeVisão",
+											"parameters": {
+												"object": "Player",
+												"image-point": "0"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Inimigos",
+											"sid": 949171898706535,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle-toward-position",
+											"objectClass": "Sniper_Arma_Inimigo",
+											"sid": 819246935882645,
+											"parameters": {
+												"x": "Player.X",
+												"y": "Player.Y"
+											}
+										}
+									],
+									"sid": 602167292511139
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 608169173779268
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 433588832993160,
+									"parameters": {
+										"object": "Inimigos"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Inimigos",
+									"sid": 178836819884090,
+									"parameters": {
+										"instance-variable": "Inimigo_TIpo",
+										"comparison": 0,
+										"value": "\"Sniper\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Inimigos",
+									"sid": 984293060213167,
+									"parameters": {
+										"object": "Sniper_Arma_Inimigo",
+										"layer": "\"Camada 1\"",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Sniper_Arma_Inimigo",
+									"sid": 444047862117357,
+									"parameters": {
+										"instance-variable": "UID_Dono",
+										"value": "Inimigos.UID"
+									}
+								}
+							],
+							"sid": 418898226169150
 						},
 						{
 							"eventType": "group",
@@ -2320,9 +2537,9 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Cajado_Inimigo",
-											"sid": 989762612649313,
+											"sid": 578962570327356,
 											"parameters": {
-												"instance-variable": "Dono_UID",
+												"instance-variable": "UID_Dono",
 												"comparison": 0,
 												"value": "Inimigos.UID"
 											}
@@ -2405,9 +2622,9 @@
 										{
 											"id": "pick-by-unique-id",
 											"objectClass": "Inimigos",
-											"sid": 854085176366417,
+											"sid": 276351948346196,
 											"parameters": {
-												"unique-id": "Cajado_Inimigo.Dono_UID"
+												"unique-id": "Cajado_Inimigo.UID_Dono"
 											}
 										}
 									],
@@ -2496,9 +2713,9 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Cajado_Inimigo",
-											"sid": 876250277157574,
+											"sid": 321382916998545,
 											"parameters": {
-												"instance-variable": "Dono_UID",
+												"instance-variable": "UID_Dono",
 												"value": "Inimigos.UID"
 											}
 										}

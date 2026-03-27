@@ -867,7 +867,7 @@
 					"sid": 461352216469688,
 					"tags": "",
 					"instanceVariables": {
-						"Dono_UID": 0
+						"UID_Dono": 0
 					},
 					"behaviors": {
 						"Fixar": {
@@ -1091,7 +1091,7 @@
 					"sid": 805255559843933,
 					"tags": "",
 					"instanceVariables": {
-						"Dono_UID": 0
+						"UID_Dono": 0
 					},
 					"behaviors": {
 						"Interpolação": {
@@ -1153,7 +1153,7 @@
 								"acceleration": 1000,
 								"deceleration": 2000,
 								"rotate-speed": 135,
-								"rotate-object": true,
+								"rotate-object": false,
 								"diagonals": true,
 								"direct-movement": "to-destination",
 								"enabled": true
@@ -1179,7 +1179,7 @@
 								"acceleration": 600,
 								"deceleration": 600,
 								"rotate-speed": 0,
-								"set-angle": true,
+								"set-angle": false,
 								"stop-on-solids": false,
 								"enabled": true
 							}
@@ -1225,7 +1225,9 @@
 					"uid": 64,
 					"sid": 713571002049896,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"UID_Dono": 0
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 713571002049896,

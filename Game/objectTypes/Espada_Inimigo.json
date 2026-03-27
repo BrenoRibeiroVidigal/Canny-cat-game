@@ -4,15 +4,7 @@
 	"sid": 870364466052018,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "Dono_UID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 599248728852440
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",

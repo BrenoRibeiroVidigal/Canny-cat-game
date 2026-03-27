@@ -4,15 +4,7 @@
 	"sid": 332029518078037,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "Dono_UID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 684273355907901
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pin",
