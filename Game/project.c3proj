@@ -1,0 +1,442 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 47602,
+	"name": "teste animacao",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Matriz",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Teclado",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Fonte de sprites",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Texto",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Plano de Fundo em Blocos",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Mosaico",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Timeline",
+			"name": "Controlador da timeline",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Projétil",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direções",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Piscar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Campo de visão",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Mover Para",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Explorador de rotas",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Fixar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Senóide",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Cronômetro",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Interpolação",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Centrar em",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Sólido",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "brightness",
+			"name": "Brilho",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "toon",
+			"name": "Cartum",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "sd7nwzfgkab",
+	"objectTypes": {
+		"items": [
+			"Player",
+			"Teclado",
+			"FundoMenu",
+			"Opcao",
+			"Botao",
+			"Inimigo",
+			"inimigoPersergidor",
+			"Tilemap",
+			"Trigger_Saida",
+			"SalasDisponiveis",
+			"Teste",
+			"Mouse",
+			"Cajado",
+			"Projetil_Cajado",
+			"Parede_Teste",
+			"Moeda",
+			"Texto_Moedas",
+			"Explosao_Efeito",
+			"Game_Over_Texto",
+			"Serginho_Over",
+			"Mosaico",
+			"Npc_mercador",
+			"Botao_Aviso_NPC",
+			"Dialogo_NPC",
+			"Hitbox_Ataque_Inimigo",
+			"Boss_Floresta",
+			"Cajado_Inimigo",
+			"Camera",
+			"ControladorDaTimeline",
+			"Pedestal",
+			"Item_Bola_De_Cristal",
+			"Texto_Dano",
+			"Espada_Inimigo",
+			"Texto_Cutscene",
+			"Cutscene_Simbolo_Vs",
+			"Sniper_Inimigo",
+			"Sniper_Arma_Inimigo"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Arvore",
+					"Arvore_1",
+					"Arvore_2",
+					"Arvore_Aglomerado",
+					"Arvore_Aglomerado2",
+					"Arvore_TileMap",
+					"Arvore_Giga",
+					"Sombra_UI"
+				],
+				"subfolders": [],
+				"name": "Arvores"
+			},
+			{
+				"items": [
+					"Fundo_Escuro",
+					"Fundo_Menu",
+					"HUD_Vida",
+					"Moeda_HUD",
+					"Borda_Retrato_NPC",
+					"Menu_Emote",
+					"Nome_Emote",
+					"Retrato_NPC"
+				],
+				"subfolders": [],
+				"name": "HUD"
+			}
+		]
+	},
+	"functionsName": "Funções",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Inimigos",
+			"NPCs",
+			"Armas_Inimigos"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Teste_Inimigos",
+			"Menu",
+			"Sala_Combate_Floresta",
+			"Sala_Boss_Floresta",
+			"Sala_Inicial",
+			"Game_Over",
+			"Cutscene_1"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Logica_Principal",
+			"Menu",
+			"Game_Over",
+			"Cutscene_1"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 609149186634374,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 148361584001984,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 472383017419985,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 980375622086857,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 793032034578560,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 179318434723524,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 160340085478523,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Cutscene_NovoJogo",
+			"Linha do tempo 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Fluxograma 1"
+		],
+		"subfolders": []
+	},
+	"models3d": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "regular",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"fixedFramerate": 30,
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"uidAllocationMode": "increment",
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"scriptsType": "module"
+	},
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
+	"firstLayout": null
+}

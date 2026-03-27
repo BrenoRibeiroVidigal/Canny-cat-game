@@ -1,0 +1,36 @@
+{
+	"name": "Game_Over",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 444542633019850
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 488358399913397,
+					"parameters": {
+						"seconds": "5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 297610644769656,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 887661156771385
+		}
+	],
+	"sid": 592024274680638
+}

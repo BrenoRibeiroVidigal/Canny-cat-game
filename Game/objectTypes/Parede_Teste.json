@@ -1,0 +1,30 @@
+{
+	"name": "Parede_Teste",
+	"plugin-id": "Tilemap",
+	"sid": 730979938172340,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 528080406120827
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 416,
+		"height": 384,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 5294083,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {}
+}

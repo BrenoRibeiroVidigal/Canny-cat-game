@@ -1,0 +1,12 @@
+{
+	"name": "Armas_Inimigos",
+	"plugin-id": "Sprite",
+	"sid": 760999140023920,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Cajado_Inimigo",
+		"Espada_Inimigo"
+	]
+}

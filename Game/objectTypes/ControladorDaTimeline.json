@@ -1,0 +1,12 @@
+{
+	"name": "ControladorDaTimeline",
+	"plugin-id": "Timeline",
+	"sid": 419827434463096,
+	"singleglobal-inst": {
+		"type": "ControladorDaTimeline",
+		"properties": {},
+		"uid": 57,
+		"sid": 804466980526042,
+		"tags": ""
+	}
+}

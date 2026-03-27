@@ -1,0 +1,53 @@
+{
+	"name": "Cutscene_1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 200016846384397
+				}
+			],
+			"actions": [
+				{
+					"id": "play-timeline",
+					"objectClass": "ControladorDaTimeline",
+					"sid": 672713159899618,
+					"parameters": {
+						"timeline": "Cutscene_NovoJogo",
+						"tags": "\"\""
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "Player",
+					"sid": 843298635560381,
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 608819690037261,
+					"parameters": {
+						"seconds": "8",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 183022320876623,
+					"parameters": {
+						"layout": "Sala_Boss_Floresta"
+					}
+				}
+			],
+			"sid": 851277896637640
+		}
+	],
+	"sid": 117659568073825
+}

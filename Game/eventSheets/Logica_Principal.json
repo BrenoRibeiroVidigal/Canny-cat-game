@@ -1,0 +1,2984 @@
+{
+	"name": "Logica_Principal",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "SorteioSala",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 227339102610947
+		},
+		{
+			"eventType": "variable",
+			"name": "VidaAtual",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 449161776966603
+		},
+		{
+			"eventType": "variable",
+			"name": "Contagem_Moeda",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 226190837298164
+		},
+		{
+			"eventType": "variable",
+			"name": "JogoPausado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 423275569571183
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pause",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 784477841879332,
+							"parameters": {
+								"key": 27
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 666423695385885,
+							"parameters": {
+								"variable": "JogoPausado"
+							}
+						}
+					],
+					"sid": 786263885027920,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 828652996182271,
+									"parameters": {
+										"variable": "JogoPausado"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 266391719603313,
+									"parameters": {
+										"time-scale": "0"
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 378086906987188,
+									"parameters": {
+										"object": "Fundo_Menu",
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 375375511870727,
+									"parameters": {
+										"object": "Fundo_Escuro",
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Fundo_Menu",
+									"sid": 793088832159651,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Descer\"",
+										"property": "offsetY",
+										"end-value": "360",
+										"time": "0.5",
+										"ease": "easeoutquint",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Fundo_Escuro",
+									"sid": 520447234707237,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Descer\"",
+										"property": "offsetY",
+										"end-value": "360",
+										"time": "0",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 802217177133366
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 971263560625763,
+									"parameters": {
+										"variable": "JogoPausado"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 322424859362047,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Fundo_Menu",
+									"sid": 251649616981667,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Descer\"",
+										"property": "offsetY",
+										"end-value": "-500",
+										"time": "0.5",
+										"ease": "easeinquint",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Fundo_Escuro",
+									"sid": 725249497194076,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Descer\"",
+										"property": "offsetY",
+										"end-value": "-500",
+										"time": "0",
+										"ease": "easeinexpo",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 762138321938107
+						}
+					]
+				}
+			],
+			"sid": 809616184023272
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Jogador",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Player",
+							"sid": 493632344700555,
+							"behaviorType": "8Direções"
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 911837976715437,
+							"parameters": {
+								"instance-variable": "Fazendo_Emote"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "Player",
+							"sid": 964965880643480,
+							"parameters": {
+								"speed": "20"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Player",
+							"sid": 703228693245415,
+							"behaviorType": "Senóide",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Player",
+							"sid": 674378739081252,
+							"parameters": {
+								"width": "64",
+								"height": "64"
+							}
+						}
+					],
+					"sid": 188859804120201
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Player",
+							"sid": 826213646108287,
+							"behaviorType": "8Direções",
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 330688502987861,
+							"parameters": {
+								"instance-variable": "Fazendo_Emote"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "Player",
+							"sid": 252421345672588,
+							"parameters": {
+								"speed": "0"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Player",
+							"sid": 749620878219001,
+							"behaviorType": "Senóide",
+							"parameters": {
+								"state": "active"
+							}
+						}
+					],
+					"sid": 125066348965600,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Player",
+									"sid": 811213549333661,
+									"parameters": {
+										"comparison": 1,
+										"number": "0"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 907358648641731,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Player",
+									"sid": 593036154363656,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 111071045955364
+						}
+					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Saida de mapa",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 739738170916317,
+									"parameters": {
+										"object": "Trigger_Saida"
+									}
+								},
+								{
+									"id": "compare-size",
+									"objectClass": "SalasDisponiveis",
+									"sid": 520965204514632,
+									"parameters": {
+										"axis": "x",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 391959656301292,
+									"parameters": {
+										"variable": "SorteioSala",
+										"value": "int(random(SalasDisponiveis.Width))"
+									}
+								},
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 693668093993968,
+									"parameters": {
+										"layout": "SalasDisponiveis.At(SorteioSala)"
+									}
+								},
+								{
+									"id": "delete",
+									"objectClass": "SalasDisponiveis",
+									"sid": 615304306541921,
+									"parameters": {
+										"index": "SorteioSala",
+										"axis": "x"
+									}
+								}
+							],
+							"sid": 943232436821543
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 902213045884684,
+									"parameters": {
+										"object": "Trigger_Saida"
+									}
+								},
+								{
+									"id": "compare-size",
+									"objectClass": "SalasDisponiveis",
+									"sid": 985821027363925,
+									"parameters": {
+										"axis": "x",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 421264231119878,
+									"parameters": {
+										"layout": "Cutscene_1"
+									}
+								}
+							],
+							"sid": 594719827947079
+						}
+					],
+					"sid": 379484623253199
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Movimentação do teclado",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 878729146093164
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 810963667430275,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 963334206147875,
+									"parameters": {
+										"animation": "Player.Direcao",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 455973840338949
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 959847683735667,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 148826932677548,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 440858480592980,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Direita\""
+									}
+								}
+							],
+							"sid": 371604363983845
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 630226878989747,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 449460656209798,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 639212242008261,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Esquerda\""
+									}
+								}
+							],
+							"sid": 378265228194507
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 480538446123005,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 808004520462777,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 149383249275070,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Cima\""
+									}
+								}
+							],
+							"sid": 480216399557448
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 657782236654954,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Player",
+									"sid": 973799742834717,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player",
+									"sid": 672633978465730,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Baixo\""
+									}
+								}
+							],
+							"sid": 335911747362997
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Player",
+									"sid": 749735831364616,
+									"behaviorType": "8Direções"
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 339222567457148,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 824379924354187,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 806026079758459
+						}
+					],
+					"sid": 342438123465273
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Dano",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 279441491832389,
+									"parameters": {
+										"object": "Hitbox_Ataque_Inimigo"
+									}
+								},
+								{
+									"id": "is-flashing",
+									"objectClass": "Player",
+									"sid": 797826864274394,
+									"behaviorType": "Piscar",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 399464658078135,
+									"parameters": {
+										"variable": "VidaAtual",
+										"value": "1"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Player",
+									"sid": 816593192538187,
+									"behaviorType": "Piscar",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "1.0"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 955922149983071,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 901207530449889
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 282714614598838
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "HUD_Vida",
+									"sid": 823567785454202,
+									"parameters": {
+										"width": "VidaAtual*32"
+									}
+								}
+							],
+							"sid": 121957428069851
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 844635778591110,
+									"parameters": {
+										"variable": "VidaAtual",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 572134807100093,
+									"parameters": {
+										"layout": "Game_Over"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 146913443909887,
+									"parameters": {
+										"variable": "VidaAtual",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 700638891999808
+						}
+					],
+					"sid": 543781943232500
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Tiro",
+					"description": "E armas em geral",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 303552284332612
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 849532942858242,
+									"parameters": {
+										"variable": "JogoPausado"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "Cajado",
+									"sid": 345385319019125,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Cajado",
+									"sid": 614161094213413,
+									"parameters": {
+										"x": "Player.X + cos(Cajado.Angle) * 30",
+										"y": "Player.Y + sin(Cajado.Angle) * 30"
+									}
+								}
+							],
+							"sid": 682540420307860
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 892319445275558,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Cajado",
+									"sid": 373541958678546,
+									"parameters": {
+										"instance-variable": "CD_Tiro"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 960322198810323,
+									"parameters": {
+										"variable": "JogoPausado"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Menu_Emote",
+									"sid": 638713584256863,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Cajado",
+									"sid": 762247705459560,
+									"parameters": {
+										"object": "Projetil_Cajado",
+										"layer": "1",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 521236693366321,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Cajado",
+									"sid": 732816816641868,
+									"parameters": {
+										"instance-variable": "CD_Tiro",
+										"value": "false"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 534333138087103,
+									"parameters": {
+										"seconds": "Player.Velocidade_Ataque",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Cajado",
+									"sid": 500852481596109,
+									"parameters": {
+										"instance-variable": "CD_Tiro",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 976359979018902
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 676983603015516,
+									"parameters": {
+										"first-value": "Mouse.Y",
+										"comparison": 4,
+										"second-value": "Player.Y"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 397989599321051,
+									"parameters": {
+										"variable": "JogoPausado"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-object",
+									"objectClass": "Cajado",
+									"sid": 528538485942691,
+									"parameters": {
+										"where": "in-front",
+										"object": "Player"
+									}
+								}
+							],
+							"sid": 472656821844642
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 716217889225119,
+									"parameters": {
+										"first-value": "Mouse.Y",
+										"comparison": 2,
+										"second-value": "Player.Y"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 418442804945369,
+									"parameters": {
+										"variable": "JogoPausado"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-object",
+									"objectClass": "Cajado",
+									"sid": 428498623630215,
+									"parameters": {
+										"where": "in-front",
+										"object": "Player"
+									}
+								}
+							],
+							"sid": 672287960930486
+						}
+					],
+					"sid": 254886986656338
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Coleta",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 970414227034598,
+									"parameters": {
+										"object": "Moeda"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Moeda",
+									"sid": 246790113326569
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 438532128587536,
+									"parameters": {
+										"variable": "Contagem_Moeda",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 962134399929521
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 250404003654636
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Texto_Moedas",
+									"sid": 780096747792987,
+									"parameters": {
+										"text": "Contagem_Moeda"
+									}
+								}
+							],
+							"sid": 927522883795325
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 100310444141161,
+									"parameters": {
+										"object": "Item_Bola_De_Cristal"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 849350572027790,
+									"parameters": {
+										"instance-variable": "Dano_Base",
+										"value": "Player.Dano_Base * 1.15"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 236871759472244,
+									"parameters": {
+										"instance-variable": "Velocidade_Ataque",
+										"value": "Player.Velocidade_Ataque * 0.95"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Item_Bola_De_Cristal",
+									"sid": 137279534921684
+								}
+							],
+							"sid": 675222069384338
+						}
+					],
+					"sid": 584128082848403
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Emote",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 551438997813429,
+									"parameters": {
+										"key": 71
+									}
+								}
+							],
+							"actions": [],
+							"sid": 454774984183633,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-visible",
+											"objectClass": "Menu_Emote",
+											"sid": 603070309835133
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Menu_Emote",
+											"sid": 893117715514448,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Nome_Emote",
+											"sid": 302695374454566,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 298555785402958
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 350604335805688
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Menu_Emote",
+											"sid": 610105371671782,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Nome_Emote",
+											"sid": 336186671458032,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 262172791899984
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 585214618271210,
+									"parameters": {
+										"object": "Nome_Emote"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Nome_Emote",
+									"sid": 129195757718134
+								}
+							],
+							"actions": [
+								{
+									"id": "set-font-color",
+									"objectClass": "Nome_Emote",
+									"sid": 553993882339086,
+									"parameters": {
+										"color": "rgbEx(155, 155, 155)"
+									}
+								}
+							],
+							"sid": 826119428148052
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 901474329875318,
+									"parameters": {
+										"object": "Nome_Emote"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Nome_Emote",
+									"sid": 947364738072087
+								}
+							],
+							"actions": [
+								{
+									"id": "set-font-color",
+									"objectClass": "Nome_Emote",
+									"sid": 338770658695540,
+									"parameters": {
+										"color": "rgbEx(0, 0, 0)"
+									}
+								}
+							],
+							"sid": 432635707422857
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 438507223945583,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Nome_Emote"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Nome_Emote",
+									"sid": 554028125728989
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 243450580128350,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 670376487618693,
+									"parameters": {
+										"animation": "Nome_Emote.Text",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 205641449552849,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 863535003378106,
+											"parameters": {
+												"object": "Nome_Emote"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Nome_Emote",
+											"sid": 389620158627201,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Menu_Emote",
+											"sid": 974624910449224,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 149236761208624
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-animation-finished",
+									"objectClass": "Player",
+									"sid": 195976931606377
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 732332360575081,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 117364578369726,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 735464885057576,
+									"parameters": {
+										"animation": "Player.Direcao",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 299450356335732
+						}
+					],
+					"sid": 790162940973223
+				}
+			],
+			"sid": 353279779568665
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Inimigo",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Base e Estados",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "Inimigos",
+									"sid": 429845169959898
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "Inimigos",
+									"sid": 724064719251296,
+									"behaviorType": "ExploradorDeRotas",
+									"parameters": {
+										"speed": "Self.VelocidadeBase"
+									}
+								}
+							],
+							"sid": 786863601880272
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-path-found",
+									"objectClass": "Inimigos",
+									"sid": 127525674809875,
+									"behaviorType": "ExploradorDeRotas"
+								}
+							],
+							"actions": [
+								{
+									"id": "move-along-path",
+									"objectClass": "Inimigos",
+									"sid": 786100737013356,
+									"behaviorType": "ExploradorDeRotas"
+								}
+							],
+							"sid": 538013106262140
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Inimigos",
+									"sid": 385865634357862,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Inimigos",
+									"sid": 868488687382942,
+									"parameters": {
+										"instance-variable": "Estado",
+										"value": "\"Perseguindo\""
+									}
+								},
+								{
+									"id": "stop-timer",
+									"objectClass": "Inimigos",
+									"sid": 534300302442045,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"tag": "\"Memoria\""
+									}
+								}
+							],
+							"sid": 770671359957025
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Inimigos",
+									"sid": 276774716966819,
+									"behaviorType": "CampoDeVisão",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-timer-running",
+									"objectClass": "Inimigos",
+									"sid": 172581551129526,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"tag": "\"Memoria\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "start-timer",
+									"objectClass": "Inimigos",
+									"sid": 676691898371031,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"duration": "3",
+										"type": "once",
+										"tag": "\"Memoria\""
+									}
+								}
+							],
+							"sid": 238024339641349
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "Inimigos",
+									"sid": 458552264146432,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"tag": "\"Memoria\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Inimigos",
+									"sid": 927864910034034,
+									"parameters": {
+										"instance-variable": "Estado",
+										"value": "\"Patrulhando\""
+									}
+								}
+							],
+							"sid": 839196410071465
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 398466644153266
+						}
+					],
+					"sid": 424358267043663
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Perseguicao",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Inimigos",
+									"sid": 249948661347225,
+									"parameters": {
+										"instance-variable": "Estado",
+										"comparison": 0,
+										"value": "\"Perseguindo\""
+									}
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 123517118526758,
+									"parameters": {
+										"interval-seconds": "0.2"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Inimigos",
+									"sid": 809666222349801,
+									"parameters": {
+										"instance-variable": "Atacando"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "find-path",
+									"objectClass": "Inimigos",
+									"sid": 662167122143287,
+									"behaviorType": "ExploradorDeRotas",
+									"parameters": {
+										"x": "Player.X",
+										"y": "Player.Y"
+									}
+								}
+							],
+							"sid": 619039188521811
+						}
+					],
+					"sid": 624777602952262
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Patrulha (Roaming)",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Inimigos",
+									"sid": 410504588535676,
+									"parameters": {
+										"instance-variable": "Estado",
+										"comparison": 0,
+										"value": "\"Patrulhando\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 812877209430899,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving-along-path",
+											"objectClass": "Inimigos",
+											"sid": 293502276847351,
+											"behaviorType": "ExploradorDeRotas",
+											"isInverted": true
+										},
+										{
+											"id": "is-timer-running",
+											"objectClass": "Inimigos",
+											"sid": 536261641936252,
+											"behaviorType": "Cronômetro",
+											"parameters": {
+												"tag": "\"CooldownPatrulha\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "find-path",
+											"objectClass": "Inimigos",
+											"sid": 871583732111652,
+											"behaviorType": "ExploradorDeRotas",
+											"parameters": {
+												"x": "Self.X + random(-200, 200)",
+												"y": "Self.Y + random(-200, 200)"
+											}
+										},
+										{
+											"id": "start-timer",
+											"objectClass": "Inimigos",
+											"sid": 875576568962413,
+											"behaviorType": "Cronômetro",
+											"parameters": {
+												"duration": "random(1,3)",
+												"type": "once",
+												"tag": "\"CooldownPatrulha\""
+											}
+										}
+									],
+									"sid": 150226163520323
+								}
+							]
+						}
+					],
+					"sid": 912048168302225
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Combate e Vida",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Projetil_Cajado",
+									"sid": 670378647289887,
+									"parameters": {
+										"object": "Inimigos"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Inimigos",
+									"sid": 664331030654915,
+									"parameters": {
+										"instance-variable": "Estado",
+										"value": "\"Perseguindo\""
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Inimigos",
+									"sid": 806868821826724,
+									"parameters": {
+										"x": "Self.X + cos(angle(Projetil_Cajado.X, Projetil_Cajado.Y, Self.X, Self.Y)) * 15",
+										"y": "Self.Y + sin(angle(Projetil_Cajado.X, Projetil_Cajado.Y, Self.X, Self.Y)) * 15"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Inimigos",
+									"sid": 381473690590835,
+									"parameters": {
+										"instance-variable": "Vida",
+										"value": "Player.Dano_Base"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Projetil_Cajado",
+									"sid": 135507424811643
+								},
+								{
+									"id": "flash",
+									"objectClass": "Inimigos",
+									"sid": 494811097293026,
+									"behaviorType": "Piscar",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.5"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Projetil_Cajado",
+									"sid": 727457624500263,
+									"parameters": {
+										"object": "Explosao_Efeito",
+										"layer": "\"Camada 1\"",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Inimigos",
+									"sid": 596442279394942,
+									"behaviorType": "ExploradorDeRotas"
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Inimigos",
+									"sid": 294130448434735,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"duration": "3",
+										"type": "once",
+										"tag": "\"Memoria\""
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Inimigos",
+									"sid": 765747661560451,
+									"parameters": {
+										"object": "Texto_Dano",
+										"layer": "\"Camada 1\"",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Texto_Dano",
+									"sid": 333634897440102,
+									"parameters": {
+										"text": "Player.Dano_Base"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Texto_Dano",
+									"sid": 336957760634697,
+									"parameters": {
+										"x": "Inimigos.X",
+										"y": "Inimigos.Y - 50"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Texto_Dano",
+									"sid": 708661222357918,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Dano_Texto\"",
+										"property": "offsetY",
+										"end-value": "Inimigos.Y - 50",
+										"time": "1",
+										"ease": "easeinquad",
+										"destroy-on-complete": "yes",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 458683422275182,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Inimigos",
+											"sid": 884142268106532,
+											"parameters": {
+												"instance-variable": "Vida",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 760286258795783,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 834187326915576,
+													"parameters": {
+														"first-value": "random(100)",
+														"comparison": 3,
+														"second-value": "99"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Inimigos",
+													"sid": 888477402830706,
+													"parameters": {
+														"object": "Moeda",
+														"layer": "1",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "Moeda",
+													"sid": 255385189611500,
+													"parameters": {
+														"angle": "0"
+													}
+												}
+											],
+											"sid": 262358496425906
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Inimigos",
+													"sid": 752999810159772
+												}
+											],
+											"sid": 373221907975095
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 899487200263632,
+													"parameters": {
+														"instance-variable": "Inimigo_TIpo",
+														"comparison": 0,
+														"value": "\"Ranged\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Cajado_Inimigo",
+													"sid": 510423265968336
+												}
+											],
+											"sid": 641018186347553
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 944228390809922,
+													"parameters": {
+														"instance-variable": "Inimigo_TIpo",
+														"comparison": 0,
+														"value": "\"Melee\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Espada_Inimigo",
+													"sid": 694409625923084
+												}
+											],
+											"sid": 299603874282987
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-animation-finished",
+									"objectClass": "Explosao_Efeito",
+									"sid": 814333099951115,
+									"parameters": {
+										"animation": "\"Explosao\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Explosao_Efeito",
+									"sid": 359289934370926
+								}
+							],
+							"sid": 252063306849590
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Melee",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 159634947482982,
+											"parameters": {
+												"object": "Inimigos"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Inimigos",
+											"sid": 289681018070042,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Inimigos",
+											"sid": 157240455971125,
+											"parameters": {
+												"instance-variable": "Inimigo_TIpo",
+												"comparison": 0,
+												"value": "\"Melee\""
+											}
+										},
+										{
+											"id": "has-los-to-object",
+											"objectClass": "Inimigos",
+											"sid": 365657117809330,
+											"behaviorType": "CampoDeVisão",
+											"parameters": {
+												"object": "Player",
+												"image-point": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 957178067284294,
+											"parameters": {
+												"first-value": "distance(Inimigos.X, Inimigos.Y, Player.X, Player.Y)",
+												"comparison": 3,
+												"second-value": "150"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Espada_Inimigo",
+											"sid": 493520265498096,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"comparison": 0,
+												"value": "Inimigos.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Inimigos",
+											"sid": 831505758265941,
+											"parameters": {
+												"instance-variable": "Atacando",
+												"value": "true"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Inimigos",
+											"sid": 968896218242439,
+											"behaviorType": "ExploradorDeRotas"
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 171326572926864,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Inimigos",
+											"sid": 897561237602191,
+											"behaviorType": "Interpolação",
+											"parameters": {
+												"tags": "\"Dash\"",
+												"property": "position",
+												"end-x": "Player.X - cos(angle(Inimigos.X, Inimigos.Y, Player.X, Player.Y)) * 50",
+												"end-y": "Player.Y - sin(angle(Inimigos.X, Inimigos.Y, Player.X, Player.Y)) * 50",
+												"time": "0.2",
+												"ease": "easeoutquad",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "set-angle-toward-position",
+											"objectClass": "Espada_Inimigo",
+											"sid": 629922088055418,
+											"parameters": {
+												"x": "Player.X",
+												"y": "Player.Y"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 754994599099360,
+											"parameters": {
+												"seconds": "0.2",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "Espada_Inimigo",
+											"sid": 919257045906343,
+											"behaviorType": "Interpolação",
+											"parameters": {
+												"tags": "\"Swing\"",
+												"property": "offsetAngle",
+												"end-value": "Espada_Inimigo.Angle + 120",
+												"time": "0.1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Espada_Inimigo",
+											"sid": 734319967494876,
+											"parameters": {
+												"object": "Hitbox_Ataque_Inimigo",
+												"layer": "\"Camada 1\"",
+												"image-point": "1",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 349822666067339,
+											"parameters": {
+												"seconds": "1.0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Inimigos",
+											"sid": 413580731333315,
+											"parameters": {
+												"instance-variable": "Atacando",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 505254356927352
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 255527248955206
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 983798334231154,
+											"parameters": {
+												"object": "Espada_Inimigo"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Inimigos",
+											"sid": 352909269650463,
+											"parameters": {
+												"unique-id": "Espada_Inimigo.Dono_UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Espada_Inimigo",
+											"sid": 634806248185164,
+											"parameters": {
+												"x": "Inimigos.X + cos(Espada_Inimigo.Angle) * 30",
+												"y": "Inimigos.Y + sin(Espada_Inimigo.Angle) * 30"
+											}
+										}
+									],
+									"sid": 966203698440210,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-los-to-object",
+													"objectClass": "Inimigos",
+													"sid": 553542381106333,
+													"behaviorType": "CampoDeVisão",
+													"parameters": {
+														"object": "Player",
+														"image-point": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Inimigos",
+													"sid": 294693376122986,
+													"parameters": {
+														"instance-variable": "Atacando"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-toward-position",
+													"objectClass": "Espada_Inimigo",
+													"sid": 835918336865725,
+													"parameters": {
+														"x": "Player.X",
+														"y": "Player.Y"
+													}
+												}
+											],
+											"sid": 225323712692145
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-start-of-layout",
+											"objectClass": "System",
+											"sid": 835704717101889
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 979426420186121,
+											"parameters": {
+												"object": "Inimigos"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Inimigos",
+											"sid": 883244829597179,
+											"parameters": {
+												"instance-variable": "Inimigo_TIpo",
+												"comparison": 0,
+												"value": "\"Melee\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inimigos",
+											"sid": 416065011051282,
+											"parameters": {
+												"object": "Espada_Inimigo",
+												"layer": "\"Camada 1\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Espada_Inimigo",
+											"sid": 486060801150788,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"value": "Inimigos.UID"
+											}
+										}
+									],
+									"sid": 954601384968805
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "Hitbox_Ataque_Inimigo",
+											"sid": 514970304053680
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 593890055214350,
+											"parameters": {
+												"seconds": "0.4",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Hitbox_Ataque_Inimigo",
+											"sid": 893089219765264
+										}
+									],
+									"sid": 251387446595086
+								}
+							],
+							"sid": 269068201740508
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Sniper",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [],
+							"sid": 118263183515384
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Ranged",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 507286291478204,
+											"parameters": {
+												"object": "Inimigos"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Inimigos",
+											"sid": 249175116858822,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Inimigos",
+											"sid": 484874141577783,
+											"parameters": {
+												"instance-variable": "Inimigo_TIpo",
+												"comparison": 0,
+												"value": "\"Ranged\""
+											}
+										},
+										{
+											"id": "has-los-to-object",
+											"objectClass": "Inimigos",
+											"sid": 221124967515394,
+											"behaviorType": "CampoDeVisão",
+											"parameters": {
+												"object": "Player",
+												"image-point": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 596496651905327,
+											"parameters": {
+												"first-value": "distance(Inimigos.X, Inimigos.Y, Player.X, Player.Y)",
+												"comparison": 3,
+												"second-value": "500"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Cajado_Inimigo",
+											"sid": 989762612649313,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"comparison": 0,
+												"value": "Inimigos.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Inimigos",
+											"sid": 563132822866418,
+											"parameters": {
+												"instance-variable": "Atacando",
+												"value": "true"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Inimigos",
+											"sid": 492900373125767,
+											"behaviorType": "ExploradorDeRotas"
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 518540264012011,
+											"parameters": {
+												"seconds": "0.2",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Cajado_Inimigo",
+											"sid": 865822115518381,
+											"parameters": {
+												"object": "Projetil_Cajado",
+												"layer": "\"Camada 1\"",
+												"image-point": "1",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 500943904014443,
+											"parameters": {
+												"seconds": "1.0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Inimigos",
+											"sid": 715151843379516,
+											"parameters": {
+												"instance-variable": "Atacando",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 491984777472767
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 698050224095132
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 547962446588610,
+											"parameters": {
+												"object": "Cajado_Inimigo"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Inimigos",
+											"sid": 854085176366417,
+											"parameters": {
+												"unique-id": "Cajado_Inimigo.Dono_UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Cajado_Inimigo",
+											"sid": 248605812499707,
+											"parameters": {
+												"x": "Inimigos.X + cos(Cajado_Inimigo.Angle) * 30",
+												"y": "Inimigos.Y + sin(Cajado_Inimigo.Angle) * 30"
+											}
+										}
+									],
+									"sid": 498756995990913,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-los-to-object",
+													"objectClass": "Inimigos",
+													"sid": 348160296042483,
+													"behaviorType": "CampoDeVisão",
+													"parameters": {
+														"object": "Player",
+														"image-point": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-toward-position",
+													"objectClass": "Cajado_Inimigo",
+													"sid": 214450463223289,
+													"parameters": {
+														"x": "Player.X",
+														"y": "Player.Y"
+													}
+												}
+											],
+											"sid": 427532470135033
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-start-of-layout",
+											"objectClass": "System",
+											"sid": 524107357286409
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 826423286886703,
+											"parameters": {
+												"object": "Inimigos"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Inimigos",
+											"sid": 244187660386353,
+											"parameters": {
+												"instance-variable": "Inimigo_TIpo",
+												"comparison": 0,
+												"value": "\"Ranged\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Inimigos",
+											"sid": 844875399147407,
+											"parameters": {
+												"object": "Cajado_Inimigo",
+												"layer": "\"Camada 1\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cajado_Inimigo",
+											"sid": 876250277157574,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"value": "Inimigos.UID"
+											}
+										}
+									],
+									"sid": 217154426098051
+								}
+							],
+							"sid": 605603365522155
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Boss",
+							"description": "Talvez usar musica \"Stalemate (NicolasPL Remix) como theme??????",
+							"isActiveOnStart": true,
+							"children": [],
+							"sid": 202357883794109
+						}
+					],
+					"sid": 237326218830576
+				}
+			],
+			"sid": 667732503685369
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "NPC",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Dialogo",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "NPCs",
+									"sid": 560348758729722,
+									"parameters": {
+										"which": "nearest",
+										"x": "Player.X",
+										"y": "Player.Y",
+										"pick-all-tied": false
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 660582812309693,
+									"parameters": {
+										"first-value": "distance(Player.X, Player.Y, NPCs.X, NPCs.Y)",
+										"comparison": 3,
+										"second-value": "150"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Botao_Aviso_NPC",
+									"sid": 415115013339077,
+									"parameters": {
+										"x": "NPCs.X",
+										"y": "NPCs.Y - 50"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Botao_Aviso_NPC",
+									"sid": 931768398191846,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 202424089793854
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "NPCs",
+									"sid": 864514482783178,
+									"parameters": {
+										"which": "nearest",
+										"x": "Player.X",
+										"y": "Player.Y",
+										"pick-all-tied": false
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 213920949933610,
+									"parameters": {
+										"first-value": "distance(Player.X, Player.Y, NPCs.X, NPCs.Y)",
+										"comparison": 4,
+										"second-value": "150"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Botao_Aviso_NPC",
+									"sid": 960968751222482,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo_NPC",
+									"sid": 968357909947469,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Retrato_NPC",
+									"sid": 365583867902002,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Borda_Retrato_NPC",
+									"sid": 287407994028225,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 808980537424148
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 914560593508495,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "NPCs",
+									"sid": 740012432628092,
+									"parameters": {
+										"which": "nearest",
+										"x": "Player.X",
+										"y": "Player.Y",
+										"pick-all-tied": false
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "NPCs",
+									"sid": 348405857735711,
+									"parameters": {
+										"instance-variable": "Pagina_Dialogo_Atual",
+										"value": "0"
+									}
+								},
+								{
+									"id": "typewriter-text",
+									"objectClass": "Dialogo_NPC",
+									"sid": 125564173378905,
+									"parameters": {
+										"text": "tokenat(NPCs.Fala, NPCs.Pagina_Dialogo_Atual, \"|\")",
+										"duration": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo_NPC",
+									"sid": 353300185992510,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Botao_Aviso_NPC",
+									"sid": 987555201665530,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Retrato_NPC",
+									"sid": 406090139985003,
+									"parameters": {
+										"frame-number": "NPCs.Id_Foto"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Borda_Retrato_NPC",
+									"sid": 429769901369894,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Retrato_NPC",
+									"sid": 777840482433378,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "Retrato_NPC",
+									"sid": 870260035684892,
+									"parameters": {
+										"y": "Retrato_NPC.Ground_Y"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Retrato_NPC",
+									"sid": 990761182826040,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Pulinho\"",
+										"property": "offsetY",
+										"end-value": "Retrato_NPC.Y - 5",
+										"time": "0.15",
+										"ease": "easeoutquad",
+										"destroy-on-complete": "no",
+										"loop": "yes",
+										"ping-pong": "yes",
+										"repeat-count": "0"
+									}
+								}
+							],
+							"sid": 269568755472343
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-typewriter-text-finished",
+									"objectClass": "Dialogo_NPC",
+									"sid": 297206498394130
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-tweens",
+									"objectClass": "Retrato_NPC",
+									"sid": 777882444242178,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Pulinho\""
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "Retrato_NPC",
+									"sid": 307329440345951,
+									"parameters": {
+										"y": "Retrato_NPC.Ground_Y"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Dialogo_NPC",
+									"sid": 671477754614766,
+									"parameters": {
+										"instance-variable": "Terminou_Digitar",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 609710339182004
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 351450809645032,
+									"parameters": {
+										"key": 13
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Dialogo_NPC",
+									"sid": 919324152710134
+								},
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "NPCs",
+									"sid": 236494140015681,
+									"parameters": {
+										"which": "nearest",
+										"x": "Player.X",
+										"y": "Player.Y",
+										"pick-all-tied": false
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Dialogo_NPC",
+									"sid": 764296312840121,
+									"parameters": {
+										"instance-variable": "Terminou_Digitar"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 672265358650190,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 495351492284952,
+											"parameters": {
+												"first-value": "NPCs.Pagina_Dialogo_Atual",
+												"comparison": 2,
+												"second-value": "tokencount(NPCs.Fala, \"|\") - 1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "NPCs",
+											"sid": 270210064542981,
+											"parameters": {
+												"instance-variable": "Pagina_Dialogo_Atual",
+												"value": "1"
+											}
+										},
+										{
+											"id": "typewriter-text",
+											"objectClass": "Dialogo_NPC",
+											"sid": 939817806777151,
+											"parameters": {
+												"text": "tokenat(NPCs.Fala, NPCs.Pagina_Dialogo_Atual, \"|\")",
+												"duration": "1"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "Retrato_NPC",
+											"sid": 801354545190395,
+											"behaviorType": "Interpolação",
+											"parameters": {
+												"tags": "\"Pulinho\"",
+												"property": "offsetY",
+												"end-value": "Retrato_NPC.Y - 5",
+												"time": "0.15",
+												"ease": "easeoutquad",
+												"destroy-on-complete": "no",
+												"loop": "yes",
+												"ping-pong": "yes",
+												"repeat-count": "0"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Dialogo_NPC",
+											"sid": 548176797490301,
+											"parameters": {
+												"instance-variable": "Terminou_Digitar",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 244747977850724
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 719551381720489
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Dialogo_NPC",
+											"sid": 409903894725485,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Borda_Retrato_NPC",
+											"sid": 648906072837041,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Retrato_NPC",
+											"sid": 339013674099306,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "stop-tweens",
+											"objectClass": "Retrato_NPC",
+											"sid": 603105553922873,
+											"behaviorType": "Interpolação",
+											"parameters": {
+												"tags": "\"Pulinho\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "NPCs",
+											"sid": 829468715269442,
+											"parameters": {
+												"instance-variable": "Pagina_Dialogo_Atual",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 290600187380416
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 274110333917965
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Retrato_NPC",
+									"sid": 285982744935105,
+									"parameters": {
+										"instance-variable": "Ground_Y",
+										"value": "Retrato_NPC.Y"
+									}
+								}
+							],
+							"sid": 652888431788077
+						}
+					],
+					"sid": 714369836877987
+				}
+			],
+			"sid": 747536372899491
+		}
+	],
+	"sid": 404931570007090
+}

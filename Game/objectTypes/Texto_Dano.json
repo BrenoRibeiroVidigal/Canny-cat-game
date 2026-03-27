@@ -1,0 +1,16 @@
+{
+	"name": "Texto_Dano",
+	"plugin-id": "Text",
+	"sid": 509811896539638,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Interpolação",
+			"sid": 989718460260107
+		}
+	],
+	"effectTypes": []
+}

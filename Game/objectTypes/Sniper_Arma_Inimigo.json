@@ -1,0 +1,65 @@
+{
+	"name": "Sniper_Arma_Inimigo",
+	"plugin-id": "Sprite",
+	"sid": 385353521341665,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 92,
+						"height": 56,
+						"originX": 0.11956521739130435,
+						"originY": 0.6607142857142857,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2413322,
+						"collisionPoly": {
+							"points": [
+								0.5217391304347826,
+								0.25,
+								0.9891304347826086,
+								0.3392857142857143,
+								0.08695652173913043,
+								0.75,
+								0.043478260869565216,
+								0.75,
+								0.010869565217391304,
+								0.6607142857142857,
+								0.16304347826086957,
+								0.44642857142857145,
+								0.2826086956521739,
+								0.3392857142857143
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Ponto de Imagem 1",
+								"x": 0.9782608695652174,
+								"y": 0.30357142857142855
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 917116457108971,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"name": "Dialogo_NPC",
+	"plugin-id": "Text",
+	"sid": 993740918184821,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Terminou_Digitar",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 532725116780615
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "toon",
+			"name": "Cartum"
+		}
+	]
+}

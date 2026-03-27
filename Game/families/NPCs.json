@@ -1,0 +1,33 @@
+{
+	"name": "NPCs",
+	"plugin-id": "Sprite",
+	"sid": 359976631730883,
+	"instanceVariables": [
+		{
+			"name": "Fala",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 482145464515636
+		},
+		{
+			"name": "Id_Foto",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 613498891398377
+		},
+		{
+			"name": "Pagina_Dialogo_Atual",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 513799929871659
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Npc_mercador"
+	]
+}
