@@ -4,7 +4,15 @@
 	"sid": 199609284133952,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Custa_Dinheiro",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 212013539368811
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",

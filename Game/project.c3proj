@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 47602,
+	"savedWithRelease": 47603,
 	"name": "teste animacao",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -209,7 +209,9 @@
 			"Sniper_Inimigo",
 			"Sniper_Arma_Inimigo",
 			"Laser_Vermelho",
-			"Tiro_Sniper"
+			"Tiro_Sniper",
+			"Pool_Normal",
+			"Texto_Preco_Loja"
 		],
 		"subfolders": [
 			{
@@ -249,7 +251,8 @@
 		"items": [
 			"Inimigos",
 			"NPCs",
-			"Armas_Inimigos"
+			"Armas_Inimigos",
+			"Items_coletaveis"
 		],
 		"subfolders": []
 	},

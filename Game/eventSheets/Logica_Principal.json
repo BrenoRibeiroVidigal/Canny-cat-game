@@ -1072,7 +1072,8 @@
 									"sid": 137279534921684
 								}
 							],
-							"sid": 675222069384338
+							"sid": 675222069384338,
+							"disabled": true
 						}
 					],
 					"sid": 584128082848403
@@ -3327,6 +3328,262 @@
 				}
 			],
 			"sid": 747536372899491
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pool_Items",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 127872277944606
+						}
+					],
+					"actions": [
+						{
+							"id": "clear",
+							"objectClass": "Pool_Normal",
+							"sid": 373618542030788,
+							"parameters": {
+								"value": "0"
+							}
+						},
+						{
+							"id": "push",
+							"objectClass": "Pool_Normal",
+							"sid": 451464555138059,
+							"parameters": {
+								"where": "back",
+								"value": "\"Bola_De_Cristal\"",
+								"axis": "x"
+							}
+						}
+					],
+					"sid": 598977403867572
+				}
+			],
+			"sid": 768524807114077
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Loja",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 319117424210622
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 522601184485161,
+							"parameters": {
+								"object": "Pedestal"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Pedestal",
+							"sid": 595387413249419,
+							"parameters": {
+								"instance-variable": "Custa_Dinheiro"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object-by-name",
+							"objectClass": "System",
+							"sid": 319418181143083,
+							"parameters": {
+								"object-name": "Pool_Normal.At( int(random(Pool_Normal.Width)) )",
+								"layer": "\"Camada 1\"",
+								"x": "Pedestal.X",
+								"y": "Pedestal.Y - 20",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Items_coletaveis",
+							"sid": 996114541675002,
+							"parameters": {
+								"instance-variable": "No_Pedestal",
+								"value": "true"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 582937608612064,
+							"parameters": {
+								"object-to-create": "Texto_Preco_Loja",
+								"layer": "\"Camada 1\"",
+								"x": "Pedestal.X",
+								"y": "Pedestal.Y + 20",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Texto_Preco_Loja",
+							"sid": 808354399488598,
+							"parameters": {
+								"text": "Items_coletaveis.Preco_Base & \" Moedas\""
+							}
+						}
+					],
+					"sid": 360298121052013
+				}
+			],
+			"sid": 572846266320692
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Interacao_Items",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 558796631152712,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 401057715507654,
+							"parameters": {
+								"object": "Items_coletaveis"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 877253747731850,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Items_coletaveis",
+									"sid": 574622158895761,
+									"parameters": {
+										"instance-variable": "No_Pedestal"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 556067746687647,
+									"parameters": {
+										"variable": "Contagem_Moeda",
+										"comparison": 5,
+										"value": "Items_coletaveis.Preco_Base"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 831036529462789,
+									"parameters": {
+										"variable": "Contagem_Moeda",
+										"value": "Items_coletaveis.Preco_Base"
+									}
+								},
+								{
+									"callFunction": "Aplicar_Reliquia",
+									"sid": 808796401131820,
+									"parameters": [
+										"Items_coletaveis.ID_Item"
+									]
+								}
+							],
+							"sid": 678966655001791
+						}
+					]
+				},
+				{
+					"functionName": "Aplicar_Reliquia",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "ID_Do_Item",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 815708304963005
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 671661713350231,
+							"parameters": {
+								"first-value": "ID_Do_Item",
+								"comparison": 0,
+								"second-value": "\"Bola_De_Cristal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 385099868460896,
+							"parameters": {
+								"instance-variable": "Dano_Base",
+								"value": "Player.Dano_Base * 1.15"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 378335652198030,
+							"parameters": {
+								"instance-variable": "Velocidade_Ataque",
+								"value": "Player.Velocidade_Ataque * 0.95"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Item_Bola_De_Cristal",
+							"sid": 510620751818732
+						}
+					],
+					"sid": 412713324208732
+				}
+			],
+			"sid": 144983785419765
 		}
 	],
 	"sid": 404931570007090

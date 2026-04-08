@@ -916,7 +916,9 @@
 					"uid": 58,
 					"sid": 531219233417804,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Custa_Dinheiro": false
+					},
 					"behaviors": {
 						"Sólido": {
 							"properties": {
@@ -961,7 +963,14 @@
 					"uid": 59,
 					"sid": 259955309871056,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Id_Item": "",
+						"Nome_Display": "",
+						"Atributos": "",
+						"Preco_Base": 0,
+						"Tipo": "",
+						"No_Pedestal": false
+					},
 					"behaviors": {
 						"Senóide": {
 							"properties": {
@@ -1300,6 +1309,59 @@
 						"z": 0,
 						"angle": 0
 					}
+				},
+				{
+					"type": "Texto_Preco_Loja",
+					"properties": {
+						"text": "Texto",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 67,
+					"sid": 675147610425687,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 675147610425687,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -381,
+						"y": 855,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
 				}
 			],
 			"sid": 647355040550677,
@@ -1477,10 +1539,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 629,
-						"y": -500,
-						"width": 457,
-						"height": 606,
+						"x": 636,
+						"y": -501.5,
+						"width": 609,
+						"height": 627,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
