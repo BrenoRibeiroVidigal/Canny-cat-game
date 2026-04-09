@@ -46,9 +46,16 @@
 			"sid": 852527758843453
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Senóide2",
+			"sid": 708712170516074
+		}
+	],
 	"effectTypes": [],
 	"members": [
-		"Item_Bola_De_Cristal"
+		"Item_Bola_De_Cristal",
+		"Item_Botas_Rapidez"
 	]
 }

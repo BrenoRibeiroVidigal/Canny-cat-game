@@ -211,7 +211,8 @@
 			"Laser_Vermelho",
 			"Tiro_Sniper",
 			"Pool_Normal",
-			"Texto_Preco_Loja"
+			"Texto_Preco_Loja",
+			"Item_Botas_Rapidez"
 		],
 		"subfolders": [
 			{

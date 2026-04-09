@@ -1041,9 +1041,9 @@
 								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "Player",
-									"sid": 100310444141161,
+									"sid": 384135810971348,
 									"parameters": {
-										"object": "Item_Bola_De_Cristal"
+										"object": "Items_coletaveis"
 									}
 								}
 							],
@@ -1072,8 +1072,7 @@
 									"sid": 137279534921684
 								}
 							],
-							"sid": 675222069384338,
-							"disabled": true
+							"sid": 675222069384338
 						}
 					],
 					"sid": 584128082848403
@@ -3337,6 +3336,10 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Para adicionar os items, só colocar o nome do \"Id_nome\" (tem que ser igual o nome do objeto)"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -3347,25 +3350,138 @@
 					],
 					"actions": [
 						{
-							"id": "clear",
+							"id": "set-size",
 							"objectClass": "Pool_Normal",
-							"sid": 373618542030788,
+							"sid": 236947053451241,
 							"parameters": {
-								"value": "0"
+								"width": "0",
+								"height": "1",
+								"depth": "1"
 							}
 						},
 						{
 							"id": "push",
 							"objectClass": "Pool_Normal",
-							"sid": 451464555138059,
+							"sid": 534951740209017,
 							"parameters": {
 								"where": "back",
-								"value": "\"Bola_De_Cristal\"",
+								"value": "\"Item_Bola_De_Cristal\"",
+								"axis": "x"
+							}
+						},
+						{
+							"id": "push",
+							"objectClass": "Pool_Normal",
+							"sid": 995319229751607,
+							"parameters": {
+								"where": "back",
+								"value": "\"Item_Botas_Rapidez\"",
 								"axis": "x"
 							}
 						}
 					],
 					"sid": 598977403867572
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Pedestal",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 573958419086697
+								}
+							],
+							"actions": [],
+							"sid": 453299206440919,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "Indice_Sorteado",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 739923083277928
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 313188581550449,
+											"parameters": {
+												"object": "Pedestal"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 912486224362828,
+											"parameters": {
+												"variable": "Indice_Sorteado",
+												"value": "int(random(Pool_Normal.width))"
+											}
+										}
+									],
+									"sid": 574020390352275,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Pedestal",
+													"sid": 486273237027642,
+													"parameters": {
+														"instance-variable": "Tipo_Pool",
+														"comparison": 0,
+														"value": "\"Normal\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object-by-name",
+													"objectClass": "System",
+													"sid": 497677096191671,
+													"parameters": {
+														"object-name": "Pool_Normal.At(Indice_Sorteado)",
+														"layer": "\"Camada 1\"",
+														"x": "Pedestal.X",
+														"y": "Pedestal.Y - 20",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "delete",
+													"objectClass": "Pool_Normal",
+													"sid": 901644268277775,
+													"parameters": {
+														"index": "Indice_Sorteado",
+														"axis": "x"
+													}
+												}
+											],
+											"sid": 343569091068112
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 786164117800064
 				}
 			],
 			"sid": 768524807114077
@@ -3447,7 +3563,8 @@
 							}
 						}
 					],
-					"sid": 360298121052013
+					"sid": 360298121052013,
+					"disabled": true
 				}
 			],
 			"sid": 572846266320692
@@ -3481,6 +3598,7 @@
 					],
 					"actions": [],
 					"sid": 877253747731850,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -3522,7 +3640,8 @@
 									]
 								}
 							],
-							"sid": 678966655001791
+							"sid": 678966655001791,
+							"disabled": true
 						}
 					]
 				},
@@ -3580,7 +3699,8 @@
 							"sid": 510620751818732
 						}
 					],
-					"sid": 412713324208732
+					"sid": 412713324208732,
+					"disabled": true
 				}
 			],
 			"sid": 144983785419765

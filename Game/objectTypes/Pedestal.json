@@ -11,6 +11,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 212013539368811
+		},
+		{
+			"name": "Tipo_Pool",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 667749167655504
 		}
 	],
 	"behaviorTypes": [
