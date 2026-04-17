@@ -353,6 +353,10 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "// Sorteia uma sala aleatória do Array, carrega o layout e deleta o índice para que a mesma sala não se repita na run."
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -656,6 +660,10 @@
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
+						{
+							"eventType": "comment",
+							"text": "// O gatilho \"X Está piscando\" funciona como um tempo de invulnerabilidade (I-Frame) para o jogador não tomar hit-kill."
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -1041,9 +1049,9 @@
 								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "Player",
-									"sid": 384135810971348,
+									"sid": 496886259684192,
 									"parameters": {
-										"object": "Items_coletaveis"
+										"object": "Item_Bola_De_Cristal"
 									}
 								}
 							],
@@ -1073,6 +1081,45 @@
 								}
 							],
 							"sid": 675222069384338
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 707905081348140,
+									"parameters": {
+										"object": "Item_Botas_Rapidez"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 979224634980941,
+									"parameters": {
+										"instance-variable": "Velocidade_Movimento",
+										"value": "50"
+									}
+								},
+								{
+									"id": "set-max-speed",
+									"objectClass": "Player",
+									"sid": 715044236556527,
+									"behaviorType": "8Direções",
+									"parameters": {
+										"max-speed": "Player.Velocidade_Movimento"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Item_Botas_Rapidez",
+									"sid": 513626658934487
+								}
+							],
+							"sid": 248206742106382
 						}
 					],
 					"sid": 584128082848403
@@ -1393,6 +1440,10 @@
 								}
 							],
 							"sid": 538013106262140
+						},
+						{
+							"eventType": "comment",
+							"text": "Lógica de Visão: Se o inimigo vê o player, ele persegue e zera a memória. Se perder a visão, o timer começa e ele só volta a patrulhar quando esquecer completamente do jogador."
 						},
 						{
 							"eventType": "block",
@@ -2863,7 +2914,84 @@
 							"title": "Boss",
 							"description": "Talvez usar musica \"Stalemate (NicolasPL Remix) como theme??????",
 							"isActiveOnStart": true,
-							"children": [],
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "Indice_Sorteado",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 552211859654004
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Boss_Floresta",
+											"sid": 352047519626959,
+											"parameters": {
+												"instance-variable": "Vida",
+												"comparison": 3,
+												"value": "0"
+											}
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 896852809303988
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Boss_Floresta",
+											"sid": 543354928539622,
+											"parameters": {
+												"object": "Pedestal",
+												"layer": "\"Camada 1\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 374552481663469,
+											"parameters": {
+												"variable": "Indice_Sorteado",
+												"value": "int(random(Pool_Normal.width))"
+											}
+										},
+										{
+											"id": "create-object-by-name",
+											"objectClass": "System",
+											"sid": 606455671506215,
+											"parameters": {
+												"object-name": "Pool_Normal.At(Indice_Sorteado)",
+												"layer": "\"Camada 1\"",
+												"x": "Pedestal.X",
+												"y": "Pedestal.Y - 20",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "delete",
+											"objectClass": "Pool_Normal",
+											"sid": 113459840516800,
+											"parameters": {
+												"index": "Indice_Sorteado",
+												"axis": "x"
+											}
+										}
+									],
+									"sid": 774596568249619
+								}
+							],
 							"sid": 202357883794109
 						}
 					],
@@ -2992,6 +3120,10 @@
 								}
 							],
 							"sid": 808980537424148
+						},
+						{
+							"eventType": "comment",
+							"text": "O texto do NPC é fatiado usando o caractere \"|\" como separador de páginas na função tokenem e para adicionar um npc novo basta adiciona-lo para a familia \"NPCs\") e mudar o id do retrato"
 						},
 						{
 							"eventType": "block",

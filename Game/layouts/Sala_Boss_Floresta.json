@@ -204,7 +204,8 @@
 						"Direcao": "",
 						"Fazendo_Emote": false,
 						"Dano_Base": 3,
-						"Velocidade_Ataque": 1
+						"Velocidade_Ataque": 1,
+						"Velocidade_Movimento": 500
 					},
 					"behaviors": {
 						"8Direções": {
