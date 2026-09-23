@@ -1,0 +1,89 @@
+{
+	"name": "Pedestal",
+	"plugin-id": "Sprite",
+	"sid": 199609284133952,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Tipo_Pedestal",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 667749167655504
+		},
+		{
+			"name": "Id_Par",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 619337361834932
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 156408692572098
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 65,
+						"height": 24,
+						"originX": 0.49230769230769234,
+						"originY": -0.375,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3819376,
+						"collisionPoly": {
+							"points": [
+								0.2923076923076923,
+								0.041666666666666664,
+								0.7692307692307693,
+								0.041666666666666664,
+								0.8307692307692308,
+								0.08333333333333333,
+								0.8769230769230769,
+								0.16666666666666666,
+								0.9076923076923077,
+								0.25,
+								0.9846153846153847,
+								0.7916666666666666,
+								0.9846153846153847,
+								0.9583333333333334,
+								0.015384615384615385,
+								0.9583333333333334,
+								0.015384615384615385,
+								0.7083333333333334,
+								0.06153846153846154,
+								0.375,
+								0.09230769230769231,
+								0.2916666666666667,
+								0.24615384615384617,
+								0.08333333333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 404281815372923,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

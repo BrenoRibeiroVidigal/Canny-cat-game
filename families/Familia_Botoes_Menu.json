@@ -1,0 +1,14 @@
+{
+	"name": "Familia_Botoes_Menu",
+	"plugin-id": "Sprite",
+	"sid": 532178940862632,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Bota_SalvarESair",
+		"Botao_Opcoes",
+		"Botao_DavyJones",
+		"Botao_Voltar"
+	]
+}

@@ -1,0 +1,60 @@
+{
+	"name": "Botao",
+	"plugin-id": "Sprite",
+	"sid": 715907593965627,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "opcaoSelecionada",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 887152818423466
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5700168,
+						"collisionPoly": {
+							"points": [
+								0.028255528255528257,
+								0.028255528255528257,
+								0.9717444717444716,
+								0.028255528255528257,
+								0.9717444717444716,
+								0.9717444717444716,
+								0.028255528255528257,
+								0.9717444717444716
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 849671551701292,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,88 @@
+{
+	"name": "Inimigos",
+	"plugin-id": "Sprite",
+	"sid": 236396639202437,
+	"instanceVariables": [
+		{
+			"name": "Vida",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 647817763288721
+		},
+		{
+			"name": "Estado",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 339127682270094
+		},
+		{
+			"name": "VelocidadeBase",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 216401100333188
+		},
+		{
+			"name": "CooldownPatrulha",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 156417105838596
+		},
+		{
+			"name": "Atacando",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 514967843101651
+		},
+		{
+			"name": "Inimigo_TIpo",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 718746686269789
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "ExploradorDeRotas",
+			"sid": 829200034867049
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "CampoDeVisão",
+			"sid": 442080174008371
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Piscar",
+			"sid": 354135825048434
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Cronômetro",
+			"sid": 409032575045587
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoverPara",
+			"sid": 238840862672915
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Interpolação",
+			"sid": 290942736820484
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Inimigo",
+		"inimigoPersergidor",
+		"Boss_Floresta",
+		"Sniper_Inimigo"
+	]
+}

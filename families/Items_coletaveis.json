@@ -1,0 +1,61 @@
+{
+	"name": "Items_coletaveis",
+	"plugin-id": "Sprite",
+	"sid": 531997789383212,
+	"instanceVariables": [
+		{
+			"name": "Id_Item",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 431502549652721
+		},
+		{
+			"name": "Nome_Display",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 919598010530882
+		},
+		{
+			"name": "Atributos",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 811468684020075
+		},
+		{
+			"name": "Preco_Base",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 942371445782310
+		},
+		{
+			"name": "Tipo",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 764217873804932
+		},
+		{
+			"name": "No_Pedestal",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 852527758843453
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Senóide2",
+			"sid": 708712170516074
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Item_Bola_De_Cristal",
+		"Item_Botas_Rapidez"
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"name": "Game_Over_Texto",
+	"plugin-id": "Text",
+	"sid": 607520970129547,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Senóide",
+			"sid": 725277780516111
+		}
+	],
+	"effectTypes": []
+}

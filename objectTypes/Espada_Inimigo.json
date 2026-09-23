@@ -1,0 +1,71 @@
+{
+	"name": "Espada_Inimigo",
+	"plugin-id": "Sprite",
+	"sid": 870364466052018,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Interpolação",
+			"sid": 110082340179817
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 91,
+						"height": 31,
+						"originX": 0.10989010989010989,
+						"originY": 0.6774193548387096,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4706777,
+						"collisionPoly": {
+							"points": [
+								0.7445054945054949,
+								0.42741935483870963,
+								0.9862637362637363,
+								1.1102230246251565e-16,
+								0.9862637362637361,
+								0.8387096774193549,
+								0.9120879120879121,
+								0.967741935483871,
+								0.8021978021978022,
+								0.967741935483871,
+								0.01098901098901099,
+								0.8064516129032258,
+								0.02197802197802198,
+								0.5161290322580645
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Ponto de Imagem 1",
+								"x": 0.8571428571428571,
+								"y": 0.7096774193548387
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 320428286598025,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

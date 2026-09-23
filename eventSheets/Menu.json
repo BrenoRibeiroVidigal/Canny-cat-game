@@ -1,0 +1,299 @@
+{
+	"name": "Menu",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Botão do menu",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Se pressionar o botão para baixo e se a variavel opcaoSelecionada for menor que 3, ele adiciona 1 para a variavel"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 488753870657023,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [],
+					"sid": 374352495521858,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Botao",
+									"sid": 261301155581394,
+									"parameters": {
+										"instance-variable": "opcaoSelecionada",
+										"comparison": 2,
+										"value": "Opcao.Count"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Botao",
+									"sid": 589030322017697,
+									"parameters": {
+										"instance-variable": "opcaoSelecionada",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 881560888933399
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Se pressionar para cima, ele subtrai da variavel"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 557969861868290,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [],
+					"sid": 106477556118543,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Botao",
+									"sid": 480435348830148,
+									"parameters": {
+										"instance-variable": "opcaoSelecionada",
+										"comparison": 4,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Botao",
+									"sid": 399685582544207,
+									"parameters": {
+										"instance-variable": "opcaoSelecionada",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 212809749119906
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 949105731593296,
+							"parameters": {
+								"key": 13
+							}
+						}
+					],
+					"actions": [],
+					"sid": 816602004388532,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 504113805280896,
+									"parameters": {
+										"object": "Opcao",
+										"expression": "Opcao.opcao",
+										"comparison": 0,
+										"value": "Botao.opcaoSelecionada"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 772086059305167,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Opcao",
+											"sid": 628591708562313,
+											"parameters": {
+												"instance-variable": "acao",
+												"comparison": 0,
+												"value": "\"novoJogo\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-size",
+											"objectClass": "SalasDisponiveis",
+											"sid": 445058680215988,
+											"parameters": {
+												"width": "0",
+												"height": "1",
+												"depth": "1"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 260990132671238,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Combate_Floresta\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 694530820097590,
+											"parameters": {
+												"where": "back",
+												"value": "\"Teste_Inimigos\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 163912870730225,
+											"parameters": {
+												"layout": "Sala_Inicial"
+											}
+										}
+									],
+									"sid": 820241283225185
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Opcao",
+											"sid": 907047954592735,
+											"parameters": {
+												"instance-variable": "acao",
+												"comparison": 0,
+												"value": "\"carregarJogo\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "load",
+											"objectClass": "System",
+											"sid": 984353627919413,
+											"parameters": {
+												"slot": "\"save\""
+											}
+										}
+									],
+									"sid": 948997284722174
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Compara se a variavel da opção é igual a variavel que a do botao de selecionar"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Opcao",
+							"sid": 707937720258162,
+							"parameters": {
+								"instance-variable": "opcao",
+								"comparison": 0,
+								"value": "Botao.opcaoSelecionada"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Botao",
+							"sid": 838148777367288,
+							"parameters": {
+								"y": "Opcao.Y"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "Opcao",
+							"sid": 664907005943588,
+							"parameters": {
+								"effect": "\"Brilho\"",
+								"parameter-index": "0",
+								"value": "200"
+							}
+						}
+					],
+					"sid": 894386097341536
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Opcao",
+							"sid": 342187954902510,
+							"parameters": {
+								"instance-variable": "opcao",
+								"comparison": 1,
+								"value": "Botao.opcaoSelecionada"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "Opcao",
+							"sid": 809133156683449,
+							"parameters": {
+								"effect": "\"Brilho\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 463002460427708
+				}
+			],
+			"sid": 952206020828135
+		}
+	],
+	"sid": 983279357845693
+}

@@ -1,0 +1,21 @@
+{
+	"name": "Armas_Inimigos",
+	"plugin-id": "Sprite",
+	"sid": 760999140023920,
+	"instanceVariables": [
+		{
+			"name": "UID_Dono",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 325104576928164
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Cajado_Inimigo",
+		"Espada_Inimigo",
+		"Sniper_Arma_Inimigo"
+	]
+}
