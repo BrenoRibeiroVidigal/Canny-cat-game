@@ -42,6 +42,36 @@
 			"sid": 423275569571183
 		},
 		{
+			"eventType": "variable",
+			"name": "Karma",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 764126240318912
+		},
+		{
+			"eventType": "variable",
+			"name": "Posicao_Centro_X",
+			"type": "number",
+			"initialValue": "640",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 946082157903960
+		},
+		{
+			"eventType": "variable",
+			"name": "Limite_Deslocamento",
+			"type": "number",
+			"initialValue": "197",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 301411843739247
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Pause",
@@ -639,6 +669,36 @@
 								}
 							],
 							"sid": 266321499856951
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-load-complete",
+									"objectClass": "System",
+									"sid": 738177725254142
+								}
+							],
+							"actions": [
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 736737215102705,
+									"parameters": {
+										"time-scale": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 168724862192507,
+									"parameters": {
+										"variable": "JogoPausado",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 251825382486394
 						}
 					],
 					"sid": 673810375327481
@@ -1573,6 +1633,184 @@
 									"sid": 119271606970429
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 622575845025443,
+									"parameters": {
+										"object": "Items_coletaveis"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Items_coletaveis",
+									"sid": 516957783418883,
+									"parameters": {
+										"instance-variable": "Tipo",
+										"comparison": 0,
+										"value": "\"Anjo\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 568543707300326,
+									"parameters": {
+										"variable": "Karma",
+										"value": "10"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 522515590491151,
+									"parameters": {
+										"variable": "Karma",
+										"value": "clamp(Karma, -100, 100)"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Barra_Karma",
+									"sid": 161923876428038,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Barra_Karma",
+									"sid": 975554241054101,
+									"behaviorType": "Esmaecer"
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Indicador_Karma",
+									"sid": 676498831996401,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Indicador_Karma",
+									"sid": 542546907764349,
+									"behaviorType": "Esmaecer"
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Indicador_Karma",
+									"sid": 434755530124459,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Indicador\"",
+										"property": "offsetX",
+										"end-value": "Posicao_Centro_X + (Karma / 100) * Limite_Deslocamento",
+										"time": "1",
+										"ease": "easeoutcubic",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 779328388609264
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 275090472283540,
+									"parameters": {
+										"object": "Items_coletaveis"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Items_coletaveis",
+									"sid": 876317493741371,
+									"parameters": {
+										"instance-variable": "Tipo",
+										"comparison": 0,
+										"value": "\"Demonio\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 876433013928877,
+									"parameters": {
+										"variable": "Karma",
+										"value": "10"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 139069105043053,
+									"parameters": {
+										"variable": "Karma",
+										"value": "clamp(Karma, -100, 100)"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Barra_Karma",
+									"sid": 855016285290162,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Barra_Karma",
+									"sid": 281075686977060,
+									"behaviorType": "Esmaecer"
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Indicador_Karma",
+									"sid": 873245475030747,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Indicador_Karma",
+									"sid": 734858059736861,
+									"behaviorType": "Esmaecer"
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Indicador_Karma",
+									"sid": 778882987429026,
+									"behaviorType": "Interpolação",
+									"parameters": {
+										"tags": "\"Indicador\"",
+										"property": "offsetX",
+										"end-value": "Posicao_Centro_X + (Karma / 100) * Limite_Deslocamento",
+										"time": "1",
+										"ease": "easeoutcubic",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 336581589133116
 						}
 					],
 					"sid": 584128082848403

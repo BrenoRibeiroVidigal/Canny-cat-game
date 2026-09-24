@@ -1,0 +1,66 @@
+{
+	"name": "Barra_Karma",
+	"plugin-id": "Sprite",
+	"sid": 754445435193326,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Esmaecer",
+			"sid": 351669444889129
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 830,
+						"height": 155,
+						"originX": 0.49594394527261587,
+						"originY": 0.6682551319648092,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4791011,
+						"collisionPoly": {
+							"points": [
+								0.07668215233816622,
+								0,
+								0.9547707780273638,
+								0,
+								0.9930595262405554,
+								0,
+								1,
+								0.05241935483870972,
+								1,
+								0.8852639296187683,
+								0.9381789871349805,
+								1,
+								0.07030069430263426,
+								1,
+								0,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 216314135414606,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

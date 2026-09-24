@@ -1191,7 +1191,7 @@
 						"Nome_Display": "",
 						"Atributos": "",
 						"Preco_Base": 0,
-						"Tipo": "",
+						"Tipo": "Anjo",
 						"No_Pedestal": false
 					},
 					"behaviors": {
@@ -1260,7 +1260,7 @@
 						"Nome_Display": "",
 						"Atributos": "",
 						"Preco_Base": 0,
-						"Tipo": "",
+						"Tipo": "Demonio",
 						"No_Pedestal": false
 					},
 					"behaviors": {

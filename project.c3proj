@@ -85,6 +85,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Fade",
+			"name": "Esmaecer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Flash",
 			"name": "Piscar",
 			"author": "Scirra",
@@ -215,7 +222,9 @@
 			"Item_Botas_Rapidez",
 			"Pool_Demonio",
 			"Seta_Menu",
-			"tt"
+			"tt",
+			"Indicador_Karma",
+			"Barra_Karma"
 		],
 		"subfolders": [
 			{

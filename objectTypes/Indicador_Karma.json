@@ -1,0 +1,63 @@
+{
+	"name": "Indicador_Karma",
+	"plugin-id": "Sprite",
+	"sid": 530841364904695,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Interpolação",
+			"sid": 882519299438146
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Esmaecer",
+			"sid": 298391418238598
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 289,
+						"height": 359,
+						"originX": 0.5017301038062284,
+						"originY": 0.5236768802228412,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 659532,
+						"collisionPoly": {
+							"points": [
+								0.5017301038062284,
+								0.002785515320334262,
+								0.9930795847750865,
+								0.4763231197771588,
+								0.4982698961937716,
+								0.9944289693593314,
+								0.006920415224913495,
+								0.4735376044568245
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 157849447428706,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
