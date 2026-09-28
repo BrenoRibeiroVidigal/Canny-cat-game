@@ -95,92 +95,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Boss_Floresta",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 51,
-					"sid": 967989432213026,
-					"tags": "",
-					"instanceVariables": {
-						"Vida": 1,
-						"Estado": "Patrulhando",
-						"VelocidadeBase": 500,
-						"CooldownPatrulha": 0,
-						"Atacando": false,
-						"Inimigo_TIpo": ""
-					},
-					"behaviors": {
-						"ExploradorDeRotas": {
-							"properties": {
-								"cell-size": 30,
-								"cell-border": -1,
-								"obstacles": "solids",
-								"max-speed": 1,
-								"acceleration": 1000,
-								"deceleration": 2000,
-								"rotate-speed": 135,
-								"rotate-object": true,
-								"diagonals": true,
-								"direct-movement": "to-destination",
-								"enabled": true
-							}
-						},
-						"CampoDeVisão": {
-							"properties": {
-								"obstacles": "solids",
-								"range": 250,
-								"cone-of-view": 180,
-								"use-collision-cells": true
-							}
-						},
-						"Piscar": {
-							"properties": {}
-						},
-						"Cronômetro": {
-							"properties": {}
-						},
-						"MoverPara": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": true,
-								"stop-on-solids": false,
-								"enabled": true
-							}
-						},
-						"Interpolação": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 830,
-						"y": 194,
-						"width": 140,
-						"height": 106,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
 					"type": "Player",
 					"properties": {
 						"initially-visible": true,
@@ -322,6 +236,127 @@
 						"y": -367,
 						"width": 64,
 						"height": 43,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Linha_Aviso",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 72,
+					"sid": 714852050674273,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 499.5631103515625,
+						"y": -302.3357835158909,
+						"width": 35,
+						"height": 511.2676211453745,
+						"originX": 1.75,
+						"originY": 0.4939759036144578,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Boss_Floresta",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 51,
+					"sid": 595986606227698,
+					"tags": "",
+					"instanceVariables": {
+						"Vida": 20,
+						"Estado": "Patrulhando",
+						"VelocidadeBase": 60,
+						"CooldownPatrulha": 0,
+						"Atacando": false,
+						"Inimigo_TIpo": "",
+						"Contagem_Ataques": 0,
+						"Acao_Atual": 0
+					},
+					"behaviors": {
+						"ExploradorDeRotas": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 1,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
+								"direct-movement": "to-destination",
+								"enabled": true
+							}
+						},
+						"CampoDeVisão": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 250,
+								"cone-of-view": 180,
+								"use-collision-cells": true
+							}
+						},
+						"Piscar": {
+							"properties": {}
+						},
+						"Cronômetro": {
+							"properties": {}
+						},
+						"MoverPara": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						},
+						"Interpolação": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 859.8872661842648,
+						"y": 281.29868313289427,
+						"width": 128.70154185022028,
+						"height": 100.98127753303959,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

@@ -1,0 +1,70 @@
+{
+	"name": "Projetil_Boss",
+	"plugin-id": "Sprite",
+	"sid": 703386120728464,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 427141421380849
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 142,
+						"height": 149,
+						"originX": 0.43661971830985913,
+						"originY": 0.5503355704697986,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9234827,
+						"collisionPoly": {
+							"points": [
+								0.3873239436619718,
+								0.006711409395973154,
+								0.47183098591549294,
+								0.006711409395973154,
+								0.9507042253521126,
+								0.3624161073825503,
+								0.9929577464788732,
+								0.4429530201342282,
+								0.9929577464788732,
+								0.5234899328859061,
+								0.8873239436619719,
+								0.9530201342281879,
+								0.16901408450704225,
+								0.9932885906040269,
+								0.035211267605633804,
+								0.6845637583892618,
+								0.014084507042253521,
+								0.4966442953020134,
+								0.007042253521126761,
+								0.08053691275167785
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 367368521494657,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

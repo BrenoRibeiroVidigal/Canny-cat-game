@@ -4,7 +4,15 @@
 	"sid": 644018726125349,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Acao_Atual",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 969328704704270
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

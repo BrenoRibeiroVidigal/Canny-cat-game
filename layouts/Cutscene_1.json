@@ -24,7 +24,9 @@
 						"VelocidadeBase": 500,
 						"CooldownPatrulha": 0,
 						"Atacando": false,
-						"Inimigo_TIpo": ""
+						"Inimigo_TIpo": "",
+						"Contagem_Ataques": 0,
+						"Acao_Atual": 0
 					},
 					"behaviors": {
 						"ExploradorDeRotas": {

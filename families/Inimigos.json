@@ -44,6 +44,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 718746686269789
+		},
+		{
+			"name": "Contagem_Ataques",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 801750113753198
 		}
 	],
 	"behaviorTypes": [

@@ -224,7 +224,11 @@
 			"Seta_Menu",
 			"tt",
 			"Indicador_Karma",
-			"Barra_Karma"
+			"Barra_Karma",
+			"Projetil_Boss",
+			"Linha_Aviso",
+			"Marca_Chao",
+			"Explosao_Dano"
 		],
 		"subfolders": [
 			{

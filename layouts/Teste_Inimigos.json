@@ -93,7 +93,8 @@
 						"VelocidadeBase": 100,
 						"CooldownPatrulha": 0,
 						"Atacando": false,
-						"Inimigo_TIpo": ""
+						"Inimigo_TIpo": "",
+						"Contagem_Ataques": 0
 					},
 					"behaviors": {
 						"ExploradorDeRotas": {
@@ -180,6 +181,7 @@
 						"CooldownPatrulha": 0,
 						"Atacando": false,
 						"Inimigo_TIpo": "",
+						"Contagem_Ataques": 0,
 						"encontrou": false,
 						"direcao": ""
 					},

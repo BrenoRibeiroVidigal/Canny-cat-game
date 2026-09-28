@@ -423,7 +423,8 @@
 						"VelocidadeBase": 100,
 						"CooldownPatrulha": 0,
 						"Atacando": false,
-						"Inimigo_TIpo": "Melee"
+						"Inimigo_TIpo": "Melee",
+						"Contagem_Ataques": 0
 					},
 					"behaviors": {
 						"ExploradorDeRotas": {
@@ -510,6 +511,7 @@
 						"CooldownPatrulha": 0,
 						"Atacando": false,
 						"Inimigo_TIpo": "Ranged",
+						"Contagem_Ataques": 0,
 						"encontrou": false,
 						"direcao": ""
 					},
@@ -977,7 +979,8 @@
 						"VelocidadeBase": 100,
 						"CooldownPatrulha": 0,
 						"Atacando": false,
-						"Inimigo_TIpo": "Sniper"
+						"Inimigo_TIpo": "Sniper",
+						"Contagem_Ataques": 0
 					},
 					"behaviors": {
 						"ExploradorDeRotas": {
@@ -1299,92 +1302,6 @@
 					}
 				},
 				{
-					"type": "Boss_Floresta",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 72,
-					"sid": 754560848419368,
-					"tags": "",
-					"instanceVariables": {
-						"Vida": 1,
-						"Estado": "Patrulhando",
-						"VelocidadeBase": 500,
-						"CooldownPatrulha": 0,
-						"Atacando": false,
-						"Inimigo_TIpo": ""
-					},
-					"behaviors": {
-						"ExploradorDeRotas": {
-							"properties": {
-								"cell-size": 30,
-								"cell-border": -1,
-								"obstacles": "solids",
-								"max-speed": 1,
-								"acceleration": 1000,
-								"deceleration": 2000,
-								"rotate-speed": 135,
-								"rotate-object": false,
-								"diagonals": true,
-								"direct-movement": "to-destination",
-								"enabled": true
-							}
-						},
-						"CampoDeVisão": {
-							"properties": {
-								"obstacles": "solids",
-								"range": 250,
-								"cone-of-view": 180,
-								"use-collision-cells": true
-							}
-						},
-						"Piscar": {
-							"properties": {}
-						},
-						"Cronômetro": {
-							"properties": {}
-						},
-						"MoverPara": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": true,
-								"stop-on-solids": false,
-								"enabled": true
-							}
-						},
-						"Interpolação": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1414,
-						"y": 558,
-						"width": 157,
-						"height": 140,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
 					"type": "Pedestal",
 					"properties": {
 						"initially-visible": true,
@@ -1418,6 +1335,161 @@
 						"height": 24,
 						"originX": 0.49230769230769234,
 						"originY": -0.375,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Projetil_Boss",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 80,
+					"sid": 988081315437606,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Projétil": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1750,
+						"y": -228,
+						"width": 40.327999999999996,
+						"height": 39.336,
+						"originX": 0.43661971830985913,
+						"originY": 0.5503355704697986,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Linha_Aviso",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 81,
+					"sid": 782142563536913,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2138,
+						"y": -537,
+						"width": 35,
+						"height": 1022,
+						"originX": 1.75,
+						"originY": 0.4939759036144578,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Marca_Chao",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 82,
+					"sid": 455143590502429,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1889,
+						"y": -580,
+						"width": 226,
+						"height": 198,
+						"originX": 0.48672566371681414,
+						"originY": 0.6212121212121212,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Explosao_Dano",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 83,
+					"sid": 194122517134214,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Esmaecer": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2373,
+						"y": -533,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

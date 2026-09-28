@@ -3631,6 +3631,595 @@
 							"isActiveOnStart": true,
 							"children": [
 								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Combate",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-start-of-layout",
+													"objectClass": "System",
+													"sid": 511494737567828
+												},
+												{
+													"id": "is-timer-paused",
+													"objectClass": "Inimigos",
+													"sid": 962723729163108,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"tag": "\"Decidir_Ataque\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "start-timer",
+													"objectClass": "Inimigos",
+													"sid": 329187593402026,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"duration": "2",
+														"type": "once",
+														"tag": "\"Decidir_Ataque\""
+													}
+												}
+											],
+											"sid": 102717391272072
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-timer",
+													"objectClass": "Inimigos",
+													"sid": 177749652575709,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"tag": "\"Decidir_Ataque\""
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 986788051205153,
+													"parameters": {
+														"instance-variable": "Estado",
+														"comparison": 0,
+														"value": "\"Perseguindo\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Inimigos",
+													"sid": 699432282617787,
+													"parameters": {
+														"instance-variable": "Contagem_Ataques",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 392715264454662,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Inimigos",
+															"sid": 996295203461832,
+															"parameters": {
+																"instance-variable": "Contagem_Ataques",
+																"comparison": 4,
+																"value": "3"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Inimigos",
+															"sid": 541825743231129,
+															"parameters": {
+																"instance-variable": "Estado",
+																"value": "\"Fadiga\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Inimigos",
+															"sid": 451651656154958,
+															"parameters": {
+																"instance-variable": "Contagem_Ataques",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 575044044815533,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Inimigos",
+																	"sid": 140678368607338,
+																	"parameters": {
+																		"instance-variable": "Contagem_Ataques",
+																		"comparison": 3,
+																		"value": "3"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "Inimigos",
+																	"sid": 516925844760745,
+																	"parameters": {
+																		"instance-variable": "Estado",
+																		"value": "choose(\"Ataque_Tiros\", \"Ataque_Dash\", \"Ataque_Area\")"
+																	}
+																}
+															],
+															"sid": 868657482798003
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 374482929838057,
+													"parameters": {
+														"instance-variable": "Estado",
+														"comparison": 0,
+														"value": "\"Ataque_Tiros\""
+													}
+												},
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 691127769101048
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "Inimigos",
+													"sid": 809147439066889,
+													"behaviorType": "ExploradorDeRotas"
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 550010223369040,
+													"parameters": {
+														"object-to-create": "Projetil_Boss",
+														"layer": "0",
+														"x": "Boss_Floresta.X",
+														"y": "Boss_Floresta.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "Projetil_Boss",
+													"sid": 100327303419588,
+													"parameters": {
+														"angle": "angle(Boss_Floresta.X, Boss_Floresta.Y, Player.X, Player.Y)"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 204367150029194,
+													"parameters": {
+														"object-to-create": "Projetil_Boss",
+														"layer": "0",
+														"x": "Boss_Floresta.X",
+														"y": "Boss_Floresta.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "Projetil_Boss",
+													"sid": 608394664511063,
+													"parameters": {
+														"angle": "angle(Boss_Floresta.X, Boss_Floresta.Y, Player.X, Player.Y) + 20"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 440835930524915,
+													"parameters": {
+														"object-to-create": "Projetil_Boss",
+														"layer": "0",
+														"x": "Boss_Floresta.X",
+														"y": "Boss_Floresta.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "Projetil_Boss",
+													"sid": 942677417785395,
+													"parameters": {
+														"angle": "angle(Boss_Floresta.X, Boss_Floresta.Y, Player.X, Player.Y) - 20"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 674365104262640,
+													"parameters": {
+														"seconds": "0.5",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Inimigos",
+													"sid": 761453076497094,
+													"parameters": {
+														"instance-variable": "Estado",
+														"value": "\"Perseguindo\""
+													}
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Inimigos",
+													"sid": 792865769630293,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"duration": "2.5",
+														"type": "once",
+														"tag": "\"Decidir_Ataque\""
+													}
+												}
+											],
+											"sid": 298490934931238
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 909050065823254,
+													"parameters": {
+														"instance-variable": "Estado",
+														"comparison": 0,
+														"value": "\"Ataque_Dash\""
+													}
+												},
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 834571306341387
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "Inimigos",
+													"sid": 397595925095633,
+													"behaviorType": "ExploradorDeRotas"
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 778038391367360,
+													"parameters": {
+														"object-to-create": "Linha_Aviso",
+														"layer": "0",
+														"x": "Boss_Floresta.X",
+														"y": "Boss_Floresta.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "Linha_Aviso",
+													"sid": 396138664426759,
+													"parameters": {
+														"angle": "angle(Boss_Floresta.X, Boss_Floresta.Y, Player.X, Player.Y)"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 579755697110700,
+													"parameters": {
+														"seconds": "0.8",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Linha_Aviso",
+													"sid": 133185204160189
+												},
+												{
+													"id": "find-path",
+													"objectClass": "Inimigos",
+													"sid": 395205140310915,
+													"behaviorType": "ExploradorDeRotas",
+													"parameters": {
+														"x": "Player.X",
+														"y": "Player.Y"
+													}
+												},
+												{
+													"id": "set-max-speed",
+													"objectClass": "Inimigos",
+													"sid": 632498598940120,
+													"behaviorType": "ExploradorDeRotas",
+													"parameters": {
+														"speed": "600"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 919381553903100,
+													"parameters": {
+														"seconds": "1",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-max-speed",
+													"objectClass": "Inimigos",
+													"sid": 680961012939281,
+													"behaviorType": "ExploradorDeRotas",
+													"parameters": {
+														"speed": "60"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Inimigos",
+													"sid": 309771765224868,
+													"parameters": {
+														"instance-variable": "Estado",
+														"value": "\"Perseguindo\""
+													}
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Inimigos",
+													"sid": 378281697508612,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"duration": "2",
+														"type": "once",
+														"tag": "\"Decidir_Ataque\""
+													}
+												}
+											],
+											"sid": 893287607290456
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 115602495924755,
+													"parameters": {
+														"instance-variable": "Estado",
+														"comparison": 0,
+														"value": "\"Ataque_Area\""
+													}
+												},
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 530851473566817
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "Inimigos",
+													"sid": 528997696076255,
+													"behaviorType": "ExploradorDeRotas"
+												}
+											],
+											"sid": 299133233912825,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "repeat",
+															"objectClass": "System",
+															"sid": 487420168779877,
+															"parameters": {
+																"count": "3"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 897897107256479,
+															"parameters": {
+																"seconds": "0.3",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 730126069900627,
+															"parameters": {
+																"object-to-create": "Marca_Chao",
+																"layer": "0",
+																"x": "Player.X + random(-120, 120)",
+																"y": "Player.Y + random(-120, 120)",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 378095730057356,
+															"parameters": {
+																"seconds": "1",
+																"use-timescale": true
+															}
+														}
+													],
+													"sid": 439635204456123,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "System",
+																	"sid": 109495652977043,
+																	"parameters": {
+																		"object": "Marca_Chao"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 579146742463423,
+																	"parameters": {
+																		"object-to-create": "Explosao_Dano",
+																		"layer": "0",
+																		"x": "Marca_Chao.X",
+																		"y": "Marca_Chao.Y",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
+																	"id": "destroy",
+																	"objectClass": "Marca_Chao",
+																	"sid": 662724605354028
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "Inimigos",
+																	"sid": 557129328684294,
+																	"parameters": {
+																		"instance-variable": "Estado",
+																		"value": "\"Perseguindo\""
+																	}
+																},
+																{
+																	"id": "start-timer",
+																	"objectClass": "Inimigos",
+																	"sid": 137094529083315,
+																	"behaviorType": "Cronômetro",
+																	"parameters": {
+																		"duration": "2.5",
+																		"type": "once",
+																		"tag": "\"Decidir_Ataque\""
+																	}
+																}
+															],
+															"sid": 379468248215873
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 920155734534544,
+													"parameters": {
+														"instance-variable": "Estado",
+														"comparison": 0,
+														"value": "\"Fadiga\""
+													}
+												},
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 894058478276534
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "Inimigos",
+													"sid": 151988830919544,
+													"behaviorType": "ExploradorDeRotas"
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Inimigos",
+													"sid": 455190206999886,
+													"parameters": {
+														"animation": "\"Cansado\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 733721146844857,
+													"parameters": {
+														"seconds": "3.5",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Inimigos",
+													"sid": 302429058413613,
+													"parameters": {
+														"instance-variable": "Estado",
+														"value": "\"Perseguindo\""
+													}
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Inimigos",
+													"sid": 475534601002673,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"duration": "2",
+														"type": "once",
+														"tag": "\"Decidir_Ataque\""
+													}
+												}
+											],
+											"sid": 331671710934725
+										}
+									],
+									"sid": 482328401466524
+								},
+								{
 									"eventType": "variable",
 									"name": "Indice_Sorteado",
 									"type": "number",
