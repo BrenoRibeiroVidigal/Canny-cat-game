@@ -40,6 +40,7 @@
 						"tile-x-spacing": 0,
 						"tile-y-spacing": 0
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": true,
 					"world": {
@@ -149,6 +150,7 @@
 							"properties": {}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -184,6 +186,7 @@
 						"CD_Tiro": true
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -229,6 +232,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -262,15 +266,16 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
 						"x": 499.5631103515625,
 						"y": -302.3357835158909,
-						"width": 35,
+						"width": 44,
 						"height": 511.2676211453745,
-						"originX": 1.75,
-						"originY": 0.4939759036144578,
+						"originX": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -299,7 +304,7 @@
 						"VelocidadeBase": 60,
 						"CooldownPatrulha": 0,
 						"Atacando": false,
-						"Inimigo_TIpo": "",
+						"Inimigo_TIpo": "Boss",
 						"Contagem_Ataques": 0,
 						"Acao_Atual": 0
 					},
@@ -313,7 +318,7 @@
 								"acceleration": 1000,
 								"deceleration": 2000,
 								"rotate-speed": 135,
-								"rotate-object": true,
+								"rotate-object": false,
 								"diagonals": true,
 								"direct-movement": "to-destination",
 								"enabled": true
@@ -350,6 +355,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -357,6 +363,100 @@
 						"y": 281.29868313289427,
 						"width": 128.70154185022028,
 						"height": 100.98127753303959,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Texto_Dano",
+					"properties": {
+						"text": "",
+						"enable-bbcode": false,
+						"character-width": 26,
+						"character-height": 32,
+						"character-set": "0123456789.-+!",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": -3,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 1317,
+					"sid": 802227298305075,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Interpolação": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Esmaecer": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0.35,
+								"fade-out-time": 0.45,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -600,
+						"y": -600,
+						"width": 120,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Stun_Boss",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 1321,
+					"sid": 806586418415421,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -500,
+						"y": -500,
+						"width": 116,
+						"height": 38,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -478,6 +578,7 @@
 	"height": 5000,
 	"unboundedScrolling": false,
 	"sampling": "auto",
+	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",

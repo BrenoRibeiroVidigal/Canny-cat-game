@@ -65,11 +65,302 @@
 			"eventType": "variable",
 			"name": "Limite_Deslocamento",
 			"type": "number",
-			"initialValue": "197",
+			"initialValue": "205",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 301411843739247
+		},
+		{
+			"eventType": "variable",
+			"name": "Player_Dano",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 976211041991118
+		},
+		{
+			"eventType": "variable",
+			"name": "Player_Vel_Ataque",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 862992455245763
+		},
+		{
+			"eventType": "variable",
+			"name": "Player_Vel_Movimento",
+			"type": "number",
+			"initialValue": "500",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 861824304888546
+		},
+		{
+			"eventType": "variable",
+			"name": "MUSICA_ROTULO",
+			"type": "string",
+			"initialValue": "♪ TOCANDO AGORA",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 851418453169507
+		},
+		{
+			"eventType": "variable",
+			"name": "MUSICA_NOME",
+			"type": "string",
+			"initialValue": "Stalemate (NicolasPL Remix) - Kayoz X",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 813279174558775
+		},
+		{
+			"eventType": "variable",
+			"name": "Musica_Estado",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 405212938168196
+		},
+		{
+			"eventType": "variable",
+			"name": "Musica_Letras",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 282431282399904
+		},
+		{
+			"eventType": "variable",
+			"name": "Musica_Tempo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 136788470842540
+		},
+		{
+			"eventType": "variable",
+			"name": "Musica_Desloc",
+			"type": "number",
+			"initialValue": "620",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 546925921728389
+		},
+		{
+			"eventType": "variable",
+			"name": "Musica_Cursor",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 536776040382766
+		},
+		{
+			"eventType": "variable",
+			"name": "Musica_Inicio",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 385810555000798
+		},
+		{
+			"eventType": "comment",
+			"text": "Status do player ficam em variáveis globais para os bônus dos itens passarem de uma sala para outra. O Player de cada layout copia esses valores ao começar a sala, e o HUD mostra moedas e karma guardados. Novo jogo (Sala_Inicial) volta status, vida, karma, moedas e pausa ao padrão."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 327765017342402
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 715381442621367,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Sala_Inicial\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 722165402702703,
+					"parameters": {
+						"variable": "Player_Dano",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 219954463149286,
+					"parameters": {
+						"variable": "Player_Vel_Ataque",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 151312833492238,
+					"parameters": {
+						"variable": "Player_Vel_Movimento",
+						"value": "500"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 168427538293252,
+					"parameters": {
+						"variable": "VidaAtual",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 177293107007363,
+					"parameters": {
+						"variable": "Karma",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 838252637545526,
+					"parameters": {
+						"variable": "Contagem_Moeda",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 954793478421552,
+					"parameters": {
+						"variable": "JogoPausado",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 489988903723200
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 186208864259881
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 653456504608816,
+					"parameters": {
+						"instance-variable": "Dano_Base",
+						"value": "Player_Dano"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 779043434961992,
+					"parameters": {
+						"instance-variable": "Velocidade_Ataque",
+						"value": "Player_Vel_Ataque"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 471754815758340,
+					"parameters": {
+						"instance-variable": "Velocidade_Movimento",
+						"value": "Player_Vel_Movimento"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "Player",
+					"sid": 889977722770675,
+					"behaviorType": "8Direções",
+					"parameters": {
+						"max-speed": "Player_Vel_Movimento"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Texto_Moedas",
+					"sid": 281840400998616,
+					"parameters": {
+						"text": "Contagem_Moeda"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Indicador_Karma",
+					"sid": 979919033960619,
+					"parameters": {
+						"x": "Posicao_Centro_X + (Karma / 100) * Limite_Deslocamento",
+						"y": "Indicador_Karma.Y"
+					}
+				}
+			],
+			"sid": 907406269073668
+		},
+		{
+			"eventType": "comment",
+			"text": "Mini HUD de status (estilo Isaac): dano, tiros por segundo (1 / Velocidade_Ataque) e velocidade de movimento."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 341619166734980
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Texto_Status",
+					"sid": 591712271473334,
+					"parameters": {
+						"text": "str(round(Player_Dano * 100) / 100) & newline & str(round(100 / Player_Vel_Ataque) / 100) & newline & str(round(Player_Vel_Movimento))"
+					}
+				}
+			],
+			"sid": 368803255448986
 		},
 		{
 			"eventType": "group",
@@ -1214,6 +1505,187 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 193644100375810,
+									"parameters": {
+										"object": "Projetil_Boss"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Projetil_Boss",
+									"sid": 422060030375808
+								}
+							],
+							"sid": 583741683420800,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-flashing",
+											"objectClass": "Player",
+											"sid": 455531173357593,
+											"behaviorType": "Piscar",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 819865696876780,
+											"parameters": {
+												"variable": "VidaAtual",
+												"value": "1"
+											}
+										},
+										{
+											"id": "flash",
+											"objectClass": "Player",
+											"sid": 508722715927444,
+											"behaviorType": "Piscar",
+											"parameters": {
+												"on-time": "0.1",
+												"off-time": "0.1",
+												"duration": "1.0"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 440087062085712,
+											"parameters": {
+												"instance-variable": "Fazendo_Emote",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 607898705779363
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 578669681164735,
+									"parameters": {
+										"object": "Explosao_Dano"
+									}
+								},
+								{
+									"id": "is-flashing",
+									"objectClass": "Player",
+									"sid": 682599248269778,
+									"behaviorType": "Piscar",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 951616644812541,
+									"parameters": {
+										"variable": "VidaAtual",
+										"value": "1"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Player",
+									"sid": 458127829419552,
+									"behaviorType": "Piscar",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "1.0"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 187557015491627,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 141767189184421
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 962216739164319,
+									"parameters": {
+										"object": "Boss_Floresta"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Boss_Floresta",
+									"sid": 902065261453902,
+									"parameters": {
+										"instance-variable": "Acao_Atual",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "is-flashing",
+									"objectClass": "Player",
+									"sid": 503305309206667,
+									"behaviorType": "Piscar",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 440218559475134,
+									"parameters": {
+										"variable": "VidaAtual",
+										"value": "1"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Player",
+									"sid": 727493623843345,
+									"behaviorType": "Piscar",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "1.0"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 680977057127860,
+									"parameters": {
+										"instance-variable": "Fazendo_Emote",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 435453088228243
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "every-tick",
 									"objectClass": "System",
 									"sid": 282714614598838
@@ -1296,12 +1768,11 @@
 							],
 							"actions": [
 								{
-									"id": "set-angle-toward-position",
+									"id": "set-angle",
 									"objectClass": "Cajado",
 									"sid": 345385319019125,
 									"parameters": {
-										"x": "Mouse.X",
-										"y": "Mouse.Y"
+										"angle": "angle(Player.X, Player.Y, Mouse.X, Mouse.Y)"
 									}
 								},
 								{
@@ -1568,21 +2039,39 @@
 									],
 									"actions": [
 										{
-											"id": "add-to-instvar",
-											"objectClass": "Player",
-											"sid": 630143195056965,
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 855313469383348,
 											"parameters": {
-												"instance-variable": "Dano_Base",
-												"value": "Player.Dano_Base * 1.15"
+												"variable": "Player_Dano",
+												"value": "Player_Dano * 1.15"
 											}
 										},
 										{
-											"id": "add-to-instvar",
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 647818508896001,
+											"parameters": {
+												"variable": "Player_Vel_Ataque",
+												"value": "Player_Vel_Ataque * 0.95"
+											}
+										},
+										{
+											"id": "set-instvar-value",
 											"objectClass": "Player",
-											"sid": 182832609492827,
+											"sid": 597466942330496,
+											"parameters": {
+												"instance-variable": "Dano_Base",
+												"value": "Player_Dano"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player",
+											"sid": 698452434339120,
 											"parameters": {
 												"instance-variable": "Velocidade_Ataque",
-												"value": "Player.Velocidade_Ataque * 0.95"
+												"value": "Player_Vel_Ataque"
 											}
 										},
 										{
@@ -1608,12 +2097,21 @@
 									],
 									"actions": [
 										{
-											"id": "add-to-instvar",
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 738749529106640,
+											"parameters": {
+												"variable": "Player_Vel_Movimento",
+												"value": "50"
+											}
+										},
+										{
+											"id": "set-instvar-value",
 											"objectClass": "Player",
-											"sid": 410112019460518,
+											"sid": 114574444655868,
 											"parameters": {
 												"instance-variable": "Velocidade_Movimento",
-												"value": "50"
+												"value": "Player_Vel_Movimento"
 											}
 										},
 										{
@@ -1747,7 +2245,7 @@
 							],
 							"actions": [
 								{
-									"id": "subtract-from-eventvar",
+									"id": "add-to-eventvar",
 									"objectClass": "System",
 									"sid": 876433013928877,
 									"parameters": {
@@ -1927,35 +2425,6 @@
 								{
 									"id": "cursor-is-over-object",
 									"objectClass": "Mouse",
-									"sid": 585214618271210,
-									"parameters": {
-										"object": "Nome_Emote"
-									}
-								},
-								{
-									"id": "is-visible",
-									"objectClass": "Nome_Emote",
-									"sid": 129195757718134
-								}
-							],
-							"actions": [
-								{
-									"id": "set-font-color",
-									"objectClass": "Nome_Emote",
-									"sid": 553993882339086,
-									"parameters": {
-										"color": "rgbEx(155, 155, 155)"
-									}
-								}
-							],
-							"sid": 826119428148052
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "cursor-is-over-object",
-									"objectClass": "Mouse",
 									"sid": 901474329875318,
 									"parameters": {
 										"object": "Nome_Emote"
@@ -1970,15 +2439,44 @@
 							],
 							"actions": [
 								{
-									"id": "set-font-color",
-									"objectClass": "Nome_Emote",
+									"id": "set-animation-frame",
+									"objectClass": "Menu_Emote",
 									"sid": 338770658695540,
 									"parameters": {
-										"color": "rgbEx(0, 0, 0)"
+										"frame-number": "0"
 									}
 								}
 							],
 							"sid": 432635707422857
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 585214618271210,
+									"parameters": {
+										"object": "Nome_Emote"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Nome_Emote",
+									"sid": 129195757718134
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Menu_Emote",
+									"sid": 553993882339086,
+									"parameters": {
+										"frame-number": "1 + round((Nome_Emote.X - Menu_Emote.X + 230) / 160)"
+									}
+								}
+							],
+							"sid": 826119428148052
 						},
 						{
 							"eventType": "block",
@@ -2110,6 +2608,765 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Animacoes",
+					"description": "Troca as animações dos inimigos: parado, andando (pulinho) e atacando.",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Animações dos inimigos: 'Animation 1' = parado (respirando), 'Andando' = pulinho enquanto anda (velocidade > 20), 'Ataque' = agachado tremendo com aura vermelha enquanto Atacando. O Gato_Bomba usa 'Armado' (o grupo Gato_Bomba escolhe o quadro para piscar) e o Gato_Invocador usa 'Invocando' durante o ritual."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 289075491943249
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 619618400148472,
+									"parameters": {
+										"object": "Inimigo"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 324309009616241,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Inimigo",
+											"sid": 970598435064854,
+											"parameters": {
+												"instance-variable": "Atacando"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 481943159124338,
+											"parameters": {
+												"first-value": "Inimigo.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Ataque\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Inimigo",
+											"sid": 535226634336315,
+											"parameters": {
+												"animation": "\"Ataque\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 850841581829000
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Inimigo",
+											"sid": 938844058145438,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 790910778107380,
+											"parameters": {
+												"first-value": "Inimigo.ExploradorDeRotas.Speed",
+												"comparison": 4,
+												"second-value": "20"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 823728319531002,
+											"parameters": {
+												"first-value": "Inimigo.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Andando\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Inimigo",
+											"sid": 218965729205934,
+											"parameters": {
+												"animation": "\"Andando\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 434228353573181
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Inimigo",
+											"sid": 845698504366919,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 587210628001523,
+											"parameters": {
+												"first-value": "Inimigo.ExploradorDeRotas.Speed",
+												"comparison": 2,
+												"second-value": "5"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 865674726022651,
+											"parameters": {
+												"first-value": "Inimigo.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Animation 1\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Inimigo",
+											"sid": 988034920532183,
+											"parameters": {
+												"animation": "\"Animation 1\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 146486045185001
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 491859558642893
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 581999119447967,
+									"parameters": {
+										"object": "inimigoPersergidor"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 448104910215104,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "inimigoPersergidor",
+											"sid": 938826426679497,
+											"parameters": {
+												"instance-variable": "Atacando"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 979885730176178,
+											"parameters": {
+												"first-value": "inimigoPersergidor.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Ataque\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "inimigoPersergidor",
+											"sid": 861546115285056,
+											"parameters": {
+												"animation": "\"Ataque\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 168825971935834
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "inimigoPersergidor",
+											"sid": 567647439702838,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 382194249974495,
+											"parameters": {
+												"first-value": "inimigoPersergidor.ExploradorDeRotas.Speed",
+												"comparison": 4,
+												"second-value": "20"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 472343874764467,
+											"parameters": {
+												"first-value": "inimigoPersergidor.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Andando\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "inimigoPersergidor",
+											"sid": 821005007106392,
+											"parameters": {
+												"animation": "\"Andando\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 871304303181350
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "inimigoPersergidor",
+											"sid": 682444257801166,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 243679661941386,
+											"parameters": {
+												"first-value": "inimigoPersergidor.ExploradorDeRotas.Speed",
+												"comparison": 2,
+												"second-value": "5"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 991961926665069,
+											"parameters": {
+												"first-value": "inimigoPersergidor.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Animation 1\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "inimigoPersergidor",
+											"sid": 301994797395923,
+											"parameters": {
+												"animation": "\"Animation 1\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 735151188709799
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 417424678954436
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 165697957060994,
+									"parameters": {
+										"object": "Sniper_Inimigo"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 259245428798781,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Sniper_Inimigo",
+											"sid": 886377974241220,
+											"parameters": {
+												"instance-variable": "Atacando"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 991517301738045,
+											"parameters": {
+												"first-value": "Sniper_Inimigo.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Ataque\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sniper_Inimigo",
+											"sid": 962957096200274,
+											"parameters": {
+												"animation": "\"Ataque\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 613106259320343
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Sniper_Inimigo",
+											"sid": 965973850905615,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 754694315361646,
+											"parameters": {
+												"first-value": "Sniper_Inimigo.ExploradorDeRotas.Speed",
+												"comparison": 4,
+												"second-value": "20"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 920151435229710,
+											"parameters": {
+												"first-value": "Sniper_Inimigo.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Andando\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sniper_Inimigo",
+											"sid": 814702601685650,
+											"parameters": {
+												"animation": "\"Andando\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 140687153334512
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Sniper_Inimigo",
+											"sid": 405775359765930,
+											"parameters": {
+												"instance-variable": "Atacando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 806553823688869,
+											"parameters": {
+												"first-value": "Sniper_Inimigo.ExploradorDeRotas.Speed",
+												"comparison": 2,
+												"second-value": "5"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 383583769321468,
+											"parameters": {
+												"first-value": "Sniper_Inimigo.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Animation 1\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sniper_Inimigo",
+											"sid": 536022825438457,
+											"parameters": {
+												"animation": "\"Animation 1\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 582235883763046
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 113881427909555
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 820713739653791,
+									"parameters": {
+										"object": "Gato_Bomba"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 425263341861810,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Bomba",
+											"sid": 644181640682304,
+											"parameters": {
+												"instance-variable": "Armado"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 664828590593840,
+											"parameters": {
+												"first-value": "Gato_Bomba.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Armado\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Bomba",
+											"sid": 176666861890713,
+											"parameters": {
+												"animation": "\"Armado\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 639342424542675
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Bomba",
+											"sid": 109549217735409,
+											"parameters": {
+												"instance-variable": "Armado"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 403266561468123,
+											"parameters": {
+												"first-value": "Gato_Bomba.ExploradorDeRotas.Speed",
+												"comparison": 4,
+												"second-value": "20"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 730751169391315,
+											"parameters": {
+												"first-value": "Gato_Bomba.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Andando\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Bomba",
+											"sid": 657900844231077,
+											"parameters": {
+												"animation": "\"Andando\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 604640759759245
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Bomba",
+											"sid": 699623709624458,
+											"parameters": {
+												"instance-variable": "Armado"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 569996990855069,
+											"parameters": {
+												"first-value": "Gato_Bomba.ExploradorDeRotas.Speed",
+												"comparison": 2,
+												"second-value": "5"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 957294610759942,
+											"parameters": {
+												"first-value": "Gato_Bomba.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Animation 1\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Bomba",
+											"sid": 678472162666564,
+											"parameters": {
+												"animation": "\"Animation 1\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 277818620550013
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 896625131273980
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 543545294991948,
+									"parameters": {
+										"object": "Gato_Invocador"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 954598446689018,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 494958055844826,
+											"parameters": {
+												"instance-variable": "Conjurando"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 281377874367343,
+											"parameters": {
+												"first-value": "Gato_Invocador.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Invocando\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Invocador",
+											"sid": 995089110331064,
+											"parameters": {
+												"animation": "\"Invocando\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 745728254243681
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 494371819753646,
+											"parameters": {
+												"instance-variable": "Conjurando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 248126430409565,
+											"parameters": {
+												"first-value": "Gato_Invocador.ExploradorDeRotas.Speed",
+												"comparison": 4,
+												"second-value": "20"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 577180243806250,
+											"parameters": {
+												"first-value": "Gato_Invocador.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Andando\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Invocador",
+											"sid": 516819904974810,
+											"parameters": {
+												"animation": "\"Andando\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 987545398164814
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 783977732177358,
+											"parameters": {
+												"instance-variable": "Conjurando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 416731580995809,
+											"parameters": {
+												"first-value": "Gato_Invocador.ExploradorDeRotas.Speed",
+												"comparison": 2,
+												"second-value": "5"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 780718213986047,
+											"parameters": {
+												"first-value": "Gato_Invocador.AnimationName",
+												"comparison": 1,
+												"second-value": "\"Animation 1\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Invocador",
+											"sid": 687542459477932,
+											"parameters": {
+												"animation": "\"Animation 1\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 254878596119335
+								}
+							]
+						}
+					],
+					"sid": 727253772811029
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Base e Estados",
 					"description": "",
 					"isActiveOnStart": true,
@@ -2144,6 +3401,15 @@
 									"objectClass": "Inimigos",
 									"sid": 127525674809875,
 									"behaviorType": "ExploradorDeRotas"
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Inimigos",
+									"sid": 400982338653725,
+									"parameters": {
+										"instance-variable": "Atacando"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -2176,15 +3442,6 @@
 							],
 							"actions": [
 								{
-									"id": "set-instvar-value",
-									"objectClass": "Inimigos",
-									"sid": 868488687382942,
-									"parameters": {
-										"instance-variable": "Estado",
-										"value": "\"Perseguindo\""
-									}
-								},
-								{
 									"id": "stop-timer",
 									"objectClass": "Inimigos",
 									"sid": 534300302442045,
@@ -2194,7 +3451,36 @@
 									}
 								}
 							],
-							"sid": 770671359957025
+							"sid": 770671359957025,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Inimigos",
+											"sid": 857624618708160,
+											"parameters": {
+												"instance-variable": "Estado",
+												"comparison": 0,
+												"value": "\"Patrulhando\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Inimigos",
+											"sid": 555388880030289,
+											"parameters": {
+												"instance-variable": "Estado",
+												"value": "\"Perseguindo\""
+											}
+										}
+									],
+									"sid": 200878224553434
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -2246,6 +3532,16 @@
 									"behaviorType": "Cronômetro",
 									"parameters": {
 										"tag": "\"Memoria\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Inimigos",
+									"sid": 753889016328401,
+									"parameters": {
+										"instance-variable": "Estado",
+										"comparison": 0,
+										"value": "\"Perseguindo\""
 									}
 								}
 							],
@@ -2345,6 +3641,15 @@
 										"comparison": 0,
 										"value": "\"Patrulhando\""
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Inimigos",
+									"sid": 624810887775068,
+									"parameters": {
+										"instance-variable": "Atacando"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [],
@@ -2421,15 +3726,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Inimigos",
-									"sid": 664331030654915,
-									"parameters": {
-										"instance-variable": "Estado",
-										"value": "\"Perseguindo\""
-									}
-								},
 								{
 									"id": "set-position",
 									"objectClass": "Inimigos",
@@ -2510,7 +3806,7 @@
 									"objectClass": "Texto_Dano",
 									"sid": 333634897440102,
 									"parameters": {
-										"text": "Player.Dano_Base"
+										"text": "round(Player.Dano_Base)"
 									}
 								},
 								{
@@ -2518,22 +3814,23 @@
 									"objectClass": "Texto_Dano",
 									"sid": 336957760634697,
 									"parameters": {
-										"x": "Inimigos.X",
-										"y": "Inimigos.Y - 50"
+										"x": "Inimigos.X + random(-10, 10)",
+										"y": "Inimigos.Y - 45"
 									}
 								},
 								{
-									"id": "tween-one-property",
+									"id": "tween-two-properties",
 									"objectClass": "Texto_Dano",
 									"sid": 708661222357918,
 									"behaviorType": "Interpolação",
 									"parameters": {
 										"tags": "\"Dano_Texto\"",
-										"property": "offsetY",
-										"end-value": "Inimigos.Y - 50",
-										"time": "1",
-										"ease": "easeinquad",
-										"destroy-on-complete": "yes",
+										"property": "position",
+										"end-x": "Texto_Dano.X + random(-14, 14)",
+										"end-y": "Texto_Dano.Y - 40",
+										"time": "0.8",
+										"ease": "easeoutcubic",
+										"destroy-on-complete": "no",
 										"loop": "no",
 										"ping-pong": "no",
 										"repeat-count": "1"
@@ -2542,6 +3839,33 @@
 							],
 							"sid": 458683422275182,
 							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Inimigos",
+											"sid": 471842611897459,
+											"parameters": {
+												"instance-variable": "Estado",
+												"comparison": 0,
+												"value": "\"Patrulhando\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Inimigos",
+											"sid": 316377624418899,
+											"parameters": {
+												"instance-variable": "Estado",
+												"value": "\"Perseguindo\""
+											}
+										}
+									],
+									"sid": 785642767780967
+								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -3626,6 +4950,1449 @@
 						{
 							"eventType": "group",
 							"disabled": false,
+							"title": "Gato_Bomba",
+							"description": "Corre até o player quando o vê, liga um contador e explode no zero (dano em área: 2 corações).",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Gato_Bomba: ao ver o player ele arma (3 s), corre atrás dele piscando em vermelho cada vez mais rápido e explode no zero. Raio da explosão: 140 px, tira 2 corações."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 423893897665631,
+											"parameters": {
+												"object": "Gato_Bomba"
+											}
+										},
+										{
+											"id": "has-los-to-object",
+											"objectClass": "Gato_Bomba",
+											"sid": 276550807169487,
+											"behaviorType": "CampoDeVisão",
+											"parameters": {
+												"object": "Player",
+												"image-point": "0"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Bomba",
+											"sid": 896293759601589,
+											"parameters": {
+												"instance-variable": "Armado"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Gato_Bomba",
+											"sid": 426635514069473,
+											"parameters": {
+												"instance-variable": "Armado",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gato_Bomba",
+											"sid": 690792041379823,
+											"parameters": {
+												"instance-variable": "Contagem",
+												"value": "3"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gato_Bomba",
+											"sid": 890504215638678,
+											"parameters": {
+												"instance-variable": "Fase",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gato_Bomba",
+											"sid": 978625463961783,
+											"parameters": {
+												"instance-variable": "Estado",
+												"value": "\"Armado\""
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "Gato_Bomba",
+											"sid": 990785544495444,
+											"behaviorType": "ExploradorDeRotas",
+											"parameters": {
+												"speed": "280"
+											}
+										},
+										{
+											"id": "find-path",
+											"objectClass": "Gato_Bomba",
+											"sid": 541574651905472,
+											"behaviorType": "ExploradorDeRotas",
+											"parameters": {
+												"x": "Player.X",
+												"y": "Player.Y"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Gato_Bomba",
+											"sid": 794884221688437,
+											"parameters": {
+												"object": "Texto_Bomba",
+												"layer": "Gato_Bomba.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Texto_Bomba",
+											"sid": 908663294546739,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"value": "Gato_Bomba.UID"
+											}
+										}
+									],
+									"sid": 415906683835666
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 657701996852233,
+											"parameters": {
+												"interval-seconds": "0.15"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Bomba",
+											"sid": 648678751236020,
+											"parameters": {
+												"instance-variable": "Armado"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "find-path",
+											"objectClass": "Gato_Bomba",
+											"sid": 736796957268619,
+											"behaviorType": "ExploradorDeRotas",
+											"parameters": {
+												"x": "Player.X",
+												"y": "Player.Y"
+											}
+										},
+										{
+											"id": "stop-timer",
+											"objectClass": "Gato_Bomba",
+											"sid": 420915859116363,
+											"behaviorType": "Cronômetro",
+											"parameters": {
+												"tag": "\"Memoria\""
+											}
+										}
+									],
+									"sid": 868511288555061
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 817268232894400
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Bomba",
+											"sid": 354918794139796,
+											"parameters": {
+												"instance-variable": "Armado"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Gato_Bomba",
+											"sid": 865393395159601,
+											"parameters": {
+												"instance-variable": "Contagem",
+												"value": "dt"
+											}
+										},
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Gato_Bomba",
+											"sid": 149309387112455,
+											"parameters": {
+												"instance-variable": "Fase",
+												"value": "dt * (2 + 10 * (1 - max(0, Self.Contagem) / 3)) * 360"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Gato_Bomba",
+											"sid": 149656909182219,
+											"parameters": {
+												"frame-number": "(floor(time * 16) - 8 * floor(time * 2)) + 8 * round(0.5 + 0.5 * sin(Self.Fase))"
+											}
+										}
+									],
+									"sid": 702266363455826
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 234610384580058,
+											"parameters": {
+												"object": "Gato_Bomba"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Bomba",
+											"sid": 227563095038295,
+											"parameters": {
+												"instance-variable": "Armado"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Gato_Bomba",
+											"sid": 392379279492305,
+											"parameters": {
+												"instance-variable": "Contagem",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 746101215175130,
+											"parameters": {
+												"object-to-create": "Explosao_Bomba",
+												"layer": "Gato_Bomba.LayerName",
+												"x": "Gato_Bomba.X",
+												"y": "Gato_Bomba.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Explosao_Bomba",
+											"sid": 524348559644123,
+											"parameters": {
+												"width": "280",
+												"height": "280"
+											}
+										}
+									],
+									"sid": 139216249467215,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 107483866172302,
+													"parameters": {
+														"first-value": "distance(Player.X, Player.Y, Gato_Bomba.X, Gato_Bomba.Y)",
+														"comparison": 3,
+														"second-value": "140"
+													}
+												},
+												{
+													"id": "is-flashing",
+													"objectClass": "Player",
+													"sid": 372027871479276,
+													"behaviorType": "Piscar",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 671770294169562,
+													"parameters": {
+														"variable": "VidaAtual",
+														"value": "max(0, VidaAtual - 2)"
+													}
+												},
+												{
+													"id": "flash",
+													"objectClass": "Player",
+													"sid": 801380503405157,
+													"behaviorType": "Piscar",
+													"parameters": {
+														"on-time": "0.1",
+														"off-time": "0.1",
+														"duration": "1.0"
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Player",
+													"sid": 813081209230212,
+													"parameters": {
+														"instance-variable": "Fazendo_Emote",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 654218908908974
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Gato_Bomba",
+													"sid": 201674679667698
+												}
+											],
+											"sid": 546940011077422
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 646204414837282
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 873660726789956,
+											"parameters": {
+												"object": "Texto_Bomba"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 444095877769006,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Gato_Bomba",
+													"sid": 687093901920583,
+													"parameters": {
+														"unique-id": "Texto_Bomba.Dono_UID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position",
+													"objectClass": "Texto_Bomba",
+													"sid": 103271237529527,
+													"parameters": {
+														"x": "Gato_Bomba.X",
+														"y": "Gato_Bomba.Y + Gato_Bomba.Height / 2 + 14"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Texto_Bomba",
+													"sid": 568885238706916,
+													"parameters": {
+														"text": "str(max(0, round(Gato_Bomba.Contagem * 10) / 10))"
+													}
+												}
+											],
+											"sid": 919613697631498
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 892896406251390
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Texto_Bomba",
+													"sid": 680929871287181
+												}
+											],
+											"sid": 145272237959435
+										}
+									]
+								}
+							],
+							"sid": 597499747204489
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Gato_Invocador",
+							"description": "Mago que fica longe do player e invoca fantasminhas (Gatinho_Sombra) que correm até ele.",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Gato_Invocador: quando te vê (ou leva dano) ele fica em alerta e tenta manter distância (260-460 px). A cada 6 s faz um ritual de 1.2 s e invoca 2 Gatinho_Sombra (máx. 4 vivos). Acertar um tiro durante o ritual cancela a invocação. Se o invocador morre, os fantasminhas somem junto. Cada fantasminha tira 1 coração ao encostar e some."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 656753298399098,
+											"parameters": {
+												"object": "Gato_Invocador"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 217790440469496,
+											"parameters": {
+												"instance-variable": "Alerta"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Gato_Invocador",
+											"sid": 603145199277812,
+											"parameters": {
+												"instance-variable": "Estado",
+												"comparison": 0,
+												"value": "\"Perseguindo\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 712459823358838,
+											"parameters": {
+												"instance-variable": "Alerta",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gato_Invocador",
+											"sid": 574219650847825,
+											"parameters": {
+												"instance-variable": "Estado",
+												"value": "\"Invocando\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gato_Invocador",
+											"sid": 510909177021418,
+											"parameters": {
+												"instance-variable": "Recarga",
+												"value": "1"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Gato_Invocador",
+											"sid": 343428928514101,
+											"behaviorType": "ExploradorDeRotas"
+										}
+									],
+									"sid": 530920634691327
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 168065727612599,
+											"parameters": {
+												"interval-seconds": "0.4"
+											}
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 343385207223596,
+											"parameters": {
+												"object": "Gato_Invocador"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 576789049550943,
+											"parameters": {
+												"instance-variable": "Alerta"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 937522954698519,
+											"parameters": {
+												"instance-variable": "Conjurando"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 108503972246429,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 930191509343038,
+													"parameters": {
+														"first-value": "distance(Gato_Invocador.X, Gato_Invocador.Y, Player.X, Player.Y)",
+														"comparison": 2,
+														"second-value": "260"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "find-path",
+													"objectClass": "Gato_Invocador",
+													"sid": 583130370297031,
+													"behaviorType": "ExploradorDeRotas",
+													"parameters": {
+														"x": "clamp(Gato_Invocador.X + cos(angle(Player.X, Player.Y, Gato_Invocador.X, Gato_Invocador.Y)) * 240, 48, LayoutWidth - 48)",
+														"y": "clamp(Gato_Invocador.Y + sin(angle(Player.X, Player.Y, Gato_Invocador.X, Gato_Invocador.Y)) * 240, 48, LayoutHeight - 48)"
+													}
+												}
+											],
+											"sid": 849263903819363
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 330801137303151,
+													"parameters": {
+														"first-value": "distance(Gato_Invocador.X, Gato_Invocador.Y, Player.X, Player.Y)",
+														"comparison": 4,
+														"second-value": "460"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "find-path",
+													"objectClass": "Gato_Invocador",
+													"sid": 891219959708768,
+													"behaviorType": "ExploradorDeRotas",
+													"parameters": {
+														"x": "Player.X",
+														"y": "Player.Y"
+													}
+												}
+											],
+											"sid": 581903132726665
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 496225433522951,
+													"parameters": {
+														"first-value": "distance(Gato_Invocador.X, Gato_Invocador.Y, Player.X, Player.Y)",
+														"comparison": 5,
+														"second-value": "260"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 282850691836466,
+													"parameters": {
+														"first-value": "distance(Gato_Invocador.X, Gato_Invocador.Y, Player.X, Player.Y)",
+														"comparison": 3,
+														"second-value": "460"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop",
+													"objectClass": "Gato_Invocador",
+													"sid": 575490806309685,
+													"behaviorType": "ExploradorDeRotas"
+												}
+											],
+											"sid": 663687841396696
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 817909706171583
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 789196033791240,
+											"parameters": {
+												"instance-variable": "Alerta"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 624652686143042,
+											"parameters": {
+												"instance-variable": "Conjurando"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 841424630701257,
+											"parameters": {
+												"instance-variable": "Recarga",
+												"value": "dt"
+											}
+										}
+									],
+									"sid": 223700627119991
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 715114616713650
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 270839597612529,
+											"parameters": {
+												"object": "Gato_Invocador"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gato_Invocador",
+											"sid": 127744896901869,
+											"parameters": {
+												"instance-variable": "Invocados",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 351363852750973,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Gatinho_Sombra",
+													"sid": 305204330976015,
+													"parameters": {
+														"instance-variable": "Dono_UID",
+														"comparison": 0,
+														"value": "Gato_Invocador.UID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Gato_Invocador",
+													"sid": 680512287458166,
+													"parameters": {
+														"instance-variable": "Invocados",
+														"value": "Gatinho_Sombra.PickedCount"
+													}
+												}
+											],
+											"sid": 245176187453220
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 516364105141258,
+											"parameters": {
+												"object": "Gato_Invocador"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 259570098254833,
+											"parameters": {
+												"instance-variable": "Alerta"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 214612553307626,
+											"parameters": {
+												"instance-variable": "Conjurando"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Gato_Invocador",
+											"sid": 618218744629697,
+											"parameters": {
+												"instance-variable": "Recarga",
+												"comparison": 3,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Gato_Invocador",
+											"sid": 117951316263403,
+											"parameters": {
+												"instance-variable": "Invocados",
+												"comparison": 2,
+												"value": "4"
+											}
+										},
+										{
+											"id": "has-los-to-object",
+											"objectClass": "Gato_Invocador",
+											"sid": 423101383446522,
+											"behaviorType": "CampoDeVisão",
+											"parameters": {
+												"object": "Player",
+												"image-point": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 407055759938047,
+											"parameters": {
+												"instance-variable": "Conjurando",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 881732351905707,
+											"parameters": {
+												"instance-variable": "Atacando",
+												"value": "true"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Gato_Invocador",
+											"sid": 496468291942367,
+											"behaviorType": "ExploradorDeRotas"
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Invocador",
+											"sid": 309485605130307,
+											"parameters": {
+												"animation": "\"Invocando\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "start-timer",
+											"objectClass": "Gato_Invocador",
+											"sid": 872384043769686,
+											"behaviorType": "Cronômetro",
+											"parameters": {
+												"duration": "1.2",
+												"type": "once",
+												"tag": "\"Invocar\""
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 249810943117521,
+											"parameters": {
+												"object-to-create": "Circulo_Invocacao",
+												"layer": "Gato_Invocador.LayerName",
+												"x": "Gato_Invocador.X",
+												"y": "Gato_Invocador.Y + Gato_Invocador.Height * 0.4",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Circulo_Invocacao",
+											"sid": 870324452190136,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"value": "Gato_Invocador.UID"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Circulo_Invocacao",
+											"sid": 273173390028133,
+											"parameters": {
+												"width": "20",
+												"height": "20"
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "Circulo_Invocacao",
+											"sid": 745941934816296,
+											"parameters": {
+												"where": "behind",
+												"object": "Gato_Invocador"
+											}
+										}
+									],
+									"sid": 129141788957157
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-timer",
+											"objectClass": "Gato_Invocador",
+											"sid": 593391881284259,
+											"behaviorType": "Cronômetro",
+											"parameters": {
+												"tag": "\"Invocar\""
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 309224443635484,
+											"parameters": {
+												"instance-variable": "Conjurando"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Gato_Invocador",
+											"sid": 559730178001677,
+											"parameters": {
+												"object": "Gatinho_Sombra",
+												"layer": "Gato_Invocador.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 882380691492858,
+											"parameters": {
+												"x": "Gato_Invocador.X - 60",
+												"y": "Gato_Invocador.Y + Gato_Invocador.Height * 0.3"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 315251608787446,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"value": "Gato_Invocador.UID"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 740304628246712,
+											"parameters": {
+												"instance-variable": "Estado",
+												"value": "\"Perseguindo\""
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 598332093337427,
+											"parameters": {
+												"object": "Fumaca_Invocacao",
+												"layer": "Gatinho_Sombra.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Fumaca_Invocacao",
+											"sid": 251747220888000,
+											"parameters": {
+												"width": "110",
+												"height": "110"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Gato_Invocador",
+											"sid": 638038520182496,
+											"parameters": {
+												"object": "Gatinho_Sombra",
+												"layer": "Gato_Invocador.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 396549797531955,
+											"parameters": {
+												"x": "Gato_Invocador.X + 60",
+												"y": "Gato_Invocador.Y + Gato_Invocador.Height * 0.3"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 550617231851891,
+											"parameters": {
+												"instance-variable": "Dono_UID",
+												"value": "Gato_Invocador.UID"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 980776261875829,
+											"parameters": {
+												"instance-variable": "Estado",
+												"value": "\"Perseguindo\""
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 975714025412170,
+											"parameters": {
+												"object": "Fumaca_Invocacao",
+												"layer": "Gatinho_Sombra.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Fumaca_Invocacao",
+											"sid": 787892224816072,
+											"parameters": {
+												"width": "110",
+												"height": "110"
+											}
+										},
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 307251180275121,
+											"parameters": {
+												"instance-variable": "Invocados",
+												"value": "2"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 947572561344139,
+											"parameters": {
+												"instance-variable": "Conjurando",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 961539340503572,
+											"parameters": {
+												"instance-variable": "Atacando",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gato_Invocador",
+											"sid": 956314484806025,
+											"parameters": {
+												"instance-variable": "Recarga",
+												"value": "6"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Invocador",
+											"sid": 120143954095669,
+											"parameters": {
+												"animation": "\"Animation 1\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 551059862848510,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Circulo_Invocacao",
+													"sid": 473821246257563,
+													"parameters": {
+														"instance-variable": "Dono_UID",
+														"comparison": 0,
+														"value": "Gato_Invocador.UID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Circulo_Invocacao",
+													"sid": 660556148348742
+												}
+											],
+											"sid": 621868304843125
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 464308329034757,
+											"parameters": {
+												"object": "Gato_Invocador"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Gato_Invocador",
+											"sid": 583947928395621,
+											"parameters": {
+												"instance-variable": "Conjurando"
+											}
+										},
+										{
+											"id": "is-flashing",
+											"objectClass": "Gato_Invocador",
+											"sid": 868803384306244,
+											"behaviorType": "Piscar"
+										}
+									],
+									"actions": [
+										{
+											"id": "stop-timer",
+											"objectClass": "Gato_Invocador",
+											"sid": 843489848947296,
+											"behaviorType": "Cronômetro",
+											"parameters": {
+												"tag": "\"Invocar\""
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 500532418880406,
+											"parameters": {
+												"instance-variable": "Conjurando",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Gato_Invocador",
+											"sid": 217112993563329,
+											"parameters": {
+												"instance-variable": "Atacando",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Gato_Invocador",
+											"sid": 683206258636626,
+											"parameters": {
+												"instance-variable": "Recarga",
+												"value": "2.5"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Gato_Invocador",
+											"sid": 990346017723397,
+											"parameters": {
+												"animation": "\"Animation 1\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Gato_Invocador",
+											"sid": 968834252763222,
+											"parameters": {
+												"object": "Fumaca_Invocacao",
+												"layer": "Gato_Invocador.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Fumaca_Invocacao",
+											"sid": 344786895758440,
+											"parameters": {
+												"width": "110",
+												"height": "110"
+											}
+										}
+									],
+									"sid": 601506910812545,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Circulo_Invocacao",
+													"sid": 437681857220102,
+													"parameters": {
+														"instance-variable": "Dono_UID",
+														"comparison": 0,
+														"value": "Gato_Invocador.UID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Circulo_Invocacao",
+													"sid": 410898671624966
+												}
+											],
+											"sid": 929392786719196
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 193547960020370
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 581442036087129,
+											"parameters": {
+												"object": "Circulo_Invocacao"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 124466262350042,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Gato_Invocador",
+													"sid": 257581142475288,
+													"parameters": {
+														"unique-id": "Circulo_Invocacao.Dono_UID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position",
+													"objectClass": "Circulo_Invocacao",
+													"sid": 459143943761176,
+													"parameters": {
+														"x": "Gato_Invocador.X",
+														"y": "Gato_Invocador.Y + Gato_Invocador.Height * 0.4"
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "Circulo_Invocacao",
+													"sid": 835440679798327,
+													"parameters": {
+														"angle": "Circulo_Invocacao.Angle + 140 * dt"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Circulo_Invocacao",
+													"sid": 375900572172935,
+													"parameters": {
+														"width": "min(150, Circulo_Invocacao.Width + 260 * dt)",
+														"height": "min(150, Circulo_Invocacao.Height + 260 * dt)"
+													}
+												}
+											],
+											"sid": 258090127966669
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 466171755102951
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Circulo_Invocacao",
+													"sid": 734181787228386
+												}
+											],
+											"sid": 751330745014258
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 548057036683934
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 852118116087119,
+											"parameters": {
+												"object": "Gatinho_Sombra"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 446351317927687,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Gato_Invocador",
+													"sid": 700593788932926,
+													"parameters": {
+														"unique-id": "Gatinho_Sombra.Dono_UID"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 695605721393770
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 749687064594418
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Gatinho_Sombra",
+													"sid": 861319221256429,
+													"parameters": {
+														"object": "Fumaca_Invocacao",
+														"layer": "Gatinho_Sombra.LayerName",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Fumaca_Invocacao",
+													"sid": 621514294567069,
+													"parameters": {
+														"width": "110",
+														"height": "110"
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Gatinho_Sombra",
+													"sid": 199157407624449
+												}
+											],
+											"sid": 617406758292569
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Player",
+											"sid": 392603057640239,
+											"parameters": {
+												"object": "Gatinho_Sombra"
+											}
+										},
+										{
+											"id": "is-flashing",
+											"objectClass": "Player",
+											"sid": 330013831390557,
+											"behaviorType": "Piscar",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 591823917927314,
+											"parameters": {
+												"variable": "VidaAtual",
+												"value": "max(0, VidaAtual - 1)"
+											}
+										},
+										{
+											"id": "flash",
+											"objectClass": "Player",
+											"sid": 449543483164352,
+											"behaviorType": "Piscar",
+											"parameters": {
+												"on-time": "0.1",
+												"off-time": "0.1",
+												"duration": "1.0"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player",
+											"sid": 110237065276612,
+											"parameters": {
+												"instance-variable": "Fazendo_Emote",
+												"value": "false"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 407713958016292,
+											"parameters": {
+												"object": "Fumaca_Invocacao",
+												"layer": "Gatinho_Sombra.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Fumaca_Invocacao",
+											"sid": 835326042036684,
+											"parameters": {
+												"width": "110",
+												"height": "110"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Gatinho_Sombra",
+											"sid": 751963670816617
+										}
+									],
+									"sid": 858604913667126
+								}
+							],
+							"sid": 584651956265274
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
 							"title": "Boss",
 							"description": "Talvez usar musica \"Stalemate (NicolasPL Remix) como theme??????",
 							"isActiveOnStart": true,
@@ -3638,20 +6405,41 @@
 									"isActiveOnStart": true,
 									"children": [
 										{
+											"eventType": "variable",
+											"name": "Dash_AlvoX",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": true,
+											"isConstant": false,
+											"sid": 540192711847687
+										},
+										{
+											"eventType": "variable",
+											"name": "Dash_AlvoY",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"isStatic": true,
+											"isConstant": false,
+											"sid": 139670435212301
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "on-start-of-layout",
 													"objectClass": "System",
-													"sid": 511494737567828
+													"sid": 322991858954663
 												},
 												{
-													"id": "is-timer-paused",
+													"id": "compare-instance-variable",
 													"objectClass": "Inimigos",
-													"sid": 962723729163108,
-													"behaviorType": "Cronômetro",
+													"sid": 626418544343100,
 													"parameters": {
-														"tag": "\"Decidir_Ataque\""
+														"instance-variable": "Inimigo_TIpo",
+														"comparison": 0,
+														"value": "\"Boss\""
 													}
 												}
 											],
@@ -3659,7 +6447,7 @@
 												{
 													"id": "start-timer",
 													"objectClass": "Inimigos",
-													"sid": 329187593402026,
+													"sid": 163376254822359,
 													"behaviorType": "Cronômetro",
 													"parameters": {
 														"duration": "2",
@@ -3668,7 +6456,7 @@
 													}
 												}
 											],
-											"sid": 102717391272072
+											"sid": 718007795399127
 										},
 										{
 											"eventType": "block",
@@ -3676,7 +6464,7 @@
 												{
 													"id": "on-timer",
 													"objectClass": "Inimigos",
-													"sid": 177749652575709,
+													"sid": 734934483938885,
 													"behaviorType": "Cronômetro",
 													"parameters": {
 														"tag": "\"Decidir_Ataque\""
@@ -3685,7 +6473,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Inimigos",
-													"sid": 986788051205153,
+													"sid": 352115248954087,
 													"parameters": {
 														"instance-variable": "Estado",
 														"comparison": 0,
@@ -3697,14 +6485,14 @@
 												{
 													"id": "add-to-instvar",
 													"objectClass": "Inimigos",
-													"sid": 699432282617787,
+													"sid": 877172081811387,
 													"parameters": {
 														"instance-variable": "Contagem_Ataques",
 														"value": "1"
 													}
 												}
 											],
-											"sid": 392715264454662,
+											"sid": 177520824779010,
 											"children": [
 												{
 													"eventType": "block",
@@ -3712,7 +6500,7 @@
 														{
 															"id": "compare-instance-variable",
 															"objectClass": "Inimigos",
-															"sid": 996295203461832,
+															"sid": 949730244475803,
 															"parameters": {
 																"instance-variable": "Contagem_Ataques",
 																"comparison": 4,
@@ -3724,7 +6512,7 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "Inimigos",
-															"sid": 541825743231129,
+															"sid": 875234832994188,
 															"parameters": {
 																"instance-variable": "Estado",
 																"value": "\"Fadiga\""
@@ -3733,45 +6521,76 @@
 														{
 															"id": "set-instvar-value",
 															"objectClass": "Inimigos",
-															"sid": 451651656154958,
+															"sid": 226174942546228,
 															"parameters": {
 																"instance-variable": "Contagem_Ataques",
 																"value": "0"
 															}
 														}
 													],
-													"sid": 575044044815533,
-													"children": [
+													"sid": 448701500144831
+												},
+												{
+													"eventType": "block",
+													"conditions": [
 														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Inimigos",
-																	"sid": 140678368607338,
-																	"parameters": {
-																		"instance-variable": "Contagem_Ataques",
-																		"comparison": 3,
-																		"value": "3"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "Inimigos",
-																	"sid": 516925844760745,
-																	"parameters": {
-																		"instance-variable": "Estado",
-																		"value": "choose(\"Ataque_Tiros\", \"Ataque_Dash\", \"Ataque_Area\")"
-																	}
-																}
-															],
-															"sid": 868657482798003
+															"id": "else",
+															"objectClass": "System",
+															"sid": 807617243804788
 														}
-													]
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Inimigos",
+															"sid": 112066860413626,
+															"parameters": {
+																"instance-variable": "Estado",
+																"value": "choose(\"Ataque_Tiros\", \"Ataque_Dash\", \"Ataque_Area\")"
+															}
+														}
+													],
+													"sid": 669837665228301
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-timer",
+													"objectClass": "Inimigos",
+													"sid": 857767318948146,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"tag": "\"Decidir_Ataque\""
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Inimigos",
+													"sid": 540157386452053,
+													"parameters": {
+														"instance-variable": "Estado",
+														"comparison": 0,
+														"value": "\"Patrulhando\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "start-timer",
+													"objectClass": "Inimigos",
+													"sid": 162475300040408,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"duration": "1",
+														"type": "once",
+														"tag": "\"Decidir_Ataque\""
+													}
+												}
+											],
+											"sid": 408527770075921
 										},
 										{
 											"eventType": "block",
@@ -3805,7 +6624,7 @@
 													"sid": 550010223369040,
 													"parameters": {
 														"object-to-create": "Projetil_Boss",
-														"layer": "0",
+														"layer": "\"Camada 1\"",
 														"x": "Boss_Floresta.X",
 														"y": "Boss_Floresta.Y",
 														"create-hierarchy": false,
@@ -3826,7 +6645,7 @@
 													"sid": 204367150029194,
 													"parameters": {
 														"object-to-create": "Projetil_Boss",
-														"layer": "0",
+														"layer": "\"Camada 1\"",
 														"x": "Boss_Floresta.X",
 														"y": "Boss_Floresta.Y",
 														"create-hierarchy": false,
@@ -3847,7 +6666,7 @@
 													"sid": 440835930524915,
 													"parameters": {
 														"object-to-create": "Projetil_Boss",
-														"layer": "0",
+														"layer": "\"Camada 1\"",
 														"x": "Boss_Floresta.X",
 														"y": "Boss_Floresta.Y",
 														"create-hierarchy": false,
@@ -3900,7 +6719,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Inimigos",
-													"sid": 909050065823254,
+													"sid": 878743462501460,
 													"parameters": {
 														"instance-variable": "Estado",
 														"comparison": 0,
@@ -3910,23 +6729,58 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 834571306341387
+													"sid": 866200198423396
 												}
 											],
 											"actions": [
 												{
 													"id": "stop",
 													"objectClass": "Inimigos",
-													"sid": 397595925095633,
+													"sid": 519326035389355,
 													"behaviorType": "ExploradorDeRotas"
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Inimigos",
+													"sid": 559692312550637,
+													"parameters": {
+														"instance-variable": "Atacando",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "Inimigos",
+													"sid": 167926337041312,
+													"parameters": {
+														"angle": "0"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 520456762903795,
+													"parameters": {
+														"variable": "Dash_AlvoX",
+														"value": "Player.X"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 332905852048228,
+													"parameters": {
+														"variable": "Dash_AlvoY",
+														"value": "Player.Y"
+													}
 												},
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 778038391367360,
+													"sid": 658766458530651,
 													"parameters": {
 														"object-to-create": "Linha_Aviso",
-														"layer": "0",
+														"layer": "\"Camada 1\"",
 														"x": "Boss_Floresta.X",
 														"y": "Boss_Floresta.Y",
 														"create-hierarchy": false,
@@ -3936,15 +6790,24 @@
 												{
 													"id": "set-angle",
 													"objectClass": "Linha_Aviso",
-													"sid": 396138664426759,
+													"sid": 967648372710492,
 													"parameters": {
-														"angle": "angle(Boss_Floresta.X, Boss_Floresta.Y, Player.X, Player.Y)"
+														"angle": "angle(Boss_Floresta.X, Boss_Floresta.Y, Dash_AlvoX, Dash_AlvoY) + 90"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Linha_Aviso",
+													"sid": 560602547518809,
+													"parameters": {
+														"width": "44",
+														"height": "distance(Boss_Floresta.X, Boss_Floresta.Y, Dash_AlvoX, Dash_AlvoY)"
 													}
 												},
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 579755697110700,
+													"sid": 965482737237692,
 													"parameters": {
 														"seconds": "0.8",
 														"use-timescale": true
@@ -3953,49 +6816,75 @@
 												{
 													"id": "destroy",
 													"objectClass": "Linha_Aviso",
-													"sid": 133185204160189
+													"sid": 345115106002759
 												},
 												{
-													"id": "find-path",
-													"objectClass": "Inimigos",
-													"sid": 395205140310915,
-													"behaviorType": "ExploradorDeRotas",
+													"id": "set-instvar-value",
+													"objectClass": "Boss_Floresta",
+													"sid": 965234018435196,
 													"parameters": {
-														"x": "Player.X",
-														"y": "Player.Y"
+														"instance-variable": "Acao_Atual",
+														"value": "1"
 													}
 												},
 												{
-													"id": "set-max-speed",
+													"id": "tween-two-properties",
 													"objectClass": "Inimigos",
-													"sid": 632498598940120,
-													"behaviorType": "ExploradorDeRotas",
+													"sid": 629393216703853,
+													"behaviorType": "Interpolação",
 													"parameters": {
-														"speed": "600"
+														"tags": "\"Dash_Boss\"",
+														"property": "position",
+														"end-x": "Dash_AlvoX",
+														"end-y": "Dash_AlvoY",
+														"time": "max(0.15, distance(Boss_Floresta.X, Boss_Floresta.Y, Dash_AlvoX, Dash_AlvoY) / 900)",
+														"ease": "easeoutquad",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
 													}
 												},
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 919381553903100,
+													"sid": 782763288120628,
 													"parameters": {
-														"seconds": "1",
+														"seconds": "max(0.15, distance(Boss_Floresta.X, Boss_Floresta.Y, Dash_AlvoX, Dash_AlvoY) / 900) + 0.05",
 														"use-timescale": true
 													}
 												},
 												{
-													"id": "set-max-speed",
-													"objectClass": "Inimigos",
-													"sid": 680961012939281,
-													"behaviorType": "ExploradorDeRotas",
+													"id": "set-instvar-value",
+													"objectClass": "Boss_Floresta",
+													"sid": 117303989600178,
 													"parameters": {
-														"speed": "60"
+														"instance-variable": "Acao_Atual",
+														"value": "0"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 227853520681815,
+													"parameters": {
+														"seconds": "0.4",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Inimigos",
+													"sid": 197770000067011,
+													"parameters": {
+														"instance-variable": "Atacando",
+														"value": "false"
 													}
 												},
 												{
 													"id": "set-instvar-value",
 													"objectClass": "Inimigos",
-													"sid": 309771765224868,
+													"sid": 520145520337196,
 													"parameters": {
 														"instance-variable": "Estado",
 														"value": "\"Perseguindo\""
@@ -4004,7 +6893,7 @@
 												{
 													"id": "start-timer",
 													"objectClass": "Inimigos",
-													"sid": 378281697508612,
+													"sid": 576123531645802,
 													"behaviorType": "Cronômetro",
 													"parameters": {
 														"duration": "2",
@@ -4013,7 +6902,7 @@
 													}
 												}
 											],
-											"sid": 893287607290456
+											"sid": 445810671966564
 										},
 										{
 											"eventType": "block",
@@ -4021,7 +6910,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Inimigos",
-													"sid": 115602495924755,
+													"sid": 781120928692102,
 													"parameters": {
 														"instance-variable": "Estado",
 														"comparison": 0,
@@ -4031,18 +6920,29 @@
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 530851473566817
+													"sid": 213737803632656
 												}
 											],
 											"actions": [
 												{
 													"id": "stop",
 													"objectClass": "Inimigos",
-													"sid": 528997696076255,
+													"sid": 917986638795182,
 													"behaviorType": "ExploradorDeRotas"
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Inimigos",
+													"sid": 899347501639702,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"duration": "1",
+														"type": "once",
+														"tag": "\"Explodir_Area\""
+													}
 												}
 											],
-											"sid": 299133233912825,
+											"sid": 565905516198731,
 											"children": [
 												{
 													"eventType": "block",
@@ -4050,7 +6950,7 @@
 														{
 															"id": "repeat",
 															"objectClass": "System",
-															"sid": 487420168779877,
+															"sid": 384232342338025,
 															"parameters": {
 																"count": "3"
 															}
@@ -4058,94 +6958,93 @@
 													],
 													"actions": [
 														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 897897107256479,
-															"parameters": {
-																"seconds": "0.3",
-																"use-timescale": true
-															}
-														},
-														{
 															"id": "create-object",
 															"objectClass": "System",
-															"sid": 730126069900627,
+															"sid": 906192395471900,
 															"parameters": {
 																"object-to-create": "Marca_Chao",
-																"layer": "0",
+																"layer": "\"Camada 1\"",
 																"x": "Player.X + random(-120, 120)",
 																"y": "Player.Y + random(-120, 120)",
 																"create-hierarchy": false,
 																"template-name": "\"\""
 															}
-														},
+														}
+													],
+													"sid": 619754255272293
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-timer",
+													"objectClass": "Inimigos",
+													"sid": 433487374019644,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"tag": "\"Explodir_Area\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Inimigos",
+													"sid": 439431309615031,
+													"parameters": {
+														"instance-variable": "Estado",
+														"value": "\"Perseguindo\""
+													}
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Inimigos",
+													"sid": 453997757312877,
+													"behaviorType": "Cronômetro",
+													"parameters": {
+														"duration": "2.5",
+														"type": "once",
+														"tag": "\"Decidir_Ataque\""
+													}
+												}
+											],
+											"sid": 113331786823040,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
 														{
-															"id": "wait",
+															"id": "for-each",
 															"objectClass": "System",
-															"sid": 378095730057356,
+															"sid": 740826648301797,
 															"parameters": {
-																"seconds": "1",
-																"use-timescale": true
+																"object": "Marca_Chao"
 															}
 														}
 													],
-													"sid": 439635204456123,
-													"children": [
+													"actions": [
 														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "for-each",
-																	"objectClass": "System",
-																	"sid": 109495652977043,
-																	"parameters": {
-																		"object": "Marca_Chao"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "create-object",
-																	"objectClass": "System",
-																	"sid": 579146742463423,
-																	"parameters": {
-																		"object-to-create": "Explosao_Dano",
-																		"layer": "0",
-																		"x": "Marca_Chao.X",
-																		"y": "Marca_Chao.Y",
-																		"create-hierarchy": false,
-																		"template-name": "\"\""
-																	}
-																},
-																{
-																	"id": "destroy",
-																	"objectClass": "Marca_Chao",
-																	"sid": 662724605354028
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "Inimigos",
-																	"sid": 557129328684294,
-																	"parameters": {
-																		"instance-variable": "Estado",
-																		"value": "\"Perseguindo\""
-																	}
-																},
-																{
-																	"id": "start-timer",
-																	"objectClass": "Inimigos",
-																	"sid": 137094529083315,
-																	"behaviorType": "Cronômetro",
-																	"parameters": {
-																		"duration": "2.5",
-																		"type": "once",
-																		"tag": "\"Decidir_Ataque\""
-																	}
-																}
-															],
-															"sid": 379468248215873
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 747368682650175,
+															"parameters": {
+																"object-to-create": "Explosao_Dano",
+																"layer": "\"Camada 1\"",
+																"x": "Marca_Chao.X",
+																"y": "Marca_Chao.Y",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "destroy",
+															"objectClass": "Marca_Chao",
+															"sid": 993971160399544
 														}
-													]
+													],
+													"sid": 740443526779621
 												}
 											]
 										},
@@ -4215,6 +7114,148 @@
 												}
 											],
 											"sid": 331671710934725
+										},
+										{
+											"eventType": "comment",
+											"text": "Estrelinhas de stun na cabeça do boss durante a Fadiga (tamanho proporcional ao boss)."
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-tick",
+													"objectClass": "System",
+													"sid": 496496198133655
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Boss_Floresta",
+													"sid": 372672955145467,
+													"parameters": {
+														"instance-variable": "Estado",
+														"comparison": 0,
+														"value": "\"Fadiga\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Stun_Boss",
+													"sid": 465773035260598,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Stun_Boss",
+													"sid": 718511162926841,
+													"parameters": {
+														"x": "Boss_Floresta.X + Boss_Floresta.Width * 0.07",
+														"y": "Boss_Floresta.Y - Boss_Floresta.Height * 0.38"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Stun_Boss",
+													"sid": 745453475487885,
+													"parameters": {
+														"width": "Boss_Floresta.Width * 0.9",
+														"height": "Boss_Floresta.Width * 0.9 * 96 / 296"
+													}
+												}
+											],
+											"sid": 501581738285506
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-tick",
+													"objectClass": "System",
+													"sid": 878327398060488
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Boss_Floresta",
+													"sid": 459433662340730,
+													"parameters": {
+														"instance-variable": "Estado",
+														"comparison": 0,
+														"value": "\"Fadiga\""
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Stun_Boss",
+													"sid": 367076046939757,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 261461119235745
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 923745916208635,
+													"parameters": {
+														"first-value": "Boss_Floresta.Count",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Stun_Boss",
+													"sid": 901427609153375,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 728532210988919
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 224017428036264,
+													"parameters": {
+														"object": "Projetil_Boss"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 496545375276206,
+													"parameters": {
+														"first-value": "max(max(-Projetil_Boss.X, -Projetil_Boss.Y), max(Projetil_Boss.X - LayoutWidth, Projetil_Boss.Y - LayoutHeight))",
+														"comparison": 4,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Projetil_Boss",
+													"sid": 962390662037343
+												}
+											],
+											"sid": 603886356611428
 										}
 									],
 									"sid": 482328401466524
@@ -4364,7 +7405,7 @@
 										},
 										{
 											"id": "delete",
-											"objectClass": "Pool_Anjo",
+											"objectClass": "Pool_Demonio",
 											"sid": 979619146717029,
 											"parameters": {
 												"index": "Indice_Sorteado",
@@ -4922,6 +7963,803 @@
 				}
 			],
 			"sid": 768524807114077
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Musica_Boss",
+			"description": "Música do boss da floresta (intro + loop sem emenda) e o aviso de 'tocando agora' com disco girando.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Música do boss: a intro (45,2 s) toca uma vez e o loop é agendado no áudio para começar exatamente quando ela termina, então não tem buraco nem emenda. O loop (118,6 s) volta pro ponto certo do compasso. O aviso no canto inferior direito entra deslizando, digita o nome da música, espera, apaga como um backspace segurado e sai."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 605232678604257
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 725823359953684,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Sala_Boss_Floresta\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 953189646989748,
+							"parameters": {
+								"tag": "\"musica_boss_intro\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 478807818432667,
+							"parameters": {
+								"tag": "\"musica_boss\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 126970843504544,
+							"parameters": {
+								"variable": "Musica_Inicio",
+								"value": "Audio.CurrentTime + 0.15"
+							}
+						},
+						{
+							"id": "schedule-next-play",
+							"objectClass": "Audio",
+							"sid": 630730794964088,
+							"parameters": {
+								"time": "Musica_Inicio"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 445594514768533,
+							"parameters": {
+								"audio-file": {
+									"path": "Boss_Floresta_Intro"
+								},
+								"loop": "not-looping",
+								"volume": "-3",
+								"stereo-pan": "0",
+								"tag-optional": "\"musica_boss_intro\""
+							}
+						},
+						{
+							"id": "schedule-next-play",
+							"objectClass": "Audio",
+							"sid": 258226589652152,
+							"parameters": {
+								"time": "Musica_Inicio + 45.221291666666666"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 731507609668864,
+							"parameters": {
+								"audio-file": {
+									"path": "Boss_Floresta_Loop"
+								},
+								"loop": "looping",
+								"volume": "-3",
+								"stereo-pan": "0",
+								"tag-optional": "\"musica_boss\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 833711856109743,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"value": "\"entrando\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 733644166779310,
+							"parameters": {
+								"variable": "Musica_Letras",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 629363866498038,
+							"parameters": {
+								"variable": "Musica_Tempo",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 850320029188246,
+							"parameters": {
+								"variable": "Musica_Desloc",
+								"value": "620"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Musica_Rotulo",
+							"sid": 763743967449028,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Musica_Nome",
+							"sid": 636455257887713,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 542698873196177
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 879179842552490
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 976489851471820,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 1,
+								"second-value": "\"Sala_Boss_Floresta\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 917593085082780,
+							"parameters": {
+								"tag": "\"musica_boss_intro\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 318908097923963,
+							"parameters": {
+								"tag": "\"musica_boss\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 533659331092207,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 815365973228593
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 463578924483065
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 185551145385422,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"comparison": 1,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 427127012563628,
+							"parameters": {
+								"variable": "Musica_Tempo",
+								"value": "dt"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Musica_Disco",
+							"sid": 207001208432839,
+							"parameters": {
+								"angle": "Musica_Disco.Angle + 260 * dt"
+							}
+						}
+					],
+					"sid": 825831790913025
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 525700932307653
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 893019085552144,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"comparison": 0,
+								"value": "\"entrando\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 330034420533474,
+							"parameters": {
+								"variable": "Musica_Desloc",
+								"value": "lerp(Musica_Desloc, 0, 1 - exp(-11 * dt))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 902399483662500,
+							"parameters": {
+								"variable": "Musica_Cursor",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 441009018751537,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 947718740085253,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"comparison": 5,
+										"value": "0.5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 529212131345189,
+									"parameters": {
+										"variable": "Musica_Estado",
+										"value": "\"digitando\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 200627334483372,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 245925160031379
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 388798187222559
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 835291058311516,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"comparison": 0,
+								"value": "\"digitando\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 485991838348390,
+							"parameters": {
+								"variable": "Musica_Desloc",
+								"value": "lerp(Musica_Desloc, 0, 1 - exp(-11 * dt))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 671472962013790,
+							"parameters": {
+								"variable": "Musica_Cursor",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 711519299206361,
+							"parameters": {
+								"variable": "Musica_Letras",
+								"value": "dt * random(12, 32)"
+							}
+						}
+					],
+					"sid": 318094116946071,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 966505181104870,
+									"parameters": {
+										"variable": "Musica_Letras",
+										"comparison": 5,
+										"value": "len(MUSICA_ROTULO) + len(MUSICA_NOME)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 126273206537959,
+									"parameters": {
+										"variable": "Musica_Letras",
+										"value": "len(MUSICA_ROTULO) + len(MUSICA_NOME)"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 627202467741073,
+									"parameters": {
+										"variable": "Musica_Estado",
+										"value": "\"mostrando\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 819953596653763,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 647878962726937
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 774605169869050
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 449659793673368,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"comparison": 0,
+								"value": "\"mostrando\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 140484517981480,
+							"parameters": {
+								"variable": "Musica_Desloc",
+								"value": "lerp(Musica_Desloc, 0, 1 - exp(-11 * dt))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 386136549504917,
+							"parameters": {
+								"variable": "Musica_Cursor",
+								"value": "floor(Musica_Tempo * 2.6) - 2 * floor(Musica_Tempo * 1.3)"
+							}
+						}
+					],
+					"sid": 393204430033495,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 284930066164597,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"comparison": 5,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 258781398558858,
+									"parameters": {
+										"variable": "Musica_Estado",
+										"value": "\"apagando\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 366879036688955,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 289822928361043
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 273941165237334
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 307351209712125,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"comparison": 0,
+								"value": "\"apagando\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 929199836347398,
+							"parameters": {
+								"variable": "Musica_Desloc",
+								"value": "lerp(Musica_Desloc, 0, 1 - exp(-11 * dt))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 538112419839495,
+							"parameters": {
+								"variable": "Musica_Cursor",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 379500837682883,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 616695816884750,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"comparison": 2,
+										"value": "0.06"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 683936608900277,
+									"parameters": {
+										"variable": "Musica_Letras",
+										"value": "len(MUSICA_ROTULO) + len(MUSICA_NOME) - 1"
+									}
+								}
+							],
+							"sid": 872333025743035
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 186593934626086,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"comparison": 5,
+										"value": "0.45"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 835268690522964,
+									"parameters": {
+										"variable": "Musica_Letras",
+										"value": "dt * min(60, 14 + 90 * (Musica_Tempo - 0.45))"
+									}
+								}
+							],
+							"sid": 855125610746461
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 743654489261437,
+									"parameters": {
+										"variable": "Musica_Letras",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 800261806222136,
+									"parameters": {
+										"variable": "Musica_Letras",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 628300829802222,
+									"parameters": {
+										"variable": "Musica_Estado",
+										"value": "\"saindo\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 482230574122765,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 413015762405170
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 348063468768726
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 293607409144000,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"comparison": 0,
+								"value": "\"saindo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 736525483643417,
+							"parameters": {
+								"variable": "Musica_Desloc",
+								"value": "lerp(Musica_Desloc, 620, 1 - exp(-11 * dt))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 365468519800789,
+							"parameters": {
+								"variable": "Musica_Cursor",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 892642769133126,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 133893294696581,
+									"parameters": {
+										"variable": "Musica_Tempo",
+										"comparison": 5,
+										"value": "0.9"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 691894837365598,
+									"parameters": {
+										"variable": "Musica_Desloc",
+										"value": "620"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 326669883913573,
+									"parameters": {
+										"variable": "Musica_Estado",
+										"value": "\"\""
+									}
+								}
+							],
+							"sid": 416633962684840
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 736311057715723
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 672330628781754,
+							"parameters": {
+								"variable": "Musica_Estado",
+								"comparison": 1,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Musica_Painel",
+							"sid": 261615545034002,
+							"parameters": {
+								"x": "992 + Musica_Desloc",
+								"y": "668"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Musica_Disco",
+							"sid": 813179489087647,
+							"parameters": {
+								"x": "1222 + Musica_Desloc",
+								"y": "668"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Musica_Rotulo",
+							"sid": 141295961195665,
+							"parameters": {
+								"x": "768 + Musica_Desloc",
+								"y": "633"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Musica_Nome",
+							"sid": 334279223478019,
+							"parameters": {
+								"x": "768 + Musica_Desloc",
+								"y": "652"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Musica_Rotulo",
+							"sid": 524227920947540,
+							"parameters": {
+								"text": "left(MUSICA_ROTULO, min(floor(Musica_Letras), len(MUSICA_ROTULO))) & left(\"|\", Musica_Cursor * (floor(Musica_Letras) < len(MUSICA_ROTULO)))"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Musica_Nome",
+							"sid": 543140642698541,
+							"parameters": {
+								"text": "left(MUSICA_NOME, max(0, floor(Musica_Letras) - len(MUSICA_ROTULO))) & left(\"|\", Musica_Cursor * (floor(Musica_Letras) >= len(MUSICA_ROTULO)))"
+							}
+						}
+					],
+					"sid": 263724510718193
+				}
+			],
+			"sid": 419438007380241
 		}
 	],
 	"sid": 404931570007090

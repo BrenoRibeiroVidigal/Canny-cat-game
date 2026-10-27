@@ -20,15 +20,16 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 638.4997032485705,
-						"y": 359.21785544408493,
+						"x": 640,
+						"y": 360,
 						"width": 1280,
 						"height": 720,
 						"originX": 0.5,
-						"originY": 0.5009107468123861,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -36,7 +37,7 @@
 							1
 						],
 						"z": 0,
-						"angle": 6.282984108341772
+						"angle": 0
 					}
 				}
 			],
@@ -80,8 +81,8 @@
 					"properties": {
 						"text": "Novo Jogo",
 						"enable-bbcode": true,
-						"character-width": 16,
-						"character-height": 16,
+						"character-width": 28,
+						"character-height": 34,
 						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
 						"spacing-data": "",
 						"scale": 1,
@@ -110,32 +111,33 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 98,
-						"y": 432,
-						"width": 276.02332726429114,
-						"height": 30,
+						"x": 128,
+						"y": 452,
+						"width": 280,
+						"height": 34,
 						"originX": 0,
 						"originY": 0.5,
 						"color": [
-							0.9803921568627451,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"z": 0,
-						"angle": 0.007999829339886855
+						"angle": 0
 					}
 				},
 				{
 					"type": "Opcao",
 					"properties": {
-						"text": "Carregar Jogo",
+						"text": "Continuar",
 						"enable-bbcode": true,
-						"character-width": 16,
-						"character-height": 16,
+						"character-width": 28,
+						"character-height": 34,
 						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
 						"spacing-data": "",
 						"scale": 1,
@@ -164,19 +166,20 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 96,
-						"y": 497,
-						"width": 255,
-						"height": 30,
+						"x": 128,
+						"y": 522,
+						"width": 280,
+						"height": 34,
 						"originX": 0,
 						"originY": 0.5,
 						"color": [
-							0.9803921568627451,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"z": 0,
@@ -199,73 +202,20 @@
 						"opcaoSelecionada": 1
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 63,
-						"y": 429,
-						"width": 32,
-						"height": 32,
+						"x": 94,
+						"y": 452,
+						"width": 44,
+						"height": 44,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Opcao",
-					"properties": {
-						"text": "Carregar Jogo",
-						"enable-bbcode": true,
-						"character-width": 16,
-						"character-height": 16,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": -2,
-						"line-height": 0,
-						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "left",
-						"read-aloud": false
-					},
-					"uid": 10,
-					"sid": 566024271672840,
-					"tags": "",
-					"instanceVariables": {
-						"opcao": 3,
-						"acao": "carregarJogo"
-					},
-					"behaviors": {},
-					"effects": {
-						"Brilho": {
-							"isEnabled": true,
-							"parameters": {
-								"brightness": 1
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 97,
-						"y": 571,
-						"width": 255,
-						"height": 30,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							0.9803921568627451,
-							0,
-							0,
 							1
 						],
 						"z": 0,
@@ -285,16 +235,32 @@
 					"sid": 666980844379716,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Senóide": {
+							"properties": {
+								"movement": "height",
+								"wave": "sine",
+								"period": 3,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 939,
-						"y": 409,
-						"width": 232.89090909090908,
-						"height": 287.024,
+						"x": 928,
+						"y": 556,
+						"width": 320,
+						"height": 272.68,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -344,6 +310,7 @@
 	"height": 720,
 	"unboundedScrolling": false,
 	"sampling": "auto",
+	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",

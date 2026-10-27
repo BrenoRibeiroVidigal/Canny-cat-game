@@ -2,6 +2,35 @@
 	"name": "Menu",
 	"events": [
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 355603525571163
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 162134999476379,
+					"parameters": {
+						"tag": "\"musica_boss_intro\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 651314600826124,
+					"parameters": {
+						"tag": "\"musica_boss\""
+					}
+				}
+			],
+			"sid": 685448144352698
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Botão do menu",
@@ -247,7 +276,7 @@
 							"objectClass": "Botao",
 							"sid": 838148777367288,
 							"parameters": {
-								"y": "Opcao.Y"
+								"y": "lerp(Botao.Y, Opcao.Y, min(1, 12 * dt))"
 							}
 						},
 						{
@@ -257,7 +286,7 @@
 							"parameters": {
 								"effect": "\"Brilho\"",
 								"parameter-index": "0",
-								"value": "200"
+								"value": "100"
 							}
 						}
 					],
@@ -285,7 +314,7 @@
 							"parameters": {
 								"effect": "\"Brilho\"",
 								"parameter-index": "0",
-								"value": "100"
+								"value": "50"
 							}
 						}
 					],

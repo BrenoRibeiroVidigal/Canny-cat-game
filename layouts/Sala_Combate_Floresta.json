@@ -40,6 +40,7 @@
 						"tile-x-spacing": 0,
 						"tile-y-spacing": 0
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": true,
 					"world": {
@@ -72,6 +73,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -182,6 +184,7 @@
 							"properties": {}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -227,6 +230,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -262,6 +266,7 @@
 						"CD_Tiro": true
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -297,6 +302,7 @@
 						"CD_Tiro": true
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -342,6 +348,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -411,13 +418,14 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 110.40216809137533,
-						"y": 609.0462058400931,
-						"width": 219.808,
-						"height": 221.8,
+						"x": 640,
+						"y": 604,
+						"width": 1240,
+						"height": 200,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -454,6 +462,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -503,6 +512,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -536,6 +546,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -561,14 +572,14 @@
 						"text": "Texto",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 32,
-						"line-height": 0,
+						"size": 26,
+						"line-height": 4,
 						"bold": false,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0.9764705882352941,
+							0.9333333333333333,
+							0.8235294117647058,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -596,13 +607,14 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 238,
-						"y": 515,
-						"width": 973,
-						"height": 200,
+						"x": 248,
+						"y": 526,
+						"width": 950,
+						"height": 150,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -637,13 +649,14 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 111.76738916118416,
-						"y": 607.2766479797108,
-						"width": 166.14414650790394,
-						"height": 169.77158198495863,
+						"x": 130,
+						"y": 604,
+						"width": 156,
+						"height": 156,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -670,13 +683,14 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 605,
-						"y": 306,
-						"width": 500,
-						"height": 250.00000000000205,
+						"x": 640,
+						"y": 360,
+						"width": 520,
+						"height": 300,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -686,7 +700,7 @@
 							1
 						],
 						"z": 0,
-						"angle": 8.816556481077375e-17
+						"angle": 0
 					}
 				},
 				{
@@ -719,20 +733,21 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 523,
-						"y": 339,
-						"width": 99,
-						"height": 66,
+						"x": 570,
+						"y": 290,
+						"width": 140,
+						"height": 172,
 						"originX": 0,
 						"originY": 0,
 						"color": [
 							1,
 							1,
 							1,
-							1
+							0
 						],
 						"z": 0,
 						"angle": 0
@@ -768,20 +783,21 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 525,
-						"y": 206,
-						"width": 99,
-						"height": 66,
+						"x": 410,
+						"y": 290,
+						"width": 140,
+						"height": 172,
 						"originX": 0,
 						"originY": 0,
 						"color": [
 							1,
 							1,
 							1,
-							1
+							0
 						],
 						"z": 0,
 						"angle": 0
@@ -817,15 +833,61 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 724,
-						"y": 200,
-						"width": 99,
-						"height": 66,
+						"x": 730,
+						"y": 290,
+						"width": 140,
+						"height": 172,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Barra_Karma",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 79,
+					"sid": 749946170009988,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Esmaecer": {
+							"properties": {
+								"fade-in-time": 0.8,
+								"wait-time": 2,
+								"fade-out-time": 0.8,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 640,
+						"y": 684,
+						"width": 640,
+						"height": 72,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -866,15 +928,16 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
 						"x": 640,
-						"y": 665.6289922128773,
-						"width": 32.701911072040616,
-						"height": 29.234876873112626,
-						"originX": 0.5017301038062284,
-						"originY": 0.5236768802228412,
+						"y": 684,
+						"width": 36,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -886,39 +949,241 @@
 					}
 				},
 				{
-					"type": "Barra_Karma",
+					"type": "HUD_Status",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
-					"uid": 79,
-					"sid": 749946170009988,
+					"uid": 1318,
+					"sid": 901386864948299,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Esmaecer": {
-							"properties": {
-								"fade-in-time": 0.8,
-								"wait-time": 2,
-								"fade-out-time": 0.8,
-								"destroy": false,
-								"enabled": false,
-								"live-preview": false
-							}
-						}
-					},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 638.0162242189095,
-						"y": 699.9285190615836,
-						"width": 646.447238950708,
-						"height": 64.39471774512066,
-						"originX": 0.49594394527261587,
-						"originY": 0.6682551319648092,
+						"x": 12,
+						"y": 50,
+						"width": 118,
+						"height": 96,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Texto_Status",
+					"properties": {
+						"text": "",
+						"enable-bbcode": false,
+						"character-width": 14,
+						"character-height": 18,
+						"character-set": "0123456789.-",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": -3,
+						"line-height": 10,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1319,
+					"sid": 172946514351922,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 52,
+						"y": 61,
+						"width": 72,
+						"height": 84,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Musica_Painel",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 2414,
+					"sid": 416764019724770,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1612,
+						"y": 668,
+						"width": 540,
+						"height": 86,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Musica_Disco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 2415,
+					"sid": 799330503607652,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1842,
+						"y": 668,
+						"width": 76,
+						"height": 76,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Musica_Rotulo",
+					"properties": {
+						"text": "♪ TOCANDO AGORA",
+						"enable-bbcode": false,
+						"font": "Arial",
+						"size": 14,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.68,
+							0.87,
+							0.45,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 2416,
+					"sid": 431884723868003,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1388,
+						"y": 633,
+						"width": 470,
+						"height": 34,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Musica_Nome",
+					"properties": {
+						"text": "Stalemate (NicolasPL Remix) - Kayoz X",
+						"enable-bbcode": false,
+						"font": "Arial",
+						"size": 19,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.98,
+							0.96,
+							0.89,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 2417,
+					"sid": 396039324680604,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1388,
+						"y": 652,
+						"width": 470,
+						"height": 34,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -1003,6 +1268,7 @@
 	"height": 1440,
 	"unboundedScrolling": false,
 	"sampling": "auto",
+	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",

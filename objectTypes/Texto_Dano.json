@@ -1,6 +1,6 @@
 {
 	"name": "Texto_Dano",
-	"plugin-id": "Text",
+	"plugin-id": "Spritefont2",
 	"sid": 509811896539638,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
@@ -10,7 +10,25 @@
 			"behaviorId": "Tween",
 			"name": "Interpolação",
 			"sid": 989718460260107
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Esmaecer",
+			"sid": 585345434967024
 		}
 	],
-	"effectTypes": []
+	"effectTypes": [],
+	"image": {
+		"width": 208,
+		"height": 64,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 4229812,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
 }

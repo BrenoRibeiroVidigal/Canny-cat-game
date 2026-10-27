@@ -7,6 +7,35 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
+					"sid": 694443757469100
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 869808398866440,
+					"parameters": {
+						"tag": "\"musica_boss_intro\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 133905754648331,
+					"parameters": {
+						"tag": "\"musica_boss\""
+					}
+				}
+			],
+			"sid": 639046575563428
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
 					"sid": 200016846384397
 				}
 			],
@@ -33,7 +62,7 @@
 					"objectClass": "System",
 					"sid": 608819690037261,
 					"parameters": {
-						"seconds": "8",
+						"seconds": "4.6",
 						"use-timescale": true
 					}
 				},

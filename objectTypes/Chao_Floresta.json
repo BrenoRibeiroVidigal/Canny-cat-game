@@ -1,0 +1,138 @@
+{
+	"name": "Chao_Floresta",
+	"plugin-id": "Sprite",
+	"sid": 452578235628618,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1120,
+						"height": 1200,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossy",
+						"exportQuality": 0.9,
+						"fileType": "image/webp",
+						"imageSpriteId": 6211376,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1120,
+						"height": 1200,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossy",
+						"exportQuality": 0.9,
+						"fileType": "image/webp",
+						"imageSpriteId": 3300098,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1120,
+						"height": 1200,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossy",
+						"exportQuality": 0.9,
+						"fileType": "image/webp",
+						"imageSpriteId": 9902575,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1120,
+						"height": 1200,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossy",
+						"exportQuality": 0.9,
+						"fileType": "image/webp",
+						"imageSpriteId": 2122459,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1120,
+						"height": 1200,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossy",
+						"exportQuality": 0.9,
+						"fileType": "image/webp",
+						"imageSpriteId": 4175543,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1120,
+						"height": 1200,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossy",
+						"exportQuality": 0.9,
+						"fileType": "image/webp",
+						"imageSpriteId": 8188047,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1120,
+						"height": 1200,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossy",
+						"exportQuality": 0.9,
+						"fileType": "image/webp",
+						"imageSpriteId": 7281250,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1120,
+						"height": 1200,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossy",
+						"exportQuality": 0.9,
+						"fileType": "image/webp",
+						"imageSpriteId": 8116581,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 202838013165755,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

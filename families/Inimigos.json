@@ -90,6 +90,9 @@
 		"Inimigo",
 		"inimigoPersergidor",
 		"Boss_Floresta",
-		"Sniper_Inimigo"
+		"Sniper_Inimigo",
+		"Gato_Bomba",
+		"Gato_Invocador",
+		"Gatinho_Sombra"
 	]
 }

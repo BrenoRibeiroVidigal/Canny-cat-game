@@ -1,0 +1,31 @@
+{
+	"name": "Texto_Bomba",
+	"plugin-id": "Spritefont2",
+	"sid": 342598569350738,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Dono_UID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 174653122933006
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 208,
+		"height": 64,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 2722730,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

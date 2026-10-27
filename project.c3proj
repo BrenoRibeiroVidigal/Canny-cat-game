@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 49502,
+	"savedWithRelease": 50603,
 	"name": "teste animacao",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -10,6 +10,13 @@
 			"type": "plugin",
 			"id": "Arr",
 			"name": "Matriz",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Áudio",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -228,7 +235,22 @@
 			"Projetil_Boss",
 			"Linha_Aviso",
 			"Marca_Chao",
-			"Explosao_Dano"
+			"Explosao_Dano",
+			"Cutscene_Fundo",
+			"Stun_Boss",
+			"Chao_Floresta",
+			"Decoracao_Floresta",
+			"Casa_Mercador",
+			"Montanha_Caverna",
+			"Lago_Floresta",
+			"Gato_Bomba",
+			"Texto_Bomba",
+			"Explosao_Bomba",
+			"Gato_Invocador",
+			"Gatinho_Sombra",
+			"Circulo_Invocacao",
+			"Fumaca_Invocacao",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -240,7 +262,8 @@
 					"Arvore_Aglomerado2",
 					"Arvore_TileMap",
 					"Arvore_Giga",
-					"Sombra_UI"
+					"Sombra_UI",
+					"Arvore_Floresta"
 				],
 				"subfolders": [],
 				"name": "Arvores"
@@ -258,7 +281,13 @@
 					"Bota_SalvarESair",
 					"Botao_DavyJones",
 					"Botao_Opcoes",
-					"Botao_Voltar"
+					"Botao_Voltar",
+					"HUD_Status",
+					"Texto_Status",
+					"Musica_Disco",
+					"Musica_Painel",
+					"Musica_Rotulo",
+					"Musica_Nome"
 				],
 				"subfolders": [],
 				"name": "HUD"
@@ -305,7 +334,24 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Boss_Floresta_Intro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 132724604423995,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Floresta_Loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 255728436615460,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
@@ -416,8 +462,8 @@
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "",
+		"saveLLMContextFile": true,
 		"pixelRounding": false,
-		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
@@ -458,6 +504,7 @@
 		"loaderStyle": "splash",
 		"preloadSounds": true,
 		"uidAllocationMode": "increment",
+		"zAxisScale": "regular",
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"exportFileStructure": "folders",
