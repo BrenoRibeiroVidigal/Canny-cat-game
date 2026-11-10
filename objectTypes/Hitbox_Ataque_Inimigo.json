@@ -4,7 +4,15 @@
 	"sid": 563985498798490,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Forte",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 356382778405567
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

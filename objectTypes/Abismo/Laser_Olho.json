@@ -1,0 +1,138 @@
+{
+	"name": "Laser_Olho",
+	"plugin-id": "Sprite",
+	"sid": 185686059421468,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Dono",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 541011218437283
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4555111,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.25,
+								1,
+								0.25,
+								1,
+								0.75,
+								0,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3191576,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.25,
+								1,
+								0.25,
+								1,
+								0.75,
+								0,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7885395,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.25,
+								1,
+								0.25,
+								1,
+								0.75,
+								0,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3681405,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.25,
+								1,
+								0.25,
+								1,
+								0.75,
+								0,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 682615083111690,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 18
+			}
+		],
+		"subfolders": []
+	}
+}

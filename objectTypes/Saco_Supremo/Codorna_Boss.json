@@ -1,0 +1,184 @@
+{
+	"name": "Codorna_Boss",
+	"plugin-id": "Sprite",
+	"sid": 477341340108406,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "VX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 740447923924008
+		},
+		{
+			"name": "VY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 116607146381892
+		},
+		{
+			"name": "T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 220142027868592
+		},
+		{
+			"name": "Tipo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 139018703263181
+		},
+		{
+			"name": "Espera",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 899277325378576
+		},
+		{
+			"name": "Ang",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 968825907445280
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 114,
+						"height": 126,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3740130,
+						"collisionPoly": {
+							"points": [
+								0.17,
+								0.17,
+								0.83,
+								0.17,
+								0.83,
+								0.83,
+								0.17,
+								0.83
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 114,
+						"height": 126,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2416135,
+						"collisionPoly": {
+							"points": [
+								0.17,
+								0.17,
+								0.83,
+								0.17,
+								0.83,
+								0.83,
+								0.17,
+								0.83
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 243231267407867,
+				"name": "Corre",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			},
+			{
+				"frames": [
+					{
+						"width": 132,
+						"height": 132,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4909883,
+						"collisionPoly": {
+							"points": [
+								0.2,
+								0.2,
+								0.8,
+								0.2,
+								0.8,
+								0.8,
+								0.2,
+								0.8
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 132,
+						"height": 132,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9431192,
+						"collisionPoly": {
+							"points": [
+								0.2,
+								0.2,
+								0.8,
+								0.2,
+								0.8,
+								0.8,
+								0.2,
+								0.8
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 510122480730258,
+				"name": "Mergulho",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

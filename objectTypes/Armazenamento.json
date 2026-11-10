@@ -1,0 +1,14 @@
+{
+	"name": "Armazenamento",
+	"plugin-id": "LocalStorage",
+	"sid": 906034678305205,
+	"singleglobal-inst": {
+		"type": "Armazenamento",
+		"properties": {
+			"in-memory-only": false
+		},
+		"uid": 4969,
+		"sid": 579275976801362,
+		"tags": ""
+	}
+}

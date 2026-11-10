@@ -2,6 +2,36 @@
 	"name": "Menu",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "MenuSelAnt",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 505158314248756
+		},
+		{
+			"eventType": "variable",
+			"name": "MenuSuorT",
+			"type": "number",
+			"initialValue": "2.5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 512290560556006
+		},
+		{
+			"eventType": "variable",
+			"name": "MenuNervoso",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 761287901377254
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -25,6 +55,56 @@
 					"sid": 651314600826124,
 					"parameters": {
 						"tag": "\"musica_boss\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 401421927442635,
+					"parameters": {
+						"tag": "\"musica_sala\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 324264848732653,
+					"parameters": {
+						"tag": "\"musica_menu\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 538683742680469,
+					"parameters": {
+						"audio-file": {
+							"path": "Musica_Menu"
+						},
+						"loop": "looping",
+						"volume": "-Infinity",
+						"stereo-pan": "0",
+						"tag-optional": "\"musica_menu\""
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 511098558005119,
+					"parameters": {
+						"tag": "\"musica_menu\"",
+						"db": "(-7) + Opcoes_Dados.dBM",
+						"duration": "1.2",
+						"ending": "keep-playing"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 374361852443665,
+					"parameters": {
+						"variable": "MenuSelAnt",
+						"value": "-1"
 					}
 				}
 			],
@@ -50,6 +130,16 @@
 							"sid": 488753870657023,
 							"parameters": {
 								"key": 40
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 453064945278709,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "0"
 							}
 						}
 					],
@@ -99,6 +189,16 @@
 							"parameters": {
 								"key": 38
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 382344350974328,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [],
@@ -143,6 +243,16 @@
 							"parameters": {
 								"key": 13
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 185329755603023,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [],
@@ -182,6 +292,20 @@
 									],
 									"actions": [
 										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 182961925671643,
+											"parameters": {
+												"audio-file": {
+													"path": "Sfx_Menu_Ok"
+												},
+												"loop": "not-looping",
+												"volume": "(-6) + Opcoes_Dados.dBE",
+												"stereo-pan": "0",
+												"tag-optional": "\"sfx\""
+											}
+										},
+										{
 											"id": "set-size",
 											"objectClass": "SalasDisponiveis",
 											"sid": 445058680215988,
@@ -194,20 +318,120 @@
 										{
 											"id": "push",
 											"objectClass": "SalasDisponiveis",
-											"sid": 260990132671238,
+											"sid": 894705596387010,
 											"parameters": {
 												"where": "back",
-												"value": "\"Sala_Combate_Floresta\"",
+												"value": "\"Sala_Caverna\"",
 												"axis": "x"
 											}
 										},
 										{
 											"id": "push",
 											"objectClass": "SalasDisponiveis",
-											"sid": 694530820097590,
+											"sid": 261947376522103,
 											"parameters": {
 												"where": "back",
-												"value": "\"Teste_Inimigos\"",
+												"value": "\"Sala_Gruta_Musgosa\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 882728980947046,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Mina_Abandonada\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 235518156974290,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Fenda_Magma\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 771710163954339,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Bosque_Cogumelos\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 965898957203921,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Catacumba\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 896026833190657,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Cristais_Gemeos\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 794589710261348,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Lagoa_Musgosa\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 539588872480934,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Galeria_Mina\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 108943340293736,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Lagos_Magma\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 134354255548080,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Clareira_Fungica\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 468807146148054,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Cripta_Real\"",
 												"axis": "x"
 											}
 										},
@@ -216,7 +440,7 @@
 											"objectClass": "System",
 											"sid": 163912870730225,
 											"parameters": {
-												"layout": "Sala_Inicial"
+												"layout": "Cutscene_Abertura"
 											}
 										}
 									],
@@ -238,6 +462,20 @@
 									],
 									"actions": [
 										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 110006503649196,
+											"parameters": {
+												"audio-file": {
+													"path": "Sfx_Menu_Ok"
+												},
+												"loop": "not-looping",
+												"volume": "(-6) + Opcoes_Dados.dBE",
+												"stereo-pan": "0",
+												"tag-optional": "\"sfx\""
+											}
+										},
+										{
 											"id": "load",
 											"objectClass": "System",
 											"sid": 984353627919413,
@@ -247,6 +485,65 @@
 										}
 									],
 									"sid": 948997284722174
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Opcao",
+											"sid": 582188598861931,
+											"parameters": {
+												"instance-variable": "acao",
+												"comparison": 0,
+												"value": "\"opcoes\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Opcoes_Dados",
+											"sid": 478993987116302,
+											"parameters": {
+												"instance-variable": "Aberto",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Opcoes_Dados",
+											"sid": 975505729847067,
+											"parameters": {
+												"instance-variable": "Sel",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Opcoes_Dados",
+											"sid": 900469151594793,
+											"parameters": {
+												"instance-variable": "SelAnt",
+												"value": "0"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 920846447249593,
+											"parameters": {
+												"audio-file": {
+													"path": "Sfx_Menu_Ok"
+												},
+												"loop": "not-looping",
+												"volume": "-6 + Opcoes_Dados.dBE",
+												"stereo-pan": "0",
+												"tag-optional": "\"sfx\""
+											}
+										}
+									],
+									"sid": 769360203043888
 								}
 							]
 						}
@@ -319,9 +616,4485 @@
 						}
 					],
 					"sid": 463002460427708
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 446949985635506,
+							"parameters": {
+								"first-value": "Botao.opcaoSelecionada",
+								"comparison": 1,
+								"second-value": "MenuSelAnt"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 227739170654542,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 985532332039038,
+									"parameters": {
+										"first-value": "MenuSelAnt",
+										"comparison": 5,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 619837558037647,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "(-10) + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 181546884184820
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 741230447998024,
+									"parameters": {
+										"variable": "MenuSelAnt",
+										"value": "Botao.opcaoSelecionada"
+									}
+								}
+							],
+							"sid": 328042944141224
+						}
+					]
 				}
 			],
 			"sid": 952206020828135
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Menu_Cena",
+			"description": "Menu: Canny Cat com o cajado no escuro, olhos vermelhos piscando e suor de nervoso de vez em quando.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Menu: fundo preto com olhos vermelhos (Menu_Olhos) que piscam sozinhos (T = tempo até a próxima piscada; 'Some' fecha por mais tempo). O Canny Cat respira e, a cada 4-8 s (MenuSuorT), sua de nervoso (Menu_Suor) e treme um pouco (MenuNervoso). O brilho do cristal do cajado pulsa. Os botões (Menu_Placa) acendem com a opção selecionada e também funcionam com o mouse."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 802046779562195
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Menu_Gato",
+							"sid": 181303872843410,
+							"parameters": {
+								"instance-variable": "BaseX",
+								"value": "Self.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Menu_Gato",
+							"sid": 550619111525247,
+							"parameters": {
+								"instance-variable": "BaseY",
+								"value": "Self.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Menu_Gato",
+							"sid": 124990785757896,
+							"parameters": {
+								"instance-variable": "BaseW",
+								"value": "Self.Width"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Menu_Gato",
+							"sid": 637492778633369,
+							"parameters": {
+								"instance-variable": "BaseH",
+								"value": "Self.Height"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Menu_Brilho",
+							"sid": 847655844104554,
+							"parameters": {
+								"instance-variable": "BaseW",
+								"value": "Self.Width"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Menu_Logo",
+							"sid": 679648621333651,
+							"parameters": {
+								"instance-variable": "BaseY",
+								"value": "Self.Y"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Menu_Suor",
+							"sid": 983902884153093,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 789288808880162,
+							"parameters": {
+								"variable": "MenuSuorT",
+								"value": "2.5"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 541212529047727,
+							"parameters": {
+								"variable": "MenuNervoso",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 668857058990653
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 284656721826394
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 296712804453044,
+							"parameters": {
+								"variable": "MenuNervoso",
+								"value": "max(0, MenuNervoso - dt)"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 238528697776412,
+							"parameters": {
+								"variable": "MenuSuorT",
+								"value": "dt"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Menu_Gato",
+							"sid": 617196406658509,
+							"parameters": {
+								"width": "Self.BaseW * (1 - 0.006 * sin(time * 110))",
+								"height": "Self.BaseH * (1 + 0.012 * sin(time * 110))"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Menu_Gato",
+							"sid": 335836519997775,
+							"parameters": {
+								"x": "Self.BaseX + sin(time * 2600) * 3 * (MenuNervoso > 0)",
+								"y": "Self.BaseY"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Menu_Brilho",
+							"sid": 539693523153930,
+							"parameters": {
+								"width": "Self.BaseW * (1 + 0.12 * sin(time * 150))",
+								"height": "Self.BaseW * (1 + 0.12 * sin(time * 150))"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Menu_Logo",
+							"sid": 199151149889693,
+							"parameters": {
+								"y": "Self.BaseY + sin(time * 70) * 5"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Menu_Logo",
+							"sid": 902210962128993,
+							"parameters": {
+								"angle": "sin(time * 45) * 1.2"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Menu_Olhos",
+							"sid": 668111256430653,
+							"parameters": {
+								"instance-variable": "T",
+								"value": "dt"
+							}
+						}
+					],
+					"sid": 981485305558412
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 676369583862654,
+							"parameters": {
+								"variable": "MenuSuorT",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 761205797140789,
+							"parameters": {
+								"variable": "MenuSuorT",
+								"value": "random(4, 8)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 235196355507630,
+							"parameters": {
+								"variable": "MenuNervoso",
+								"value": "0.7"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Menu_Suor",
+							"sid": 601890839931266,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Menu_Suor",
+							"sid": 696637251775795,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 895821250170480
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Menu_Suor",
+							"sid": 232594803939227,
+							"parameters": {
+								"animation": "\"Animation 1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Menu_Suor",
+							"sid": 593601251606633,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 935593464925407
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 632964125699042,
+							"parameters": {
+								"object": "Menu_Olhos",
+								"expression": "Menu_Olhos.T",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Menu_Olhos",
+							"sid": 858002384931923,
+							"parameters": {
+								"animation": "choose(\"Piscar\", \"Piscar\", \"Some\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Menu_Olhos",
+							"sid": 442322568627115,
+							"parameters": {
+								"instance-variable": "T",
+								"value": "random(1.5, 6)"
+							}
+						}
+					],
+					"sid": 723116903446267
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 206086372033142
+						}
+					],
+					"actions": [],
+					"sid": 189109191873896,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Menu_Placa",
+									"sid": 908208516570569,
+									"parameters": {
+										"instance-variable": "opcao",
+										"comparison": 0,
+										"value": "Botao.opcaoSelecionada"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Menu_Placa",
+									"sid": 878662751721091,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 626836557152535
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Menu_Placa",
+									"sid": 427269821443585,
+									"parameters": {
+										"instance-variable": "opcao",
+										"comparison": 1,
+										"value": "Botao.opcaoSelecionada"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Menu_Placa",
+									"sid": 293720696881145,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 424149557243785
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 286527693863331,
+							"parameters": {
+								"object": "Menu_Placa"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 786101929389543,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Botao",
+							"sid": 314536050853401,
+							"parameters": {
+								"instance-variable": "opcaoSelecionada",
+								"value": "Menu_Placa.opcao"
+							}
+						}
+					],
+					"sid": 988149315761962
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 789350173633178,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Menu_Placa"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 717107984009131,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 396479504088093,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 749526555303681,
+									"parameters": {
+										"object": "Opcao",
+										"expression": "Opcao.opcao",
+										"comparison": 0,
+										"value": "Menu_Placa.opcao"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 765648123433885,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Opcao",
+											"sid": 242143692340027,
+											"parameters": {
+												"instance-variable": "acao",
+												"comparison": 0,
+												"value": "\"novoJogo\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 427842465825650,
+											"parameters": {
+												"audio-file": {
+													"path": "Sfx_Menu_Ok"
+												},
+												"loop": "not-looping",
+												"volume": "(-6) + Opcoes_Dados.dBE",
+												"stereo-pan": "0",
+												"tag-optional": "\"sfx\""
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "SalasDisponiveis",
+											"sid": 625077267282193,
+											"parameters": {
+												"width": "0",
+												"height": "1",
+												"depth": "1"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 113537375542542,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Caverna\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 751116054275866,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Gruta_Musgosa\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 308030124628246,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Mina_Abandonada\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 598900054724149,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Fenda_Magma\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 761188801451418,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Bosque_Cogumelos\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 730112633715206,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Catacumba\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 272477296779948,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Cristais_Gemeos\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 330087699391697,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Lagoa_Musgosa\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 947374635790289,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Galeria_Mina\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 217167314155988,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Lagos_Magma\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 464863992011125,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Clareira_Fungica\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "SalasDisponiveis",
+											"sid": 368411340903028,
+											"parameters": {
+												"where": "back",
+												"value": "\"Sala_Cripta_Real\"",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 967689808712105,
+											"parameters": {
+												"layout": "Cutscene_Abertura"
+											}
+										}
+									],
+									"sid": 811259733858805
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Opcao",
+											"sid": 225973130416590,
+											"parameters": {
+												"instance-variable": "acao",
+												"comparison": 0,
+												"value": "\"carregarJogo\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 129312560517588,
+											"parameters": {
+												"audio-file": {
+													"path": "Sfx_Menu_Ok"
+												},
+												"loop": "not-looping",
+												"volume": "(-6) + Opcoes_Dados.dBE",
+												"stereo-pan": "0",
+												"tag-optional": "\"sfx\""
+											}
+										},
+										{
+											"id": "load",
+											"objectClass": "System",
+											"sid": 479756061347831,
+											"parameters": {
+												"slot": "\"save\""
+											}
+										}
+									],
+									"sid": 160176526830005
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Opcao",
+											"sid": 512759879131155,
+											"parameters": {
+												"instance-variable": "acao",
+												"comparison": 0,
+												"value": "\"opcoes\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Opcoes_Dados",
+											"sid": 548913637457322,
+											"parameters": {
+												"instance-variable": "Aberto",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Opcoes_Dados",
+											"sid": 389926147663827,
+											"parameters": {
+												"instance-variable": "Sel",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Opcoes_Dados",
+											"sid": 960364176797725,
+											"parameters": {
+												"instance-variable": "SelAnt",
+												"value": "0"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 943327453274937,
+											"parameters": {
+												"audio-file": {
+													"path": "Sfx_Menu_Ok"
+												},
+												"loop": "not-looping",
+												"volume": "-6 + Opcoes_Dados.dBE",
+												"stereo-pan": "0",
+												"tag-optional": "\"sfx\""
+											}
+										}
+									],
+									"sid": 294539937341176
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 450029475927267
+		},
+		{
+			"eventType": "comment",
+			"text": "Atalho de desenvolvimento: T no menu abre a Sala_Teste_Inimigos."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 817391755929767,
+					"parameters": {
+						"key": 84
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 315653965119765,
+					"parameters": {
+						"tag": "\"musica_menu\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 582218320964127,
+					"parameters": {
+						"layout": "Sala_Teste_Inimigos"
+					}
+				}
+			],
+			"sid": 859294704305370
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Opcoes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "MENU DE OPÇÕES: volume geral, música e efeitos (0 a 100%), tremor da tela, números de dano e cinemáticas. Os valores ficam no objeto global Opcoes_Dados (Geral/Musica/Efeitos em %, SemTremor/SemDano/SemCine = 1 quando desligado; dBM e dBE = quanto somar no volume das músicas e dos efeitos, já com o volume geral) e são guardados no Local Storage (Armazenamento, chave canny_opcoes). Abrir = Opcoes_Dados.Aberto = 1; o painel é montado na camada Opcoes e desmontado quando Aberto volta a 0. Setas/WASD escolhem e ajustam, Enter/Espaço liga e desliga, Esc fecha; com o mouse, passar por cima seleciona, clique liga/desliga e clique no medidor escolhe o volume."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 813672956522178
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Opc_Painel",
+							"sid": 246483869074812
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Opc_Item",
+							"sid": 942417390668542
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Opc_Valor",
+							"sid": 545440124327362
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Opc_Escuro",
+							"sid": 680829304571402
+						}
+					],
+					"sid": 743842031598747
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 452515185054247
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 670304223575647,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Count",
+								"comparison": 4,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 224111891956001,
+							"parameters": {
+								"object": "Opcoes_Dados",
+								"expression": "Opcoes_Dados.Carregou",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Opcoes_Dados",
+							"sid": 137675294433868
+						}
+					],
+					"sid": 368953926238879
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 469549147213936
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 639110501133137,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 330972263886686,
+							"parameters": {
+								"object-to-create": "Opcoes_Dados",
+								"layer": "0",
+								"x": "-300",
+								"y": "-300",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Opcoes_Dados",
+							"sid": 431456516743632,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 522354472532147,
+							"parameters": {
+								"instance-variable": "Geral",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 763480363933739,
+							"parameters": {
+								"instance-variable": "Musica",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 220901988349915,
+							"parameters": {
+								"instance-variable": "Efeitos",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 429922888271953,
+							"parameters": {
+								"instance-variable": "SemTremor",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 100940692193524,
+							"parameters": {
+								"instance-variable": "SemDano",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 124793056251017,
+							"parameters": {
+								"instance-variable": "SemCine",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 913689724117891,
+							"parameters": {
+								"instance-variable": "dBM",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 148254944369093,
+							"parameters": {
+								"instance-variable": "dBE",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 132911346667543,
+							"parameters": {
+								"instance-variable": "Aberto",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 667183863137393,
+							"parameters": {
+								"instance-variable": "Sel",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 408504297440285,
+							"parameters": {
+								"instance-variable": "SelAnt",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 451661792622751,
+							"parameters": {
+								"instance-variable": "Carregou",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 738838992559822,
+							"parameters": {
+								"instance-variable": "MX",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 458751487171635,
+							"parameters": {
+								"instance-variable": "MY",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 225074281988902
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 747124884787457
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 258135688260923,
+							"parameters": {
+								"instance-variable": "Aberto",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 195378776453703,
+							"parameters": {
+								"instance-variable": "Sel",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 606959002810989,
+							"parameters": {
+								"instance-variable": "SelAnt",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 811238364442061,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 347421986911276,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Carregou",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 548918671551047,
+									"parameters": {
+										"instance-variable": "Carregou",
+										"value": "1"
+									}
+								},
+								{
+									"id": "get-item",
+									"objectClass": "Armazenamento",
+									"sid": 812656295037839,
+									"parameters": {
+										"key": "\"canny_opcoes\""
+									}
+								}
+							],
+							"sid": 256103670557631
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-item-get",
+							"objectClass": "Armazenamento",
+							"sid": 527164370862100,
+							"parameters": {
+								"key": "\"canny_opcoes\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 853189503669669,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 336861250345369,
+									"parameters": {
+										"first-value": "tokencount(Armazenamento.ItemValue, \"|\")",
+										"comparison": 5,
+										"second-value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 278275268138058,
+									"parameters": {
+										"instance-variable": "Geral",
+										"value": "clamp(int(tokenat(Armazenamento.ItemValue, 0, \"|\")), 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 919550213284388,
+									"parameters": {
+										"instance-variable": "Musica",
+										"value": "clamp(int(tokenat(Armazenamento.ItemValue, 1, \"|\")), 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 255531653791055,
+									"parameters": {
+										"instance-variable": "Efeitos",
+										"value": "clamp(int(tokenat(Armazenamento.ItemValue, 2, \"|\")), 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 393223718092296,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "clamp(int(tokenat(Armazenamento.ItemValue, 3, \"|\")), 0, 1)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 250120381158425,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "clamp(int(tokenat(Armazenamento.ItemValue, 4, \"|\")), 0, 1)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 434902297067366,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "clamp(int(tokenat(Armazenamento.ItemValue, 5, \"|\")), 0, 1)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 941651253813451,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 530666296804816,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 530360480200415,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								}
+							],
+							"sid": 139144364196548
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Abre: monta o véu, o painel, os 7 rótulos e os 6 valores. Fecha: desmonta e guarda as opções."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 709241619459000,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 333724843862954,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 763590259656320,
+							"parameters": {
+								"object-to-create": "Opc_Escuro",
+								"layer": "\"Opcoes\"",
+								"x": "640",
+								"y": "360",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Opc_Escuro",
+							"sid": 379036129976735,
+							"parameters": {
+								"width": "1280",
+								"height": "720"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Opc_Escuro",
+							"sid": 241365339550623,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 619425013045847,
+							"parameters": {
+								"object-to-create": "Opc_Painel",
+								"layer": "\"Opcoes\"",
+								"x": "640",
+								"y": "360",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Opc_Painel",
+							"sid": 643549526217882,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 751128169874903,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 754036098572365,
+									"parameters": {
+										"count": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 152141835147888,
+									"parameters": {
+										"object-to-create": "Opc_Item",
+										"layer": "\"Opcoes\"",
+										"x": "523",
+										"y": "234 + loopindex * 54 + (loopindex = 6) * 12",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opc_Item",
+									"sid": 144974988092428,
+									"parameters": {
+										"instance-variable": "Idx",
+										"value": "loopindex"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Opc_Item",
+									"sid": 831055634564671,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 401019865910158
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 533720481002718,
+									"parameters": {
+										"count": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 571556512171834,
+									"parameters": {
+										"object-to-create": "Opc_Valor",
+										"layer": "\"Opcoes\"",
+										"x": "787",
+										"y": "234 + loopindex * 54",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opc_Valor",
+									"sid": 104617245296597,
+									"parameters": {
+										"instance-variable": "Idx",
+										"value": "loopindex"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Opc_Valor",
+									"sid": 389023654172037,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 891876732648873
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 336608336866269,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 350472563024479,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Opc_Painel",
+							"sid": 922987751499198
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Opc_Item",
+							"sid": 139582250630378
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Opc_Valor",
+							"sid": 998475513864018
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Opc_Escuro",
+							"sid": 596614861060811
+						},
+						{
+							"id": "set-item",
+							"objectClass": "Armazenamento",
+							"sid": 149613882786985,
+							"parameters": {
+								"key": "\"canny_opcoes\"",
+								"value": "Opcoes_Dados.Geral & \"|\" & Opcoes_Dados.Musica & \"|\" & Opcoes_Dados.Efeitos & \"|\" & Opcoes_Dados.SemTremor & \"|\" & Opcoes_Dados.SemDano & \"|\" & Opcoes_Dados.SemCine"
+							}
+						}
+					],
+					"sid": 999702201809775
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 686562203114723
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 122434327671791,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Opc_Item",
+							"sid": 325519120299907,
+							"parameters": {
+								"frame-number": "Self.Idx * 2 + ((Self.Idx = Opcoes_Dados.Sel) ? 1 : 0)"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Opc_Valor",
+							"sid": 817498992512550,
+							"parameters": {
+								"frame-number": "((Self.Idx = 0) ? round(Opcoes_Dados.Geral / 10) : ((Self.Idx = 1) ? round(Opcoes_Dados.Musica / 10) : ((Self.Idx = 2) ? round(Opcoes_Dados.Efeitos / 10) : ((Self.Idx = 3) ? 12 - Opcoes_Dados.SemTremor : ((Self.Idx = 4) ? 12 - Opcoes_Dados.SemDano : 12 - Opcoes_Dados.SemCine))))) * 2 + ((Self.Idx = Opcoes_Dados.Sel) ? 1 : 0)"
+							}
+						}
+					],
+					"sid": 133913021947639
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 326875844183557,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 893493313963971,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 779677663640338,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Sel",
+								"comparison": 1,
+								"second-value": "Opcoes_Dados.SelAnt"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 822940884700184,
+							"parameters": {
+								"instance-variable": "SelAnt",
+								"value": "Opcoes_Dados.Sel"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 521665510577366,
+							"parameters": {
+								"audio-file": {
+									"path": "Sfx_Menu_Mover"
+								},
+								"loop": "not-looping",
+								"volume": "-10 + Opcoes_Dados.dBE",
+								"stereo-pan": "0",
+								"tag-optional": "\"sfx\""
+							}
+						}
+					],
+					"sid": 552058867759091
+				},
+				{
+					"eventType": "comment",
+					"text": "Teclado: cima/baixo (ou W/S) escolhem a linha, esquerda/direita (ou A/D) mudam o valor, Enter/Espaço liga e desliga (ou volta), Esc fecha."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 132396482113707,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 152600713193302,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 921418622174414,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 456693426061000,
+							"parameters": {
+								"instance-variable": "Sel",
+								"value": "(Opcoes_Dados.Sel + 6) % 7"
+							}
+						}
+					],
+					"sid": 767046617279734
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 604244033735480,
+							"parameters": {
+								"key": 87
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 628364679272867,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 280377993105410,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 946581642661826,
+							"parameters": {
+								"instance-variable": "Sel",
+								"value": "(Opcoes_Dados.Sel + 6) % 7"
+							}
+						}
+					],
+					"sid": 793491259875717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 535213840944369,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 685712818227573,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 694151236123352,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 347017899477071,
+							"parameters": {
+								"instance-variable": "Sel",
+								"value": "(Opcoes_Dados.Sel + 1) % 7"
+							}
+						}
+					],
+					"sid": 572591200089546
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 829425260061001,
+							"parameters": {
+								"key": 83
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 611209231504420,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 471701101638685,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 198975426505603,
+							"parameters": {
+								"instance-variable": "Sel",
+								"value": "(Opcoes_Dados.Sel + 1) % 7"
+							}
+						}
+					],
+					"sid": 406569446675085
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 656793025886095,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 589006604555442,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 912397738676336,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 960837472295354,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 980355131671734,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 721413549341227,
+									"parameters": {
+										"instance-variable": "Geral",
+										"value": "clamp(Opcoes_Dados.Geral + -10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 533951030237508,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 875539295083776,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 454288141375293,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 308305835146705,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 307876358728913
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 342098264726730,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 225334042834032,
+									"parameters": {
+										"instance-variable": "Musica",
+										"value": "clamp(Opcoes_Dados.Musica + -10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 343677067844636,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 814586433335183,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 401002518517211,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 292971376183688,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 550847504623971
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 538013372990942,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 732184542961972,
+									"parameters": {
+										"instance-variable": "Efeitos",
+										"value": "clamp(Opcoes_Dados.Efeitos + -10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 101117544727331,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 327543764243938,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 226626771828784,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 689693038833213,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 918781488810891
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 712090164334693,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 136288806933794,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "1 - Opcoes_Dados.SemTremor"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 677042497951005,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 399470176695384
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 152852847436651,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 810464119876893,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "1 - Opcoes_Dados.SemDano"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 344564245331626,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 824092378303515
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 898442483984464,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 851378121560876,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "1 - Opcoes_Dados.SemCine"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 109387322682222,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 513231529655892
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 797928276867640,
+							"parameters": {
+								"key": 65
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 232939417961394,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 131232606737033,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 160703394187552,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 365372905980541,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 844367378001023,
+									"parameters": {
+										"instance-variable": "Geral",
+										"value": "clamp(Opcoes_Dados.Geral + -10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 524233053616155,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 470729726850579,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 733036197053550,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 119358458217538,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 646727450964039
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 447685350975624,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 317814912567493,
+									"parameters": {
+										"instance-variable": "Musica",
+										"value": "clamp(Opcoes_Dados.Musica + -10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 310322643271252,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 420467535511334,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 958325563630258,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 906764425135326,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 373691809735070
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 860705466183771,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 746938715844994,
+									"parameters": {
+										"instance-variable": "Efeitos",
+										"value": "clamp(Opcoes_Dados.Efeitos + -10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 358808187379223,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 686098688690428,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 298416393746649,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 926395250730634,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 536803353211314
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 394389549658304,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 758154501176212,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "1 - Opcoes_Dados.SemTremor"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 917928260653992,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 164389708265632
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 120082994945289,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 956926285416401,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "1 - Opcoes_Dados.SemDano"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 398081180474710,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 247378932752590
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 476043034967725,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 803785490189378,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "1 - Opcoes_Dados.SemCine"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 506769585554736,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 922161736654209
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 749345554123046,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 105877986842531,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 350950546141652,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 517730464749750,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 662289451060276,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 391349201494459,
+									"parameters": {
+										"instance-variable": "Geral",
+										"value": "clamp(Opcoes_Dados.Geral + 10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 339316348991775,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 512914388904048,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 349904138244758,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 700500654567710,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 644454266438685
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 955206285045999,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 121713296258824,
+									"parameters": {
+										"instance-variable": "Musica",
+										"value": "clamp(Opcoes_Dados.Musica + 10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 686168681083902,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 110265115350320,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 868752806834296,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 888039453443349,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 177247564202702
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 970525306701986,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 158447647148579,
+									"parameters": {
+										"instance-variable": "Efeitos",
+										"value": "clamp(Opcoes_Dados.Efeitos + 10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 695876979441251,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 259214453294516,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 183081975273214,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 302570217823109,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 205656460998466
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 447258470871091,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 378738698199160,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "1 - Opcoes_Dados.SemTremor"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 106701948981807,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 405223840299870
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 966427486148290,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 570060521464876,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "1 - Opcoes_Dados.SemDano"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 857652388518632,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 996908611054392
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 539848378811263,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 953729800807158,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "1 - Opcoes_Dados.SemCine"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 914350567765409,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 415392317458679
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 131399445408948,
+							"parameters": {
+								"key": 68
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 763887655729826,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 109162055602317,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 260729736237499,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 703342621078950,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 505401382438916,
+									"parameters": {
+										"instance-variable": "Geral",
+										"value": "clamp(Opcoes_Dados.Geral + 10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 313952546145010,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 909121812747094,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 487971878601326,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 527880065778235,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 642591206181320
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 735245570890664,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 352026781879330,
+									"parameters": {
+										"instance-variable": "Musica",
+										"value": "clamp(Opcoes_Dados.Musica + 10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 712640583348184,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 683230544498641,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 935713343517403,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 873769647968235,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 296875295142649
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 266649453698187,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 335907825617442,
+									"parameters": {
+										"instance-variable": "Efeitos",
+										"value": "clamp(Opcoes_Dados.Efeitos + 10, 0, 100)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 708058244520176,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 873906105108001,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 494103120500654,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 976169978163677,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 688843037528883
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 463250940397716,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 714663336156921,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "1 - Opcoes_Dados.SemTremor"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 514487771885473,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 960559058516410
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 791206839880328,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 747745489481192,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "1 - Opcoes_Dados.SemDano"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 124558511754791,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 937442061436748
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 198720276997920,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 711613182336968,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "1 - Opcoes_Dados.SemCine"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 998638674944932,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 726060194211634
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 455321315182560,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 288930852961679,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 316094660471573,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 813580789119459,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 282653334484470,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 945677314256066,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "1 - Opcoes_Dados.SemTremor"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 933199961401506,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 487798524561393
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 900373495492294,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 127957335458489,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "1 - Opcoes_Dados.SemDano"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 631172683894410,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 190630900480527
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 151397423456665,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 363030293867268,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "1 - Opcoes_Dados.SemCine"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 706126658947174,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 309101772150180
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 668901750484846,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 383508884414040,
+									"parameters": {
+										"instance-variable": "Aberto",
+										"value": "0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 418889949650234,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 145152966789537
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 829554328852342,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 855499845013342,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 985969635799472,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 860110477004173,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 714966364888175,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 318370141600378,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "1 - Opcoes_Dados.SemTremor"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 498410425491993,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 459106252910954
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 825919520722204,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 977818883038093,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "1 - Opcoes_Dados.SemDano"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 245925610281840,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 909208053800483
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 151846625613243,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 993328993598689,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "1 - Opcoes_Dados.SemCine"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 295388132184914,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 464719537316465
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 521421369577186,
+									"parameters": {
+										"first-value": "Opcoes_Dados.Sel",
+										"comparison": 0,
+										"second-value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 854573934303559,
+									"parameters": {
+										"instance-variable": "Aberto",
+										"value": "0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 131695356422845,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 698311735301094
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 132247987118677,
+							"parameters": {
+								"key": 27
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 382544838145648,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 143700877329493,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 512282743100130,
+							"parameters": {
+								"instance-variable": "Aberto",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 665094695769524,
+							"parameters": {
+								"audio-file": {
+									"path": "Sfx_Menu_Mover"
+								},
+								"loop": "not-looping",
+								"volume": "-10 + Opcoes_Dados.dBE",
+								"stereo-pan": "0",
+								"tag-optional": "\"sfx\""
+							}
+						}
+					],
+					"sid": 500646759579082
+				},
+				{
+					"eventType": "comment",
+					"text": "Mouse: passar por cima seleciona; clique no rótulo liga/desliga (ou volta); clique no medidor escolhe o volume pelo gomo clicado."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 478034391532137,
+							"parameters": {
+								"object": "Opc_Item"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 738573162973932,
+							"parameters": {
+								"first-value": "abs(Mouse.X - Opcoes_Dados.MX) + abs(Mouse.Y - Opcoes_Dados.MY)",
+								"comparison": 4,
+								"second-value": "0.5"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 728378214157560,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 138729271340126,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 131330176308033,
+							"parameters": {
+								"instance-variable": "Sel",
+								"value": "Opc_Item.Idx"
+							}
+						}
+					],
+					"sid": 741440065540717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 240756572732789,
+							"parameters": {
+								"object": "Opc_Valor"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 681127074673431,
+							"parameters": {
+								"first-value": "abs(Mouse.X - Opcoes_Dados.MX) + abs(Mouse.Y - Opcoes_Dados.MY)",
+								"comparison": 4,
+								"second-value": "0.5"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 274805631609380,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 172611758360752,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 277747653364173,
+							"parameters": {
+								"instance-variable": "Sel",
+								"value": "Opc_Valor.Idx"
+							}
+						}
+					],
+					"sid": 844032766275578
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 442078104163048
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 119294023599015,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 135860977111599,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 813293779056212,
+							"parameters": {
+								"instance-variable": "MX",
+								"value": "Mouse.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Opcoes_Dados",
+							"sid": 544491384142845,
+							"parameters": {
+								"instance-variable": "MY",
+								"value": "Mouse.Y"
+							}
+						}
+					],
+					"sid": 724882720303815
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 270579451654890,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Opc_Item"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 331701629326321,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 572077415431202,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 797425175988739,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 289073943549143,
+									"parameters": {
+										"first-value": "Opc_Item.Idx",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 288782409898685,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "1 - Opcoes_Dados.SemTremor"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 101015978573934,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 284264430076048
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 810919986642790,
+									"parameters": {
+										"first-value": "Opc_Item.Idx",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 298298826461546,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "1 - Opcoes_Dados.SemDano"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 206141255604036,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 182167005734535
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 803024617339213,
+									"parameters": {
+										"first-value": "Opc_Item.Idx",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 559446973446949,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "1 - Opcoes_Dados.SemCine"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 310341157624068,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 513794477056475
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 899130992835341,
+									"parameters": {
+										"first-value": "Opc_Item.Idx",
+										"comparison": 0,
+										"second-value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 432172907932003,
+									"parameters": {
+										"instance-variable": "Aberto",
+										"value": "0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 949172599544697,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 460114491854591
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 253560521970130,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Opc_Valor"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 124096631204900,
+							"parameters": {
+								"first-value": "Opc_Painel.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 877503873986853,
+							"parameters": {
+								"first-value": "Opcoes_Dados.Aberto",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 790235382293917,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 742400084833321,
+									"parameters": {
+										"first-value": "Opc_Valor.Idx",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 107015990719419,
+									"parameters": {
+										"instance-variable": "Geral",
+										"value": "clamp(ceil((Mouse.X(\"Opcoes\") - Opc_Valor.BBoxLeft - 18) / 15), 0, 10) * 10"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 194090096069178,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 121949232337076,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 967184005433999,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 805245232212739,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 450564590582646
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 858673169370840,
+									"parameters": {
+										"first-value": "Opc_Valor.Idx",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 570588905527832,
+									"parameters": {
+										"instance-variable": "Musica",
+										"value": "clamp(ceil((Mouse.X(\"Opcoes\") - Opc_Valor.BBoxLeft - 18) / 15), 0, 10) * 10"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 419573278246421,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 134656242214197,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 611646088120037,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 795678731868570,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 919837062794792
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 124933765095794,
+									"parameters": {
+										"first-value": "Opc_Valor.Idx",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 261424775097984,
+									"parameters": {
+										"instance-variable": "Efeitos",
+										"value": "clamp(ceil((Mouse.X(\"Opcoes\") - Opc_Valor.BBoxLeft - 18) / 15), 0, 10) * 10"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 513351772669894,
+									"parameters": {
+										"instance-variable": "dBM",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Musica <= 0) ? -100 : 30 * log10(Opcoes_Dados.Musica / 100))"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 111412995388706,
+									"parameters": {
+										"instance-variable": "dBE",
+										"value": "((Opcoes_Dados.Geral <= 0) ? -100 : 30 * log10(Opcoes_Dados.Geral / 100)) + ((Opcoes_Dados.Efeitos <= 0) ? -100 : 30 * log10(Opcoes_Dados.Efeitos / 100))"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 461187088104779,
+									"parameters": {
+										"tag": "\"musica_menu\"",
+										"db": "(-7) + Opcoes_Dados.dBM",
+										"duration": "0.08",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 627669799854865,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Mover"
+										},
+										"loop": "not-looping",
+										"volume": "-10 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 661569866825711
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 521804033609518,
+									"parameters": {
+										"first-value": "Opc_Valor.Idx",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 638166359195127,
+									"parameters": {
+										"instance-variable": "SemTremor",
+										"value": "1 - Opcoes_Dados.SemTremor"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 149863730135842,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 164830179126993
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 560242341381716,
+									"parameters": {
+										"first-value": "Opc_Valor.Idx",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 262483002717726,
+									"parameters": {
+										"instance-variable": "SemDano",
+										"value": "1 - Opcoes_Dados.SemDano"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 461171689921588,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 892443335749058
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 827121916369218,
+									"parameters": {
+										"first-value": "Opc_Valor.Idx",
+										"comparison": 0,
+										"second-value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Opcoes_Dados",
+									"sid": 874417446258289,
+									"parameters": {
+										"instance-variable": "SemCine",
+										"value": "1 - Opcoes_Dados.SemCine"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 435272946577568,
+									"parameters": {
+										"audio-file": {
+											"path": "Sfx_Menu_Ok"
+										},
+										"loop": "not-looping",
+										"volume": "-6 + Opcoes_Dados.dBE",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								}
+							],
+							"sid": 345952344526213
+						}
+					]
+				}
+			],
+			"sid": 155597305436060
 		}
 	],
 	"sid": 983279357845693

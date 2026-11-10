@@ -1,0 +1,174 @@
+{
+	"name": "HQ_Quadro",
+	"plugin-id": "Sprite",
+	"sid": 665568030091874,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Pagina",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 990527331357078
+		},
+		{
+			"name": "Ordem",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 281845707141240
+		},
+		{
+			"name": "T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 154921542176709
+		},
+		{
+			"name": "Base_X",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 958645540036454
+		},
+		{
+			"name": "Base_Y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 874829115667682
+		},
+		{
+			"name": "Base_W",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 287478456858003
+		},
+		{
+			"name": "Base_H",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 935229910247641
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1232,
+						"height": 294,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1719995,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 608,
+						"height": 334,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8216272,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 608,
+						"height": 334,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2909292,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 492,
+						"height": 644,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3194199,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 724,
+						"height": 314,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9046525,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 724,
+						"height": 314,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8975674,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1232,
+						"height": 644,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2101672,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 294053391519001,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -26,6 +26,36 @@
 					"parameters": {
 						"tag": "\"musica_boss\""
 					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 266419716161595,
+					"parameters": {
+						"tag": "\"musica_menu\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 462928616471149,
+					"parameters": {
+						"tag": "\"musica_sala\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 455752376853316,
+					"parameters": {
+						"audio-file": {
+							"path": "Sfx_Game_Over"
+						},
+						"loop": "not-looping",
+						"volume": "(-4) + Opcoes_Dados.dBE",
+						"stereo-pan": "0",
+						"tag-optional": "\"sfx\""
+					}
 				}
 			],
 			"sid": 414543005337128

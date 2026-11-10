@@ -1,0 +1,438 @@
+{
+	"name": "Projetil_Inimigo",
+	"plugin-id": "Sprite",
+	"sid": 710766923045488,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Forte",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 138902832390923
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 469428584736129
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 100,
+						"height": 52,
+						"originX": 0.72,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1213755,
+						"collisionPoly": {
+							"points": [
+								0.86,
+								0.5,
+								0.8189949493661166,
+								0.6903749026271473,
+								0.72,
+								0.7692307692307693,
+								0.6210050506338834,
+								0.6903749026271474,
+								0.58,
+								0.5,
+								0.6210050506338833,
+								0.3096250973728526,
+								0.72,
+								0.23076923076923078,
+								0.8189949493661166,
+								0.30962509737285254
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 100,
+						"height": 52,
+						"originX": 0.72,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8203084,
+						"collisionPoly": {
+							"points": [
+								0.86,
+								0.5,
+								0.8189949493661166,
+								0.6903749026271473,
+								0.72,
+								0.7692307692307693,
+								0.6210050506338834,
+								0.6903749026271474,
+								0.58,
+								0.5,
+								0.6210050506338833,
+								0.3096250973728526,
+								0.72,
+								0.23076923076923078,
+								0.8189949493661166,
+								0.30962509737285254
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 100,
+						"height": 52,
+						"originX": 0.72,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2238249,
+						"collisionPoly": {
+							"points": [
+								0.86,
+								0.5,
+								0.8189949493661166,
+								0.6903749026271473,
+								0.72,
+								0.7692307692307693,
+								0.6210050506338834,
+								0.6903749026271474,
+								0.58,
+								0.5,
+								0.6210050506338833,
+								0.3096250973728526,
+								0.72,
+								0.23076923076923078,
+								0.8189949493661166,
+								0.30962509737285254
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 100,
+						"height": 52,
+						"originX": 0.72,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7881888,
+						"collisionPoly": {
+							"points": [
+								0.86,
+								0.5,
+								0.8189949493661166,
+								0.6903749026271473,
+								0.72,
+								0.7692307692307693,
+								0.6210050506338834,
+								0.6903749026271474,
+								0.58,
+								0.5,
+								0.6210050506338833,
+								0.3096250973728526,
+								0.72,
+								0.23076923076923078,
+								0.8189949493661166,
+								0.30962509737285254
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 397114444701071,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 14
+			},
+			{
+				"frames": [
+					{
+						"width": 108,
+						"height": 54,
+						"originX": 0.72,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5184975,
+						"collisionPoly": {
+							"points": [
+								0.94,
+								0.5,
+								0.78,
+								0.32,
+								0.6,
+								0.5,
+								0.78,
+								0.68
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 108,
+						"height": 54,
+						"originX": 0.72,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1169873,
+						"collisionPoly": {
+							"points": [
+								0.94,
+								0.5,
+								0.78,
+								0.32,
+								0.6,
+								0.5,
+								0.78,
+								0.68
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 108,
+						"height": 54,
+						"originX": 0.72,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9452188,
+						"collisionPoly": {
+							"points": [
+								0.94,
+								0.5,
+								0.78,
+								0.32,
+								0.6,
+								0.5,
+								0.78,
+								0.68
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 108,
+						"height": 54,
+						"originX": 0.72,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2883184,
+						"collisionPoly": {
+							"points": [
+								0.94,
+								0.5,
+								0.78,
+								0.32,
+								0.6,
+								0.5,
+								0.78,
+								0.68
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 807873458255056,
+				"name": "Cristal",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			},
+			{
+				"frames": [
+					{
+						"width": 42,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3082000,
+						"collisionPoly": {
+							"points": [
+								0.833,
+								0.638,
+								0.638,
+								0.833,
+								0.362,
+								0.833,
+								0.167,
+								0.638,
+								0.167,
+								0.362,
+								0.362,
+								0.167,
+								0.638,
+								0.167,
+								0.833,
+								0.362
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 42,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8258423,
+						"collisionPoly": {
+							"points": [
+								0.833,
+								0.638,
+								0.638,
+								0.833,
+								0.362,
+								0.833,
+								0.167,
+								0.638,
+								0.167,
+								0.362,
+								0.362,
+								0.167,
+								0.638,
+								0.167,
+								0.833,
+								0.362
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 42,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3529785,
+						"collisionPoly": {
+							"points": [
+								0.833,
+								0.638,
+								0.638,
+								0.833,
+								0.362,
+								0.833,
+								0.167,
+								0.638,
+								0.167,
+								0.362,
+								0.362,
+								0.167,
+								0.638,
+								0.167,
+								0.833,
+								0.362
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 42,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6568122,
+						"collisionPoly": {
+							"points": [
+								0.833,
+								0.638,
+								0.638,
+								0.833,
+								0.362,
+								0.833,
+								0.167,
+								0.638,
+								0.167,
+								0.362,
+								0.362,
+								0.167,
+								0.638,
+								0.167,
+								0.833,
+								0.362
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 127868423378886,
+				"name": "Corrompido",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

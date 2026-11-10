@@ -1,0 +1,144 @@
+{
+	"name": "Projetil_Espelho",
+	"plugin-id": "Sprite",
+	"sid": 279708712297283,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Forte",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 426056716175666
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 622057245715868
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 86,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4350276,
+						"collisionPoly": {
+							"points": [
+								0.56,
+								0.32,
+								0.95,
+								0.42,
+								0.95,
+								0.58,
+								0.56,
+								0.68
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 128,
+						"height": 86,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6284636,
+						"collisionPoly": {
+							"points": [
+								0.56,
+								0.32,
+								0.95,
+								0.42,
+								0.95,
+								0.58,
+								0.56,
+								0.68
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 128,
+						"height": 86,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3383010,
+						"collisionPoly": {
+							"points": [
+								0.56,
+								0.32,
+								0.95,
+								0.42,
+								0.95,
+								0.58,
+								0.56,
+								0.68
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 128,
+						"height": 86,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8048846,
+						"collisionPoly": {
+							"points": [
+								0.56,
+								0.32,
+								0.95,
+								0.42,
+								0.95,
+								0.58,
+								0.56,
+								0.68
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 751318604871409,
+				"name": "Tiro",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 14
+			}
+		],
+		"subfolders": []
+	}
+}

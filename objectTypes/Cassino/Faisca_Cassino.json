@@ -1,0 +1,191 @@
+{
+	"name": "Faisca_Cassino",
+	"plugin-id": "Sprite",
+	"sid": 640027944787818,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Ang",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 469485042941541
+		},
+		{
+			"name": "V",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 126168112614107
+		},
+		{
+			"name": "Vida_T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 739977135768812
+		},
+		{
+			"name": "Tipo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 568001681427996
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5264167,
+						"collisionPoly": {
+							"points": [
+								0.7772,
+								0.6148,
+								0.6148,
+								0.7772,
+								0.3852,
+								0.7772,
+								0.2228,
+								0.6148,
+								0.2228,
+								0.3852,
+								0.3852,
+								0.2228,
+								0.6148,
+								0.2228,
+								0.7772,
+								0.3852
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3443230,
+						"collisionPoly": {
+							"points": [
+								0.7772,
+								0.6148,
+								0.6148,
+								0.7772,
+								0.3852,
+								0.7772,
+								0.2228,
+								0.6148,
+								0.2228,
+								0.3852,
+								0.3852,
+								0.2228,
+								0.6148,
+								0.2228,
+								0.7772,
+								0.3852
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2838967,
+						"collisionPoly": {
+							"points": [
+								0.7772,
+								0.6148,
+								0.6148,
+								0.7772,
+								0.3852,
+								0.7772,
+								0.2228,
+								0.6148,
+								0.2228,
+								0.3852,
+								0.3852,
+								0.2228,
+								0.6148,
+								0.2228,
+								0.7772,
+								0.3852
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7842749,
+						"collisionPoly": {
+							"points": [
+								0.7772,
+								0.6148,
+								0.6148,
+								0.7772,
+								0.3852,
+								0.7772,
+								0.2228,
+								0.6148,
+								0.2228,
+								0.3852,
+								0.3852,
+								0.2228,
+								0.6148,
+								0.2228,
+								0.7772,
+								0.3852
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 840648175680767,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 16
+			}
+		],
+		"subfolders": []
+	}
+}

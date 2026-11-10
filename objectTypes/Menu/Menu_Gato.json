@@ -1,0 +1,69 @@
+{
+	"name": "Menu_Gato",
+	"plugin-id": "Sprite",
+	"sid": 667400885239702,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "BaseX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 968222128710520
+		},
+		{
+			"name": "BaseY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 441332209462104
+		},
+		{
+			"name": "BaseW",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 470499257872044
+		},
+		{
+			"name": "BaseH",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 182911805795274
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 622,
+						"height": 530,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6783693,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 336698021885994,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

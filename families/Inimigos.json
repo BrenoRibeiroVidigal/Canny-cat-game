@@ -51,6 +51,90 @@
 			"desc": "",
 			"show": true,
 			"sid": 801750113753198
+		},
+		{
+			"name": "Preso_X",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 972611959070952
+		},
+		{
+			"name": "Preso_Y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 240813919282557
+		},
+		{
+			"name": "Preso_N",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 589954326038461
+		},
+		{
+			"name": "Campeao",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 179764792948014
+		},
+		{
+			"name": "Camp_X",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 457493618131639
+		},
+		{
+			"name": "Camp_Y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 953567073510714
+		},
+		{
+			"name": "Escudo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 712200575402531
+		},
+		{
+			"name": "Furia_T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 471030125123459
+		},
+		{
+			"name": "Regen_T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 949410930676583
+		},
+		{
+			"name": "Pressa_T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 524485534692938
+		},
+		{
+			"name": "Vida_Max",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 654375272124882
+		},
+		{
+			"name": "Elo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 200126676602921
 		}
 	],
 	"behaviorTypes": [
@@ -93,6 +177,15 @@
 		"Sniper_Inimigo",
 		"Gato_Bomba",
 		"Gato_Invocador",
-		"Gatinho_Sombra"
+		"Gatinho_Sombra",
+		"Gato_Tanque",
+		"Gato_Espelho",
+		"Gato_Freira",
+		"Gato_Espectro",
+		"Gato_Cristalino",
+		"Lodo_Abismo",
+		"Olho_Abismo",
+		"Gato_Tentaculo",
+		"Gato_Corruptor"
 	]
 }

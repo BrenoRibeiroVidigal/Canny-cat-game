@@ -1,0 +1,101 @@
+{
+	"name": "Banca_Loja",
+	"plugin-id": "Sprite",
+	"sid": 763072204625788,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Item_UID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 318067916050779
+		},
+		{
+			"name": "Preco",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 118233683628793
+		},
+		{
+			"name": "Tipo",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 872148081154402
+		},
+		{
+			"name": "Vendido",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 685816598049174
+		},
+		{
+			"name": "Avisou",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 354820693050568
+		},
+		{
+			"name": "Idx",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 942791623658387
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 530723041925618
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 108,
+						"height": 84,
+						"originX": 0.5,
+						"originY": 0.9,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6088885,
+						"collisionPoly": {
+							"points": [
+								0.08,
+								0.55,
+								0.92,
+								0.55,
+								0.92,
+								0.95,
+								0.08,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 651233746751759,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

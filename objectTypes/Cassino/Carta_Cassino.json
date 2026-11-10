@@ -1,0 +1,191 @@
+{
+	"name": "Carta_Cassino",
+	"plugin-id": "Sprite",
+	"sid": 751423814009697,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Ang",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 153878232441613
+		},
+		{
+			"name": "V",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 172883436744005
+		},
+		{
+			"name": "Vida_T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 184336592527727
+		},
+		{
+			"name": "Tipo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 707410310535376
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 30,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6209563,
+						"collisionPoly": {
+							"points": [
+								0.8141,
+								0.6531,
+								0.6301,
+								0.8696,
+								0.3699,
+								0.8696,
+								0.1859,
+								0.6531,
+								0.1859,
+								0.3469,
+								0.3699,
+								0.1304,
+								0.6301,
+								0.1304,
+								0.8141,
+								0.3469
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 30,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3964852,
+						"collisionPoly": {
+							"points": [
+								0.8141,
+								0.6531,
+								0.6301,
+								0.8696,
+								0.3699,
+								0.8696,
+								0.1859,
+								0.6531,
+								0.1859,
+								0.3469,
+								0.3699,
+								0.1304,
+								0.6301,
+								0.1304,
+								0.8141,
+								0.3469
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 30,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3897145,
+						"collisionPoly": {
+							"points": [
+								0.8141,
+								0.6531,
+								0.6301,
+								0.8696,
+								0.3699,
+								0.8696,
+								0.1859,
+								0.6531,
+								0.1859,
+								0.3469,
+								0.3699,
+								0.1304,
+								0.6301,
+								0.1304,
+								0.8141,
+								0.3469
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 30,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9990805,
+						"collisionPoly": {
+							"points": [
+								0.8141,
+								0.6531,
+								0.6301,
+								0.8696,
+								0.3699,
+								0.8696,
+								0.1859,
+								0.6531,
+								0.1859,
+								0.3469,
+								0.3699,
+								0.1304,
+								0.6301,
+								0.1304,
+								0.8141,
+								0.3469
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 187875793652581,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 14
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -55,7 +55,17 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"Item_Bola_De_Cristal",
-		"Item_Botas_Rapidez"
+		"Item_Aureola",
+		"Item_Pena_Sagrada",
+		"Item_Lagrima_Anjo",
+		"Item_Pacto_Sangue",
+		"Item_Olho_Demonio",
+		"Item_Botas_Inferno",
+		"Item_Asas_Celestes",
+		"Item_Coracao_Dourado",
+		"Item_Sino_Sagrado",
+		"Item_Chifre_Partido",
+		"Item_Moeda_Maldita",
+		"Item_Garra_Sombria"
 	]
 }

@@ -1,0 +1,31 @@
+{
+	"name": "Texto_Dev",
+	"plugin-id": "Spritefont2",
+	"sid": 856719098461237,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Campo",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 447250060928669
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 112,
+		"height": 36,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 3173598,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

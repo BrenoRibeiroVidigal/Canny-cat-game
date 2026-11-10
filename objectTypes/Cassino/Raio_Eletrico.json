@@ -1,0 +1,208 @@
+{
+	"name": "Raio_Eletrico",
+	"plugin-id": "Sprite",
+	"sid": 515126626277015,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 828145375750145
+		},
+		{
+			"name": "Ativo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 916771243902775
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1881145,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3,
+								1,
+								0.3,
+								1,
+								0.7,
+								0,
+								0.7
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3012943,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3,
+								1,
+								0.3,
+								1,
+								0.7,
+								0,
+								0.7
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 198049532502546,
+				"name": "Aviso",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			},
+			{
+				"frames": [
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8875526,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3,
+								1,
+								0.3,
+								1,
+								0.7,
+								0,
+								0.7
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6931660,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3,
+								1,
+								0.3,
+								1,
+								0.7,
+								0,
+								0.7
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2949130,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3,
+								1,
+								0.3,
+								1,
+								0.7,
+								0,
+								0.7
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 96,
+						"height": 30,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3015376,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3,
+								1,
+								0.3,
+								1,
+								0.7,
+								0,
+								0.7
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 987062054048111,
+				"name": "Ativo",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 18
+			}
+		],
+		"subfolders": []
+	}
+}

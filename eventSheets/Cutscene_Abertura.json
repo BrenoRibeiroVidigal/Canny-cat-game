@@ -1,0 +1,997 @@
+{
+	"name": "Cutscene_Abertura",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Abertura em quadrinhos (roteiro em roteiro_abertura.py): Vila Ronrom, os gatos somem e voltam corrompidos, as pegadas levam à caverna, Canny pega o cajado do Vô Bigode e o Uncanny espera lá embaixo. 3 páginas; cada HQ_Quadro sabe a Pagina e a Ordem. Clique, espaço, enter ou E chamam HQ_Avancar (sozinho a cada 6 s); o quadro aparece com um pop (T = tempo desde que apareceu); acabada a página ela sai pra esquerda (HQ_Vira); ESC pula. No fim escurece e vai pra Sala_Inicial."
+		},
+		{
+			"eventType": "variable",
+			"name": "HQ_Pag",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 698785134172599
+		},
+		{
+			"eventType": "variable",
+			"name": "HQ_N",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 899315558635062
+		},
+		{
+			"eventType": "variable",
+			"name": "HQ_T",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 874457019814838
+		},
+		{
+			"eventType": "variable",
+			"name": "HQ_TT",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 250777212202126
+		},
+		{
+			"eventType": "variable",
+			"name": "HQ_Fim",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 342156357155670
+		},
+		{
+			"eventType": "variable",
+			"name": "HQ_TF",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 430670562565964
+		},
+		{
+			"eventType": "variable",
+			"name": "HQ_Vira",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 832256582976517
+		},
+		{
+			"eventType": "variable",
+			"name": "HQ_VT",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 172030601303458
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 892629379898157
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 839393557688722,
+					"parameters": {
+						"variable": "HQ_Pag",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 401704382245979,
+					"parameters": {
+						"variable": "HQ_N",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 311213756641224,
+					"parameters": {
+						"variable": "HQ_T",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 358107762401782,
+					"parameters": {
+						"variable": "HQ_TT",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 627767992348236,
+					"parameters": {
+						"variable": "HQ_Fim",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 496682143413645,
+					"parameters": {
+						"variable": "HQ_TF",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 494324919834597,
+					"parameters": {
+						"variable": "HQ_Vira",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 765338061126583,
+					"parameters": {
+						"variable": "HQ_VT",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 154903774002199,
+					"parameters": {
+						"layer": "\"Fade\"",
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 327847204404412
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 566542212188679
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 165835570618642,
+					"parameters": {
+						"variable": "HQ_TT",
+						"value": "dt"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 347854405808512,
+					"parameters": {
+						"variable": "HQ_T",
+						"value": "dt"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "HQ_Dica",
+					"sid": 568872503063857,
+					"parameters": {
+						"y": "697 + 2 * sin(HQ_TT * 200)"
+					}
+				}
+			],
+			"sid": 162030892466365,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 423514847269349,
+							"parameters": {
+								"variable": "HQ_Fim",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 395722159036939,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"opacity": "max(0, 100 - HQ_TT / 0.5 * 100)"
+							}
+						}
+					],
+					"sid": 247197856931116
+				}
+			]
+		},
+		{
+			"functionName": "HQ_Avancar",
+			"functionDescription": "Mostra o próximo quadro da página; sem quadros sobrando vira a página; na última página termina a abertura.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 796269205009445,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 373115889962944,
+							"parameters": {
+								"variable": "HQ_Vira",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 521181114822066,
+							"parameters": {
+								"variable": "HQ_Fim",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 266551135427641,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 581404873850887,
+									"parameters": {
+										"first-value": "HQ_N",
+										"comparison": 2,
+										"second-value": "(((HQ_Pag = 1) ? 3 : ((HQ_Pag = 2) ? 3 : 1)))"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 319654675696261,
+									"parameters": {
+										"variable": "HQ_N",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 205084047489771,
+									"parameters": {
+										"variable": "HQ_T",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 300073568951167,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 278446711947531,
+											"parameters": {
+												"object": "HQ_Quadro",
+												"expression": "((HQ_Quadro.Pagina = HQ_Pag) & (HQ_Quadro.Ordem = HQ_N)) ? 1 : 0",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 270855851572128,
+											"parameters": {
+												"audio-file": {
+													"path": "Sfx_HQ_Quadro"
+												},
+												"loop": "not-looping",
+												"volume": "(-10) + Opcoes_Dados.dBE",
+												"stereo-pan": "0",
+												"tag-optional": "\"sfx\""
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "HQ_Quadro",
+											"sid": 559074889461758,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "HQ_Quadro",
+											"sid": 969526198159792,
+											"parameters": {
+												"instance-variable": "T",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "HQ_Quadro",
+											"sid": 483334100802257,
+											"parameters": {
+												"width": "HQ_Quadro.Base_W * 0.55",
+												"height": "HQ_Quadro.Base_H * 0.55"
+											}
+										}
+									],
+									"sid": 487525234882857,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 626634543945868,
+													"parameters": {
+														"first-value": "HQ_Quadro.AnimationFrame",
+														"comparison": 0,
+														"second-value": "5"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 960063648553685,
+													"parameters": {
+														"audio-file": {
+															"path": "Boss_Braam"
+														},
+														"loop": "not-looping",
+														"volume": "(-10) + Opcoes_Dados.dBE",
+														"stereo-pan": "0",
+														"tag-optional": "\"abertura\""
+													}
+												}
+											],
+											"sid": 844877268235215
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 433497743933329
+								}
+							],
+							"actions": [],
+							"sid": 137344231962297,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 130681764548805,
+											"parameters": {
+												"variable": "HQ_Pag",
+												"comparison": 2,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 317581923132217,
+											"parameters": {
+												"audio-file": {
+													"path": "Sfx_HQ_Pagina"
+												},
+												"loop": "not-looping",
+												"volume": "(-8) + Opcoes_Dados.dBE",
+												"stereo-pan": "0",
+												"tag-optional": "\"sfx\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 758302850415167,
+											"parameters": {
+												"variable": "HQ_Vira",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 768175508969777,
+											"parameters": {
+												"variable": "HQ_VT",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 270487051806885
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 835305023692549
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 823232478890385,
+											"parameters": {
+												"variable": "HQ_Fim",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 762626017795279,
+											"parameters": {
+												"variable": "HQ_TF",
+												"value": "HQ_TT"
+											}
+										}
+									],
+									"sid": 877710157692414
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 357551281209098,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HQ_Avancar",
+					"sid": 253905553747459
+				}
+			],
+			"sid": 153694546543935
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 192503334824498,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HQ_Avancar",
+					"sid": 483076407452895
+				}
+			],
+			"sid": 519043238906075
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 409186533139524,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HQ_Avancar",
+					"sid": 601578347388485
+				}
+			],
+			"sid": 833794683412480
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 716454295639395,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HQ_Avancar",
+					"sid": 760167493239410
+				}
+			],
+			"sid": 537392661851551
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 307307029111602,
+					"parameters": {
+						"key": 27
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 313656374935933,
+					"parameters": {
+						"variable": "HQ_Fim",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 737842086179737,
+					"parameters": {
+						"variable": "HQ_Fim",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 623564139447852,
+					"parameters": {
+						"variable": "HQ_TF",
+						"value": "HQ_TT"
+					}
+				}
+			],
+			"sid": 982358961524338
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 139421727732653
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 328723206961678,
+					"parameters": {
+						"variable": "HQ_Fim",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 339262538543513,
+					"parameters": {
+						"variable": "HQ_Vira",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 824589868934415,
+					"parameters": {
+						"first-value": "(((HQ_N = 0) & (HQ_T >= 0.35)) | (HQ_T >= 6)) ? 1 : 0",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HQ_Avancar",
+					"sid": 357507279480546
+				}
+			],
+			"sid": 841425043742524
+		},
+		{
+			"eventType": "comment",
+			"text": "Pop do quadro: cresce de 55 % a 100 % com um leve passar do ponto (easeOutBack) e endireita."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 231887453195629
+				},
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 882097057811339,
+					"parameters": {
+						"object": "HQ_Quadro"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HQ_Quadro",
+					"sid": 187428671069603,
+					"parameters": {
+						"instance-variable": "T",
+						"comparison": 5,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "HQ_Quadro",
+					"sid": 226612020554915,
+					"parameters": {
+						"instance-variable": "T",
+						"value": "dt"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "HQ_Quadro",
+					"sid": 161871141059093,
+					"parameters": {
+						"width": "HQ_Quadro.Base_W * (0.55 + 0.45 * (1 + 2.70158 * (min(1, HQ_Quadro.T / 0.3) - 1) ^ 3 + 1.70158 * (min(1, HQ_Quadro.T / 0.3) - 1) ^ 2))",
+						"height": "HQ_Quadro.Base_H * (0.55 + 0.45 * (1 + 2.70158 * (min(1, HQ_Quadro.T / 0.3) - 1) ^ 3 + 1.70158 * (min(1, HQ_Quadro.T / 0.3) - 1) ^ 2))"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "HQ_Quadro",
+					"sid": 907352150861646,
+					"parameters": {
+						"angle": "(1 - min(1, HQ_Quadro.T / 0.3)) * -5"
+					}
+				}
+			],
+			"sid": 352677527278479
+		},
+		{
+			"eventType": "comment",
+			"text": "Virar a página: os quadros da página saem pra esquerda em 0,45 s, somem e a próxima página começa."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 550840128933535,
+					"parameters": {
+						"variable": "HQ_Vira",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 109029426442355,
+					"parameters": {
+						"variable": "HQ_VT",
+						"value": "dt"
+					}
+				}
+			],
+			"sid": 160544597316428,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 850964112983466,
+							"parameters": {
+								"object": "HQ_Quadro",
+								"expression": "(HQ_Quadro.Pagina = HQ_Pag) ? 1 : 0",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "HQ_Quadro",
+							"sid": 626499292015621,
+							"parameters": {
+								"x": "HQ_Quadro.Base_X - 1700 * (min(1, HQ_VT / 0.45)) ^ 2"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "HQ_Quadro",
+							"sid": 217937304595862,
+							"parameters": {
+								"angle": "-10 * min(1, HQ_VT / 0.45)"
+							}
+						}
+					],
+					"sid": 822267711905063
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 706651133956823,
+							"parameters": {
+								"variable": "HQ_VT",
+								"comparison": 5,
+								"value": "0.45"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 443994565461884,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 579514108571819,
+									"parameters": {
+										"object": "HQ_Quadro",
+										"expression": "(HQ_Quadro.Pagina = HQ_Pag) ? 1 : 0",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "HQ_Quadro",
+									"sid": 518968762796407,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HQ_Quadro",
+									"sid": 574335511862385,
+									"parameters": {
+										"instance-variable": "T",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "HQ_Quadro",
+									"sid": 146420988299586,
+									"parameters": {
+										"x": "HQ_Quadro.Base_X"
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "HQ_Quadro",
+									"sid": 182437422140317,
+									"parameters": {
+										"angle": "0"
+									}
+								}
+							],
+							"sid": 862510615460735
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 502097366736189,
+									"parameters": {
+										"variable": "HQ_Pag",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 958518326367994,
+									"parameters": {
+										"variable": "HQ_N",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 680915661389584,
+									"parameters": {
+										"variable": "HQ_Vira",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 820428083730860,
+									"parameters": {
+										"variable": "HQ_T",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 422739657261328
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 898248836924630,
+					"parameters": {
+						"variable": "HQ_Fim",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 723722685075308,
+					"parameters": {
+						"layer": "\"Fade\"",
+						"opacity": "clamp((HQ_TT - HQ_TF) / 0.6, 0, 1) * 100"
+					}
+				}
+			],
+			"sid": 839427371790426,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 576066644920416,
+							"parameters": {
+								"first-value": "HQ_TT - HQ_TF",
+								"comparison": 5,
+								"second-value": "0.65"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 986099666664290
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 663919021635661,
+							"parameters": {
+								"layout": "Sala_Inicial"
+							}
+						}
+					],
+					"sid": 683131253766967
+				}
+			]
+		}
+	],
+	"sid": 782093521581570
+}

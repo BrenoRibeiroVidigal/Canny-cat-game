@@ -3,7 +3,7 @@
 	"savedWithRelease": 50603,
 	"name": "teste animacao",
 	"runtime": "c3",
-	"useWorker": "auto",
+	"useWorker": "no",
 	"bundleAddons": false,
 	"usedAddons": [
 		{
@@ -24,6 +24,13 @@
 			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Teclado",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Armazenamento local",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -215,18 +222,14 @@
 			"Camera",
 			"ControladorDaTimeline",
 			"Pedestal",
-			"Item_Bola_De_Cristal",
 			"Texto_Dano",
 			"Espada_Inimigo",
-			"Texto_Cutscene",
-			"Cutscene_Simbolo_Vs",
 			"Sniper_Inimigo",
 			"Sniper_Arma_Inimigo",
 			"Laser_Vermelho",
 			"Tiro_Sniper",
 			"Pool_Anjo",
 			"Texto_Preco_Loja",
-			"Item_Botas_Rapidez",
 			"Pool_Demonio",
 			"Seta_Menu",
 			"tt",
@@ -236,7 +239,6 @@
 			"Linha_Aviso",
 			"Marca_Chao",
 			"Explosao_Dano",
-			"Cutscene_Fundo",
 			"Stun_Boss",
 			"Chao_Floresta",
 			"Decoracao_Floresta",
@@ -250,7 +252,27 @@
 			"Gatinho_Sombra",
 			"Circulo_Invocacao",
 			"Fumaca_Invocacao",
-			"Audio"
+			"Audio",
+			"Raiz_Boss",
+			"Onda_Choque",
+			"Aura_Boss",
+			"Faisca_Cajado",
+			"Poeira_Passo",
+			"Sombra_Player",
+			"Gato_Tanque",
+			"Escudo_Tanque",
+			"Gato_Espelho",
+			"Cajado_Espelho",
+			"Projetil_Espelho",
+			"Faisca_Espelho",
+			"Rastro_Espelho",
+			"Popup_Critico",
+			"Corte_Machete",
+			"Projetil_Inimigo",
+			"Impacto_Inimigo",
+			"Texto_Teste",
+			"Raiz_Prisao",
+			"Armazenamento"
 		],
 		"subfolders": [
 			{
@@ -287,10 +309,385 @@
 					"Musica_Disco",
 					"Musica_Painel",
 					"Musica_Rotulo",
-					"Musica_Nome"
+					"Musica_Nome",
+					"Banner_Item",
+					"Boss_Barra_Moldura",
+					"Boss_Barra_Topo",
+					"Boss_Barra_Vida",
+					"Boss_Barra_Lasca",
+					"HUD_Meio_Coracao"
 				],
 				"subfolders": [],
 				"name": "HUD"
+			},
+			{
+				"items": [
+					"Menu_Fundo",
+					"Menu_Olhos",
+					"Menu_Brilho",
+					"Menu_Cajado",
+					"Menu_Gato",
+					"Menu_Suor",
+					"Menu_Logo",
+					"Menu_Placa"
+				],
+				"subfolders": [],
+				"name": "Menu"
+			},
+			{
+				"items": [
+					"Caverna_Fundo",
+					"Caverna_Frente",
+					"Parede_Caverna",
+					"Rocha_Caverna",
+					"Bloqueio_Caverna",
+					"Escuridao_Caverna",
+					"Feixe_Luz",
+					"Brilho_Cristal",
+					"Luz_Saida",
+					"Particulas_Caverna",
+					"Gota_Caverna"
+				],
+				"subfolders": [],
+				"name": "Caverna"
+			},
+			{
+				"items": [
+					"Obstaculo_Alto",
+					"Agua_Caverna",
+					"Lava_Caverna",
+					"Vagalumes_Caverna",
+					"Brasas_Caverna",
+					"Esporos_Caverna",
+					"Fundo_Gruta",
+					"Frente_Gruta",
+					"Fundo_Mina",
+					"Frente_Mina",
+					"Fundo_Magma",
+					"Frente_Magma",
+					"Fundo_Cogumelos",
+					"Frente_Cogumelos",
+					"Fundo_Catacumba",
+					"Frente_Catacumba",
+					"Fundo_Teste",
+					"Frente_Teste",
+					"Painel_Teste",
+					"Fundo_Cristais",
+					"Frente_Cristais",
+					"Fundo_Lagoa",
+					"Frente_Lagoa",
+					"Fundo_Galeria",
+					"Frente_Galeria",
+					"Fundo_Lagos",
+					"Frente_Lagos",
+					"Fundo_Clareira",
+					"Frente_Clareira",
+					"Fundo_Cripta",
+					"Frente_Cripta"
+				],
+				"subfolders": [],
+				"name": "Salas"
+			},
+			{
+				"items": [
+					"Portal_Inimigo",
+					"Barra_Cinema",
+					"Dica_Pular",
+					"Sombra_Queda",
+					"Poeira_Intro",
+					"Clarao_Intro",
+					"Titulo_Faixa",
+					"Titulo_Nome"
+				],
+				"subfolders": [],
+				"name": "Intro_Sala"
+			},
+			{
+				"items": [
+					"Fundo_Arena",
+					"Frente_Arena",
+					"Runas_Arena",
+					"Raio_Sol",
+					"Feixe_Recompensa",
+					"Brilho_Item",
+					"Info_Item",
+					"Restos_Boss",
+					"Boss_Morte"
+				],
+				"subfolders": [],
+				"name": "Arena_Boss"
+			},
+			{
+				"items": [
+					"Fogo_Rastro",
+					"Aureola_Player",
+					"Item_Aureola",
+					"Item_Pena_Sagrada",
+					"Item_Lagrima_Anjo",
+					"Item_Pacto_Sangue",
+					"Item_Olho_Demonio",
+					"Item_Botas_Inferno",
+					"Item_Asas_Celestes",
+					"Item_Coracao_Dourado",
+					"Item_Sino_Sagrado",
+					"Item_Chifre_Partido",
+					"Item_Moeda_Maldita",
+					"Item_Garra_Sombria"
+				],
+				"subfolders": [],
+				"name": "Itens"
+			},
+			{
+				"items": [
+					"Fundo_Escada",
+					"Frente_Escada",
+					"Escada_Frente",
+					"Braseiro",
+					"Aviso_Descer",
+					"Tela_Preta",
+					"Gato_Escada",
+					"Fundo_Escada_Abismo",
+					"Frente_Escada_Abismo",
+					"Escada_Frente_Abismo",
+					"Braseiro_Abismo"
+				],
+				"subfolders": [],
+				"name": "Escada"
+			},
+			{
+				"items": [
+					"Descida_Camada",
+					"Descida_Portao",
+					"Descida_Sombra",
+					"Descida_Titulo",
+					"Descida_Gato"
+				],
+				"subfolders": [],
+				"name": "Descida"
+			},
+			{
+				"items": [
+					"Fundo_Tesouro",
+					"Frente_Tesouro",
+					"Fundo_Loja",
+					"Frente_Loja",
+					"Pedestal_Tesouro",
+					"Banca_Loja",
+					"Coracao_Loja",
+					"Etiqueta_Preco",
+					"Aviso_Sem_Moedas",
+					"Fundo_Altar",
+					"Frente_Altar",
+					"Fundo_Desafio",
+					"Frente_Desafio",
+					"Altar_Karma",
+					"Custo_Altar",
+					"Totem_Desafio",
+					"Grade_Desafio",
+					"Portal_Desafio",
+					"Onda_Texto"
+				],
+				"subfolders": [],
+				"name": "Salas_Especiais"
+			},
+			{
+				"items": [
+					"Laser_Ponto",
+					"Painel_Dev",
+					"Botao_Dev",
+					"Texto_Dev"
+				],
+				"subfolders": [],
+				"name": "Dev"
+			},
+			{
+				"items": [
+					"Mapa_Fundo",
+					"Mapa_Sala",
+					"Trigger_Volta",
+					"Barreira_Volta"
+				],
+				"subfolders": [],
+				"name": "Mapa"
+			},
+			{
+				"items": [
+					"Aura_Campeao",
+					"Icone_Campeao",
+					"Rastro_Vinha",
+					"Bomba_Campeao",
+					"Coracao_Drop"
+				],
+				"subfolders": [],
+				"name": "Campeoes"
+			},
+			{
+				"items": [
+					"Ponto_Perigo",
+					"Espinhos",
+					"Barril_Explosivo",
+					"Poca",
+					"Sombra_Perigo"
+				],
+				"subfolders": [],
+				"name": "Perigos"
+			},
+			{
+				"items": [
+					"Gato_Freira",
+					"Escudo_Bolha",
+					"Buff_Icone",
+					"Marca_Bencao",
+					"Feixe_Bencao",
+					"Brilho_Bencao"
+				],
+				"subfolders": [],
+				"name": "Freira"
+			},
+			{
+				"items": [
+					"HQ_Papel",
+					"HQ_Dica",
+					"HQ_Quadro"
+				],
+				"subfolders": [],
+				"name": "Abertura"
+			},
+			{
+				"items": [
+					"Placa_Dica"
+				],
+				"subfolders": [],
+				"name": "Dicas"
+			},
+			{
+				"items": [
+					"Agua_Animada",
+					"Borboleta",
+					"Folha_Caindo",
+					"Fumaca_Chamine",
+					"Brilho_Fenda_Magma",
+					"Brilho_Lagos_Magma",
+					"Brilho_Catacumba",
+					"Brilho_Cripta_Real",
+					"Brilho_Caverna",
+					"Brilho_Cristais_Gemeos",
+					"Brilho_Bosque_Cogumelos",
+					"Brilho_Clareira_Fungica",
+					"Brilho_Mina_Abandonada",
+					"Brilho_Galeria_Mina",
+					"Brilho_Loja",
+					"Brilho_Desafio",
+					"Brilho_Altar",
+					"Brilho_Tesouro",
+					"Brilho_Escada",
+					"Brilho_Abismo_Entrada",
+					"Brilho_Abismo_Fenda",
+					"Brilho_Abismo_Cristais",
+					"Brilho_Abismo_Raizes",
+					"Brilho_Abismo_Templo",
+					"Brilho_Abismo_Lago",
+					"Brilho_Abismo_Ninho",
+					"Brilho_Escada_Abismo"
+				],
+				"subfolders": [],
+				"name": "Ambiente"
+			},
+			{
+				"items": [
+					"Grao_Boss",
+					"Ovo_Boss",
+					"Alvo_Ovo",
+					"Pintinho",
+					"Codorna_Boss",
+					"Grao_Rastro",
+					"Poeira_Farelo",
+					"Faixa_Promo"
+				],
+				"subfolders": [],
+				"name": "Saco_Supremo"
+			},
+			{
+				"items": [
+					"Opcoes_Dados",
+					"Opc_Escuro",
+					"Opc_Painel",
+					"Opc_Item",
+					"Opc_Valor"
+				],
+				"subfolders": [],
+				"name": "Opcoes"
+			},
+			{
+				"items": [
+					"Fenda_Abismo",
+					"Ponto_Abismo",
+					"Particulas_Abismo",
+					"Portal_Chegada",
+					"Rastro_Espectro",
+					"Garra_Espectro",
+					"Respingo_Lodo",
+					"Gato_Espectro",
+					"Gato_Cristalino",
+					"Lodo_Abismo",
+					"Fundo_Abismo_Entrada",
+					"Frente_Abismo_Entrada",
+					"Fundo_Abismo_Fenda",
+					"Frente_Abismo_Fenda",
+					"Fundo_Abismo_Cristais",
+					"Frente_Abismo_Cristais",
+					"Fundo_Abismo_Raizes",
+					"Frente_Abismo_Raizes",
+					"Fundo_Abismo_Templo",
+					"Frente_Abismo_Templo",
+					"Fundo_Abismo_Lago",
+					"Frente_Abismo_Lago",
+					"Fundo_Abismo_Ninho",
+					"Frente_Abismo_Ninho",
+					"Olho_Abismo",
+					"Gato_Tentaculo",
+					"Gato_Corruptor",
+					"Laser_Olho",
+					"Aviso_Linha",
+					"Impacto_Laser",
+					"Tentaculo_Abismo",
+					"Fio_Corrupcao",
+					"Icone_Elo",
+					"Sonda_Laser"
+				],
+				"subfolders": [],
+				"name": "Abismo"
+			},
+			{
+				"items": [
+					"Maquina_Cassino",
+					"Alavanca_Cassino",
+					"Rolo_Cassino",
+					"Painel_Rolos",
+					"Balcao_Cassino",
+					"Faixa_Jackpot",
+					"Cano_Teto",
+					"Cachoeira",
+					"Solido_Cassino",
+					"Moeda_Cassino",
+					"Alvo_Cassino",
+					"Carta_Cassino",
+					"Ficha_Cassino",
+					"Nota_Sino",
+					"Gota_Agua",
+					"Faisca_Cassino",
+					"Dado_Cassino",
+					"Novelo_Cassino",
+					"Raio_777",
+					"Poca_Agua",
+					"Jato_Agua",
+					"Raio_Eletrico",
+					"Choque_Boss",
+					"Respingo",
+					"Brilho_Cassino"
+				],
+				"subfolders": [],
+				"name": "Cassino"
 			}
 		]
 	},
@@ -309,13 +706,41 @@
 	},
 	"layouts": {
 		"items": [
-			"Teste_Inimigos",
 			"Menu",
 			"Sala_Combate_Floresta",
 			"Sala_Boss_Floresta",
+			"Sala_Boss_Galpao",
+			"Sala_Boss_Cassino",
 			"Sala_Inicial",
 			"Game_Over",
-			"Cutscene_1"
+			"Sala_Caverna",
+			"Sala_Gruta_Musgosa",
+			"Sala_Mina_Abandonada",
+			"Sala_Fenda_Magma",
+			"Sala_Bosque_Cogumelos",
+			"Sala_Catacumba",
+			"Sala_Teste_Inimigos",
+			"Sala_Escada",
+			"Sala_Escada_Abismo",
+			"Cutscene_Abertura",
+			"Cutscene_Descida",
+			"Sala_Tesouro",
+			"Sala_Loja",
+			"Sala_Altar",
+			"Sala_Desafio",
+			"Sala_Cristais_Gemeos",
+			"Sala_Lagoa_Musgosa",
+			"Sala_Galeria_Mina",
+			"Sala_Lagos_Magma",
+			"Sala_Clareira_Fungica",
+			"Sala_Cripta_Real",
+			"Sala_Abismo_Entrada",
+			"Sala_Abismo_Fenda",
+			"Sala_Abismo_Cristais",
+			"Sala_Abismo_Raizes",
+			"Sala_Abismo_Templo",
+			"Sala_Abismo_Lago",
+			"Sala_Abismo_Ninho"
 		],
 		"subfolders": []
 	},
@@ -324,7 +749,8 @@
 			"Logica_Principal",
 			"Menu",
 			"Game_Over",
-			"Cutscene_1"
+			"Cutscene_Descida",
+			"Cutscene_Abertura"
 		],
 		"subfolders": []
 	},
@@ -347,6 +773,1198 @@
 					"name": "Boss_Floresta_Loop.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 255728436615460,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sniper_Acerto.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 553415041843783,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sniper_Tiro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 876447377146478,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Critico.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 569571937816863,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Intro_Surgir.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 370570502564557,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Tremor.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 140053307143969,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Impacto.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 206216167549289,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Braam.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 622845782256550,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Emote_Dancinha.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 105016154576981,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Morte.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 786590502949787,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Pedestal_Surgir.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 633267324772090,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Item_Anjo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 877616569631016,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Item_Demonio.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 511217424405486,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Pedestal_Quebrar.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 657848016894561,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Barra_Racha.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 731721479007118,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Saida_Raizes.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 107503498383515,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Escada_Descer.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 118844140839024,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Cutscene_Descida.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 857873903892074,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Compra.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 363482463790611,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sem_Moedas.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 102586169138250,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Gongo_Desafio.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 538956108892379,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Portal_Desafio.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 122693171732588,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Vitoria_Desafio.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 304922215386639,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Vila.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 811365729573196,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Caverna.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 463630008995496,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Musgosa.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 661568566583768,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Mina.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 122770161406643,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Magma.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 536099073766155,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Fungos.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 831115130913639,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Catacumba.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 709734436859267,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Loja.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 797197477772902,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Santuario.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 614992664860255,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Desafio.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 604701728666252,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Menu.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 869189984306802,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Acerto_Inimigo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 630533890837150,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Barril_Racha.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 369447804520220,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Bencao.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 975770096881300,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Bolha_Quebra.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 875655141117857,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Coracao.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 339527281641332,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Dano_Player.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 868415906176144,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Dialogo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 719717908693839,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Dica_Abre.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 979555726185525,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Eco_Carga.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 534154593302048,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Eco_Tiro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 608766929864726,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Escudo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 452444921315846,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Espinhos.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 932343966438014,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Explosao.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 942085960453200,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Game_Over.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 780173154431068,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Golpe.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 864840132528004,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_HQ_Pagina.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 455277687276897,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_HQ_Quadro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 654204208416131,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Invocacao.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 113432584516189,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Menu_Mover.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 675872710363992,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Menu_Ok.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 656058040497608,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Moeda.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 592475471233096,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Morte_Inimigo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 378142914865465,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Pausa.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 842594810314160,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Porta_Abre.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 685335266160114,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Tiro_Cajado.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 976979876753393,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Tiro_Inimigo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 693345490245444,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Bomba_Acende.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 304651744591078,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Bomba_Bip.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 167153242582137,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Bomba_Bip2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 619383968661768,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Bomba_Explosao.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 451943284545222,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Surgir_Pop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 507765561055105,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Batida.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 559510501525415,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Espiral.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 310962714863819,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Estouro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 186707209353733,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Furia.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 945116874493884,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Investida.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 198961389796701,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Marca.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 165599943230300,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Mira.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 959951769583580,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Pouso.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 380719399803347,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Pulo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 586566220532404,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Raiz.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 180859259611641,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Raizes_Aviso.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 102488408777135,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Raizes_Sobem.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 252685792296014,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Rosnado.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 558418931484814,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Rugido.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 734285568705282,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Tiros.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 387958914185626,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Tonto.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 793391964290086,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Boss_Tremor.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 949918446468146,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Bando.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 820672351633084,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Cansado.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 665153406166087,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Chuva.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 804689026044350,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Codorna.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 218049164793223,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Grao.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 844072157958320,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Mergulho.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 818086456847930,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Ovo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 908815257645563,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Ovo_Quebra.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 314190131494972,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Pio.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 486971504857407,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Pisao.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 261243824626569,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Pulo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 168198701783644,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Queda.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 391078674408323,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Queima.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 244035410380034,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Quique.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 146828243674542,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Rasgo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 824710850168596,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Rolada.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 794858917250163,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Saco_Vazamento.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 556854818884601,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Saco_Intro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 274661884208479,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Saco_Loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 759664202137783,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Espectro_Some.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 543912874192364,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Espectro_Surge.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 899869523780113,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Espectro_Grito.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 563172188210399,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Espectro_Investida.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 820829249739571,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cristal_Carga.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 296709844520436,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cristal_Disparo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 317242570493494,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Lodo_Pulo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 913357526052895,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Lodo_Divide.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 887509870221461,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Abismo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 345261149568617,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Olho_Carga.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 202293300141509,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Olho_Laser.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 419303609112193,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Tentaculo_Surge.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 679202972329183,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Tentaculo_Chicote.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 357365590304285,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Tentaculo_Puxa.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 331655634428768,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Corruptor_Elo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 764666585906855,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Corruptor_Renasce.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 530665529300184,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Corruptor_Estilhaco.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 395805515419233,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Musica_Escada_Abismo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 493698035240358,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Alavanca.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 450918765577223,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Azar.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 301355498956038,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Bufa.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 973555744345032,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Cachoeira.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 169687247635293,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Cano.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 345987591252614,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Carta.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 773877341439609,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Chacoalha.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 432161081737895,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Curto.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 456315044646598,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Dado.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 946493736557520,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Dado_Face.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 763555825028398,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Escorrega.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 579352274040711,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Explode.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 765654919927700,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Faisca.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 921289883098374,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Giro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 575442362207773,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Jackpot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 171879547309474,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Jato.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 199715951698590,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Linha.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 477865509729781,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Miado_Bravo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 912912228923662,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Moeda.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 658458396775202,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Moeda_Chao.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 178686055415991,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Novelo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 914436304028259,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Par.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 731251457913336,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Para.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 275968217861034,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Poca_Aviso.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 955453715169193,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Poca_Choque.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 725712253761069,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Raio.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 249936430865635,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Sino.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 185693100237494,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Sfx_Cassino_Trava.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 399383112536372,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Cassino_Intro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 353301197489868,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Cassino_Loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 480414577314457,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Boss_Cassino_Fase2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 399046079404382,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -428,13 +2046,29 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "davy_jones.webm",
+					"type": "video/webm",
+					"sid": 371557273103245,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "davy_jones.mp4",
+					"type": "video/mp4",
+					"sid": 141603821274164,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},
 	"timelines": {
 		"items": [
-			"Cutscene_NovoJogo",
 			"Linha do tempo 1"
 		],
 		"subfolders": [
@@ -467,7 +2101,7 @@
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
-		"fullscreenQuality": "high",
+		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
@@ -500,7 +2134,7 @@
 		"anisotropicFiltering": "auto",
 		"zNear": 1,
 		"zFar": 10000,
-		"maxSpriteSheetSize": 2048,
+		"maxSpriteSheetSize": 4096,
 		"loaderStyle": "splash",
 		"preloadSounds": true,
 		"uidAllocationMode": "increment",

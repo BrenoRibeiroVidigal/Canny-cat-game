@@ -1,0 +1,344 @@
+{
+	"name": "Obstaculo_Alto",
+	"plugin-id": "Sprite",
+	"sid": 639783941131701,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 538993885101674
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 176,
+						"originX": 0.5,
+						"originY": 0.9090909090909091,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5825493,
+						"collisionPoly": {
+							"points": [
+								0.09375,
+								0.8295454545454546,
+								0.90625,
+								0.8295454545454546,
+								0.90625,
+								0.9772727272727273,
+								0.09375,
+								0.9772727272727273
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "estalagmite_alta"
+					},
+					{
+						"width": 72,
+						"height": 184,
+						"originX": 0.4166666666666667,
+						"originY": 0.9456521739130435,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1094675,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.9021739130434783,
+								0.5833333333333334,
+								0.9021739130434783,
+								0.5833333333333334,
+								0.9782608695652174,
+								0.25,
+								0.9782608695652174
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "poste_lanterna"
+					},
+					{
+						"width": 160,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.9,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9714288,
+						"collisionPoly": {
+							"points": [
+								0.0875,
+								0.8,
+								0.9125,
+								0.8,
+								0.9125,
+								0.98,
+								0.0875,
+								0.98
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "basalto"
+					},
+					{
+						"width": 200,
+						"height": 240,
+						"originX": 0.5,
+						"originY": 0.9416666666666667,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7088768,
+						"collisionPoly": {
+							"points": [
+								0.38,
+								0.8916666666666667,
+								0.62,
+								0.8916666666666667,
+								0.62,
+								0.975,
+								0.38,
+								0.975
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "cogumelo_gigante"
+					},
+					{
+						"width": 200,
+						"height": 240,
+						"originX": 0.5,
+						"originY": 0.9416666666666667,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8091231,
+						"collisionPoly": {
+							"points": [
+								0.38,
+								0.8916666666666667,
+								0.62,
+								0.8916666666666667,
+								0.62,
+								0.975,
+								0.38,
+								0.975
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "cogumelo_gigante_roxo"
+					},
+					{
+						"width": 104,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.912,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9208977,
+						"collisionPoly": {
+							"points": [
+								0.09615384615384616,
+								0.832,
+								0.9038461538461539,
+								0.832,
+								0.9038461538461539,
+								0.968,
+								0.09615384615384616,
+								0.968
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "pilar"
+					},
+					{
+						"width": 104,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.912,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4610738,
+						"collisionPoly": {
+							"points": [
+								0.09615384615384616,
+								0.832,
+								0.9038461538461539,
+								0.832,
+								0.9038461538461539,
+								0.968,
+								0.09615384615384616,
+								0.968
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "pilar_quebrado"
+					},
+					{
+						"width": 128,
+						"height": 176,
+						"originX": 0.5,
+						"originY": 0.9090909090909091,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2420048,
+						"collisionPoly": {
+							"points": [
+								0.17188,
+								0.79545,
+								0.82812,
+								0.79545,
+								0.82812,
+								0.98864,
+								0.17188,
+								0.98864
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "estalagmite_alta"
+					},
+					{
+						"width": 128,
+						"height": 176,
+						"originX": 0.5,
+						"originY": 0.9090909090909091,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8358620,
+						"collisionPoly": {
+							"points": [
+								0.17188,
+								0.79545,
+								0.82812,
+								0.79545,
+								0.82812,
+								0.98864,
+								0.17188,
+								0.98864
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "estalagmite_alta"
+					},
+					{
+						"width": 96,
+						"height": 222,
+						"originX": 0.5,
+						"originY": 0.9279279279279279,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8898871,
+						"collisionPoly": {
+							"points": [
+								0.125,
+								0.8558558558558559,
+								0.875,
+								0.8558558558558559,
+								0.875,
+								0.963963963963964,
+								0.125,
+								0.963963963963964
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "obelisco"
+					},
+					{
+						"width": 140,
+						"height": 214,
+						"originX": 0.5,
+						"originY": 0.9158878504672897,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5284660,
+						"collisionPoly": {
+							"points": [
+								0.12857142857142856,
+								0.8504672897196262,
+								0.8714285714285714,
+								0.8504672897196262,
+								0.8714285714285714,
+								0.9626168224299065,
+								0.12857142857142856,
+								0.9626168224299065
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "cristal_alto"
+					},
+					{
+						"width": 104,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.912,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9553684,
+						"collisionPoly": {
+							"points": [
+								0.09615384615384616,
+								0.832,
+								0.9038461538461539,
+								0.832,
+								0.9038461538461539,
+								0.968,
+								0.09615384615384616,
+								0.968
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "pilar_abismo"
+					}
+				],
+				"sid": 512020621558384,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

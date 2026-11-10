@@ -1,0 +1,146 @@
+{
+	"name": "Opcoes_Dados",
+	"plugin-id": "Sprite",
+	"sid": 399645893725232,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Geral",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 341674027535087
+		},
+		{
+			"name": "Musica",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 741514891878064
+		},
+		{
+			"name": "Efeitos",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 624905746857990
+		},
+		{
+			"name": "SemTremor",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 848200934050214
+		},
+		{
+			"name": "SemDano",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 129147842607162
+		},
+		{
+			"name": "SemCine",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 294571395051889
+		},
+		{
+			"name": "dBM",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 795836484590611
+		},
+		{
+			"name": "dBE",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 204286266481715
+		},
+		{
+			"name": "Aberto",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 431094217080860
+		},
+		{
+			"name": "Sel",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 646762335562585
+		},
+		{
+			"name": "SelAnt",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 594088911389009
+		},
+		{
+			"name": "Carregou",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 769389193603257
+		},
+		{
+			"name": "MX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 777207781402704
+		},
+		{
+			"name": "MY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 914983575182995
+		},
+		{
+			"name": "Andar",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 969445452400539
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 4,
+						"height": 4,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3606862,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 506724520806923,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

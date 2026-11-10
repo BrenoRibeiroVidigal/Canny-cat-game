@@ -1,0 +1,262 @@
+{
+	"name": "Totem_Desafio",
+	"plugin-id": "Sprite",
+	"sid": 962143514918198,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 151353155504443
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 102,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.95,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7483120,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.8,
+								0.88,
+								0.8,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 799704719432248,
+				"name": "Dormindo",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 102,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.95,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6235079,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.8,
+								0.88,
+								0.8,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 102,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.95,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7026355,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.8,
+								0.88,
+								0.8,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 102,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.95,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2672190,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.8,
+								0.88,
+								0.8,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 102,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.95,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2511338,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.8,
+								0.88,
+								0.8,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 102,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.95,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3049538,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.8,
+								0.88,
+								0.8,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 102,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.95,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5924497,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.8,
+								0.88,
+								0.8,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 342788650209569,
+				"name": "Ativo",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 8
+			},
+			{
+				"frames": [
+					{
+						"width": 102,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.95,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4343653,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.8,
+								0.88,
+								0.8,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 200831752196548,
+				"name": "Apagado",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

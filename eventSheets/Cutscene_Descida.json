@@ -1,0 +1,631 @@
+{
+	"name": "Cutscene_Descida",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Cutscene da descida: DC_T = tempo. O gato anda pra direita (DC_X, em px do mundo) e a câmera (DC_Cam) segue; cada camada (Descida_Camada) é uma faixa repetível de 1281 px que anda com Fator (parallax). Ao chegar no portão (DC_T = CHEGA) o gato para, o portão acende e o título aparece. Andar 1 -> 2 (Opcoes_Dados.Andar < 2): título \"ANDAR 2 / ABISMO CORROMPIDO\", portão com o olho, e corta pra Sala_Abismo_Entrada. Depois do boss do andar 2: título \"ANDAR 3 / ??? / EM BREVE\", portão com \"?\", e volta pro Menu. ESPAÇO/ENTER pula."
+		},
+		{
+			"eventType": "variable",
+			"name": "DC_T",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 986514412132480
+		},
+		{
+			"eventType": "variable",
+			"name": "DC_X",
+			"type": "number",
+			"initialValue": "-60",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 241788653246753
+		},
+		{
+			"eventType": "variable",
+			"name": "DC_Cam",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 109224170061029
+		},
+		{
+			"eventType": "variable",
+			"name": "DC_F1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 961217253440995
+		},
+		{
+			"eventType": "variable",
+			"name": "DC_Fim",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 472066723037856
+		},
+		{
+			"eventType": "variable",
+			"name": "DC_TF",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 594616594761556
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 983153645634179
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 363164653815471,
+					"parameters": {
+						"tag": "\"musica_sala\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 626222629242274,
+					"parameters": {
+						"variable": "DC_T",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 964538713136185,
+					"parameters": {
+						"variable": "DC_X",
+						"value": "-60"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 679388067322253,
+					"parameters": {
+						"variable": "DC_Cam",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 702064615243915,
+					"parameters": {
+						"variable": "DC_F1",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 846048200415944,
+					"parameters": {
+						"variable": "DC_Fim",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 522878074171652,
+					"parameters": {
+						"variable": "DC_TF",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 222543487973754,
+					"parameters": {
+						"layer": "\"Titulo\"",
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 702181199634259,
+					"parameters": {
+						"layer": "\"Fade\"",
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 927051114427385,
+					"parameters": {
+						"tag": "\"musica_jogo\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 348858946883830,
+					"parameters": {
+						"tag": "\"musica_boss\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 627392962589358,
+					"parameters": {
+						"tag": "\"musica_boss_intro\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 176554546382399,
+					"parameters": {
+						"tag": "\"musica_menu\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 780230380661980,
+					"parameters": {
+						"audio-file": {
+							"path": "Cutscene_Descida"
+						},
+						"loop": "not-looping",
+						"volume": "(-1) + Opcoes_Dados.dBM",
+						"stereo-pan": "0",
+						"tag-optional": "\"cutscene_descida\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Descida_Titulo",
+					"sid": 971663833984327,
+					"parameters": {
+						"frame-number": "(Opcoes_Dados.Andar >= 2) ? 1 : 0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Descida_Portao",
+					"sid": 791598322992389,
+					"parameters": {
+						"animation": "(Opcoes_Dados.Andar >= 2) ? \"Calmo\" : \"Calmo_Olho\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 226832487713362
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 639416459884998
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 754299009747257,
+					"parameters": {
+						"variable": "DC_T",
+						"value": "dt"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 387116211922643,
+					"parameters": {
+						"variable": "DC_X",
+						"value": "min(2270, -60 + 380 * max(0, DC_T - 0.3))"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 552494272753626,
+					"parameters": {
+						"variable": "DC_Cam",
+						"value": "clamp(DC_X - 420, 0, 1600)"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Descida_Camada",
+					"sid": 929004979159296,
+					"parameters": {
+						"x": "640 + Self.Idx * 1281 - (DC_Cam * Self.Fator) % 1281",
+						"y": "360"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Descida_Portao",
+					"sid": 225732960403851,
+					"parameters": {
+						"x": "2500 - DC_Cam",
+						"y": "594"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Descida_Gato",
+					"sid": 108569500879667,
+					"parameters": {
+						"x": "DC_X - DC_Cam",
+						"y": "548"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Descida_Sombra",
+					"sid": 861563367969495,
+					"parameters": {
+						"x": "DC_X - DC_Cam",
+						"y": "592"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 154596429182412,
+					"parameters": {
+						"layer": "\"Titulo\"",
+						"opacity": "clamp((DC_T - 6.931578947368421) / 0.6, 0, 1) * 100"
+					}
+				}
+			],
+			"sid": 548869282798387,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 689614550686184,
+							"parameters": {
+								"variable": "DC_Fim",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 502612104318681,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"opacity": "max(0, 100 - DC_T / 0.7 * 100)"
+							}
+						}
+					],
+					"sid": 398725073383098
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 429663137856624,
+					"parameters": {
+						"variable": "DC_T",
+						"comparison": 5,
+						"value": "6.432"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 591568731645134,
+					"parameters": {
+						"variable": "DC_F1",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 708290387097483,
+					"parameters": {
+						"variable": "DC_F1",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Descida_Gato",
+					"sid": 448177710998742,
+					"parameters": {
+						"animation": "\"Parado\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Descida_Portao",
+					"sid": 778197580440815,
+					"parameters": {
+						"animation": "(Opcoes_Dados.Andar >= 2) ? \"Aceso\" : \"Aceso_Olho\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 251578766495511
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 704764879839614,
+					"parameters": {
+						"variable": "DC_T",
+						"comparison": 5,
+						"value": "10.032"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 528417259068962,
+					"parameters": {
+						"variable": "DC_Fim",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 924420338812314,
+					"parameters": {
+						"variable": "DC_Fim",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 783942845835111,
+					"parameters": {
+						"variable": "DC_TF",
+						"value": "DC_T"
+					}
+				}
+			],
+			"sid": 992139476812452
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 246292697502167,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 848641342308766,
+					"parameters": {
+						"variable": "DC_T",
+						"comparison": 5,
+						"value": "0.5"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 446989493993355,
+					"parameters": {
+						"variable": "DC_Fim",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 487316867315910,
+					"parameters": {
+						"variable": "DC_Fim",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 639242350292183,
+					"parameters": {
+						"variable": "DC_TF",
+						"value": "DC_T"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 365974072501574,
+					"parameters": {
+						"tag": "\"cutscene_descida\"",
+						"db": "-Infinity",
+						"duration": "0.6",
+						"ending": "stop"
+					}
+				}
+			],
+			"sid": 282460713524612
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 479639642501974,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 650642254563830,
+					"parameters": {
+						"variable": "DC_T",
+						"comparison": 5,
+						"value": "0.5"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 368590982337449,
+					"parameters": {
+						"variable": "DC_Fim",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 673570165253625,
+					"parameters": {
+						"variable": "DC_Fim",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 646630021342439,
+					"parameters": {
+						"variable": "DC_TF",
+						"value": "DC_T"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 298565849843261,
+					"parameters": {
+						"tag": "\"cutscene_descida\"",
+						"db": "-Infinity",
+						"duration": "0.6",
+						"ending": "stop"
+					}
+				}
+			],
+			"sid": 165058605143415
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 460138087622893,
+					"parameters": {
+						"variable": "DC_Fim",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 700861882632762,
+					"parameters": {
+						"layer": "\"Fade\"",
+						"opacity": "clamp((DC_T - DC_TF) / 0.6, 0, 1) * 100"
+					}
+				}
+			],
+			"sid": 679832648704563,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 380689776116592,
+							"parameters": {
+								"first-value": "DC_T - DC_TF",
+								"comparison": 5,
+								"second-value": "0.65"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 994862123279009
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 954499254425367,
+							"parameters": {
+								"layout": "(Opcoes_Dados.Andar >= 2) ? \"Menu\" : \"Sala_Abismo_Entrada\""
+							}
+						}
+					],
+					"sid": 344807978401776
+				}
+			]
+		}
+	],
+	"sid": 269111225160474
+}

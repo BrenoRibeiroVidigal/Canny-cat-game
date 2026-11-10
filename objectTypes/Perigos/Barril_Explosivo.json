@@ -1,0 +1,271 @@
+{
+	"name": "Barril_Explosivo",
+	"plugin-id": "Sprite",
+	"sid": 151447124667830,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Vida",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 430422565932769
+		},
+		{
+			"name": "Pavio",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 336682050639113
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 173959043802233
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Piscar",
+			"sid": 940406992481070
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 54,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.9318181818181818,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3839802,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.55,
+								0.88,
+								0.55,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 54,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.9318181818181818,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2067013,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.55,
+								0.88,
+								0.55,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 54,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.9318181818181818,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7428918,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.55,
+								0.88,
+								0.55,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 54,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.9318181818181818,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5945733,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.55,
+								0.88,
+								0.55,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 456046660834422,
+				"name": "Barril",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 54,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.9318181818181818,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6319960,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.55,
+								0.88,
+								0.55,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 54,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.9318181818181818,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4016721,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.55,
+								0.88,
+								0.55,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 54,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.9318181818181818,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9933024,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.55,
+								0.88,
+								0.55,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 54,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.9318181818181818,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5269232,
+						"collisionPoly": {
+							"points": [
+								0.12,
+								0.55,
+								0.88,
+								0.55,
+								0.88,
+								0.97,
+								0.12,
+								0.97
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 130944581011785,
+				"name": "Cogumelo",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

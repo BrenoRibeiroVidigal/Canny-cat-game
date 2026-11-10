@@ -1,0 +1,123 @@
+{
+	"name": "Nota_Sino",
+	"plugin-id": "Sprite",
+	"sid": 140602180463895,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Ang",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 985741640104865
+		},
+		{
+			"name": "V",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 902710950746702
+		},
+		{
+			"name": "Vida_T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 479131637260301
+		},
+		{
+			"name": "Tipo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 503489202086897
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 30,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2328309,
+						"collisionPoly": {
+							"points": [
+								0.7956,
+								0.6301,
+								0.6225,
+								0.8141,
+								0.3775,
+								0.8141,
+								0.2044,
+								0.6301,
+								0.2044,
+								0.3699,
+								0.3775,
+								0.1859,
+								0.6225,
+								0.1859,
+								0.7956,
+								0.3699
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 30,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3188673,
+						"collisionPoly": {
+							"points": [
+								0.7956,
+								0.6301,
+								0.6225,
+								0.8141,
+								0.3775,
+								0.8141,
+								0.2044,
+								0.6301,
+								0.2044,
+								0.3699,
+								0.3775,
+								0.1859,
+								0.6225,
+								0.1859,
+								0.7956,
+								0.3699
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 220712792557155,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

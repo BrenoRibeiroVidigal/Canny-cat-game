@@ -1,0 +1,481 @@
+{
+	"name": "Raiz_Prisao",
+	"plugin-id": "Sprite",
+	"sid": 929351751451727,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 187600683479240
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1739899,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6838641,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3758966,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6382587,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 164110098313295,
+				"name": "Aviso",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 8
+			},
+			{
+				"frames": [
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2642255,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7190281,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6600060,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8316030,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 478405422121925,
+				"name": "Subir",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 16
+			},
+			{
+				"frames": [
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8725741,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3205663,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2562403,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1339222,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 115578982613354,
+				"name": "Parado",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 7
+			},
+			{
+				"frames": [
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2802808,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7247612,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5917450,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 171,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.85,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1285278,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.7,
+								0.75,
+								0.7,
+								0.75,
+								0.95,
+								0.25,
+								0.95
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 120498054270056,
+				"name": "Descer",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 14
+			}
+		],
+		"subfolders": []
+	}
+}

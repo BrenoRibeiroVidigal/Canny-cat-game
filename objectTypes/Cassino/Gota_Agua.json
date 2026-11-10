@@ -1,0 +1,123 @@
+{
+	"name": "Gota_Agua",
+	"plugin-id": "Sprite",
+	"sid": 192053304253263,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Ang",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 851984635532756
+		},
+		{
+			"name": "V",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 896611316953401
+		},
+		{
+			"name": "Vida_T",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 137769408729331
+		},
+		{
+			"name": "Tipo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 320381601273765
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7217845,
+						"collisionPoly": {
+							"points": [
+								0.7956,
+								0.6648,
+								0.6225,
+								0.8272,
+								0.3775,
+								0.8272,
+								0.2044,
+								0.6648,
+								0.2044,
+								0.4352,
+								0.3775,
+								0.2728,
+								0.6225,
+								0.2728,
+								0.7956,
+								0.4352
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 24,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3729024,
+						"collisionPoly": {
+							"points": [
+								0.7956,
+								0.6648,
+								0.6225,
+								0.8272,
+								0.3775,
+								0.8272,
+								0.2044,
+								0.6648,
+								0.2044,
+								0.4352,
+								0.3775,
+								0.2728,
+								0.6225,
+								0.2728,
+								0.7956,
+								0.4352
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 520109088986970,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 8
+			}
+		],
+		"subfolders": []
+	}
+}
